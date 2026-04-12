@@ -1,65 +1,88 @@
-import Image from "next/image";
+'use client';
+
+import HeroSection from '@/components/HeroSection';
+import ServicesSection from '@/components/ServicesSection';
+import AboutSection from '@/components/AboutSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <HeroSection />
+      <ServicesSection />
+      <AboutSection />
+      <TestimonialsSection />
+      
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-4xl mx-auto px-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-16"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Frequently Asked <span className="text-primary">Questions</span>
+          </motion.h2>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: 'How can I book an appointment with Dr. Shekhar Poudel?',
+                a: 'You can book an appointment through WhatsApp (+977-9765199777), phone (+977-01-5451000), or using our online booking form. Walk-ins are also welcome during office hours.'
+              },
+              {
+                q: 'What should I expect during my first visit?',
+                a: 'Your first visit includes a comprehensive consultation, medical history review, and necessary diagnostic tests. Please bring any previous medical records and a list of medications.'
+              },
+              {
+                q: 'Do you offer telemedicine consultations?',
+                a: 'Yes, teleconsultations are available for follow-up cases. Contact us to arrange a video consultation.'
+              },
+              {
+                q: 'What insurance do you accept?',
+                a: 'We work with major insurance providers. Please contact our clinic for specific insurance information.'
+              },
+              {
+                q: 'How long does endoscopy take?',
+                a: 'Typically 15-30 minutes. You should plan to be at the facility for 2-3 hours including pre and post-procedure care.'
+              },
+              {
+                q: 'Is ERCP procedure available?',
+                a: 'Yes, Dr. Poudel performs advanced ERCP procedures for treating bile and pancreatic duct conditions.'
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white dark:bg-gray-800 p-6 rounded-lg"
+              >
+                <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-3">{item.q}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{item.a}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-primary to-primary-dark text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Care for Your Digestive Health?</h2>
+          <p className="text-xl mb-8 opacity-90">Book your appointment today or contact us for a free consultation</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+977015451000" className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+              Call Now: +977-01-5451000
+            </a>
+            <a href="https://wa.me/977-9765199777" target="_blank" rel="noopener noreferrer" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition">
+              WhatsApp: +977-9765199777
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

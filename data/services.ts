@@ -1,0 +1,98 @@
+export const services = [
+  {
+    id: 'gastritis-treatment',
+    title: 'Gastritis & Ulcer Treatment',
+    description: 'Comprehensive treatment for gastritis and peptic ulcer disease using latest medications and endoscopic procedures.',
+    icon: 'stomach',
+    details: [
+      'Diagnostic endoscopy',
+      'H. pylori testing and eradication',
+      'Medication management',
+      'Lifestyle counseling',
+    ],
+  },
+  {
+    id: 'acid-reflux-gerd',
+    title: 'Acid Reflux & GERD Management',
+    description: 'Advanced treatment options for gastroesophageal reflux disease with long-term relief.',
+    icon: 'heartburn',
+    details: [
+      'pH monitoring',
+      'Endoscopic evaluation',
+      'Medical therapy',
+      'Lifestyle modifications',
+    ],
+  },
+  {
+    id: 'ibs-treatment',
+    title: 'IBS Management',
+    description: 'Personalized treatment plans for Irritable Bowel Syndrome with dietary and medicinal interventions.',
+    icon: 'bowel',
+    details: [
+      'IBS diagnosis and classification',
+      'Gut microbiome analysis',
+      'Dietary consultation',
+      'Medication optimization',
+    ],
+  },
+  {
+    id: 'liver-disease',
+    title: 'Liver Disease Management',
+    description: 'Expert care for hepatitis, cirrhosis, and other chronic liver conditions.',
+    icon: 'liver',
+    details: [
+      'Hepatitis screening and treatment',
+      'Cirrhosis management',
+      'Liver function testing',
+      'Treatment monitoring',
+    ],
+  },
+  {
+    id: 'endoscopy-colonoscopy',
+    title: 'Endoscopy & Colonoscopy',
+    description: 'Minimally invasive diagnostic and therapeutic endoscopic procedures.',
+    icon: 'endoscope',
+    details: [
+      'Upper endoscopy',
+      'Colonoscopy',
+      'ERCP procedures',
+      'Tissue biopsy',
+    ],
+  },
+  {
+    id: 'eus-procedures',
+    title: 'EUS-Guided Procedures',
+    description: 'Advanced Endoscopic Ultrasound for diagnosis and treatment of gastrointestinal diseases.',
+    icon: 'ultrasound',
+    details: [
+      'Diagnostic EUS',
+      'EUS-FNA (Fine Needle Aspiration)',
+      'Variceal coiling',
+      'Cyst drainage',
+    ],
+  },
+  {
+    id: 'liver-transplant',
+    title: 'Liver Transplant Care',
+    description: 'Expert pre and post-transplant liver care with specialized hepatology expertise.',
+    icon: 'transplant',
+    details: [
+      'Pre-transplant evaluation',
+      'Post-transplant management',
+      'Medication optimization',
+      'Complication monitoring',
+    ],
+  },
+  {
+    id: 'fmt-procedure',
+    title: 'Fecal Microbiota Transplantation',
+    description: 'Advanced gut microbiome restoration therapy for serious digestive and liver conditions.',
+    icon: 'microbiota',
+    details: [
+      'Patient screening',
+      'Microbiota analysis',
+      'FMT procedure',
+      'Follow-up monitoring',
+    ],
+  },
+];

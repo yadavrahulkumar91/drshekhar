@@ -1,6 +1,5 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   output: process.env.EXPORT_STATIC === 'true' ? 'export' : undefined,
   images: {
@@ -9,9 +8,6 @@ const nextConfig: NextConfig = {
   },
   compress: true,
   productionBrowserSourceMaps: false,
-  turbopack: {
-    root: __dirname,
-  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
