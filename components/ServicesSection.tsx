@@ -1,9 +1,10 @@
-'use client';
+"use client";
 
-import { services } from '@/data/services';
-import { motion } from 'framer-motion';
-import { Check, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { services } from "@/data/services";
+import { motion } from "framer-motion";
+import { Check, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function ServicesSection() {
   return (
@@ -19,42 +20,64 @@ export default function ServicesSection() {
             Specialized Medical Services
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Comprehensive gastroenterology and hepatology services with state-of-the-art facilities
+            Comprehensive gastroenterology and hepatology services with
+            state-of-the-art facilities
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.slice(0, 3).map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 p-6 rounded-xl hover:shadow-lg hover:shadow-emerald-200 dark:hover:shadow-emerald-900/50 transition border border-emerald-200/50 dark:border-emerald-700/50"
+            <Link
+              href={`/services/${service.id}`}
+              className="inline-flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 hover:text-green-600 dark:hover:text-green-400 font-semibold transition text-sm mt-4"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-200 to-green-200 dark:from-emerald-700 dark:to-green-700 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">🏥</span>
-              </div>
-              <h3 className="text-lg font-semibold bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent mb-2">{service.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{service.description}</p>
-              <ul className="space-y-2">
-                {service.details.slice(0, 2).map((detail, i) => (
-                  <li key={i} className="flex items-start space-x-2 text-sm">
-                    <Check size={16} className="text-emerald-600 dark:text-emerald-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-600 dark:text-gray-300">{detail}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link 
-                href={`/services/${service.id}`} 
-                className="inline-flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 hover:text-green-600 dark:hover:text-green-400 font-semibold transition text-sm mt-4"
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 p-6 rounded-xl hover:shadow-lg hover:shadow-emerald-200 dark:hover:shadow-emerald-900/50 transition border border-emerald-200/50 dark:border-emerald-700/50"
               >
-                <span>Learn More</span>
-                <ArrowRight size={16} />
-              </Link>
-            </motion.div>
+                <div className="w-28 h-20 p-0.5 bg-gradient-to-br from-emerald-200 to-green-200 dark:from-emerald-700 dark:to-green-700 rounded-lg flex items-center justify-center mb-4">
+                  <Image
+                    width={112}
+                    height={80}
+                    src={service.image}
+                    alt={service.title}
+                    className="rounded-lg"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                  {service.description}
+                </p>
+                <ul className="space-y-2">
+                  {service.details.slice(0, 2).map((detail, i) => (
+                    <li key={i} className="flex items-start space-x-2 text-sm">
+                      <Check
+                        size={16}
+                        className="text-emerald-600 dark:text-emerald-400 mt-0.5 flex-shrink-0"
+                      />
+                      <span className="text-gray-600 dark:text-gray-300">
+                        {detail}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* <span>Learn More</span>
+                <ArrowRight size={16} /> */}
+              </motion.div>
+
+            </Link>
           ))}
         </div>
+        <Link href="/services" className="inline-flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 hover:text-green-600 dark:hover:text-green-400 font-semibold transition mt-8">
+          <span>View All Services</span>
+          <ArrowRight size={16} />
+        </Link>
       </div>
     </section>
   );

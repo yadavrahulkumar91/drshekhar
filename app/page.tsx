@@ -11,11 +11,11 @@ export default function Home() {
     <>
       <HeroSection />
       <ServicesSection />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <TestimonialsSection />
 
       {/* Achievements Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      {/* <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -146,7 +146,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-900">

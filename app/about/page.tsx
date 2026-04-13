@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { motion } from "framer-motion";
 import { Award, Briefcase, BookOpen } from "lucide-react";
+import Achievement from "@/components/Achievement";
 
 export const metadata: Metadata = {
   title: "About Dr. Shekhar Poudel - Gastroenterologist Nepal",
@@ -177,6 +178,9 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
+
+          {/* Achievement Section */}
+          <Achievement />
         </div>
       </div>
     </>

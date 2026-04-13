@@ -3,7 +3,7 @@ export const services = [
     id: 'gastritis-treatment',
     title: 'Gastritis & Ulcer Treatment',
     description: 'Comprehensive treatment for gastritis and peptic ulcer disease using latest medications and endoscopic procedures.',
-    icon: 'stomach',
+    image: '/gastritis.jpg',
     details: [
       'Diagnostic endoscopy',
       'H. pylori testing and eradication',
@@ -15,7 +15,7 @@ export const services = [
     id: 'acid-reflux-gerd',
     title: 'Acid Reflux & GERD Management',
     description: 'Advanced treatment options for gastroesophageal reflux disease with long-term relief.',
-    icon: 'heartburn',
+    image: '/gerd.webp',
     details: [
       'pH monitoring',
       'Endoscopic evaluation',
@@ -27,7 +27,7 @@ export const services = [
     id: 'ibs-treatment',
     title: 'IBS Management',
     description: 'Personalized treatment plans for Irritable Bowel Syndrome with dietary and medicinal interventions.',
-    icon: 'bowel',
+    image: '/ibd.webp',
     details: [
       'IBS diagnosis and classification',
       'Gut microbiome analysis',
@@ -39,7 +39,7 @@ export const services = [
     id: 'liver-disease',
     title: 'Liver Disease Management',
     description: 'Expert care for hepatitis, cirrhosis, and other chronic liver conditions.',
-    icon: 'liver',
+    image: '/liver_disease.webp',
     details: [
       'Hepatitis screening and treatment',
       'Cirrhosis management',
@@ -51,7 +51,7 @@ export const services = [
     id: 'endoscopy-colonoscopy',
     title: 'Endoscopy & Colonoscopy',
     description: 'Minimally invasive diagnostic and therapeutic endoscopic procedures.',
-    icon: 'endoscope',
+    image: '/endoscopy.webp',
     details: [
       'Upper endoscopy',
       'Colonoscopy',
@@ -63,7 +63,7 @@ export const services = [
     id: 'eus-procedures',
     title: 'EUS-Guided Procedures',
     description: 'Advanced Endoscopic Ultrasound for diagnosis and treatment of gastrointestinal diseases.',
-    icon: 'ultrasound',
+    image: '/eus.jpg',
     details: [
       'Diagnostic EUS',
       'EUS-FNA (Fine Needle Aspiration)',
@@ -75,7 +75,7 @@ export const services = [
     id: 'liver-transplant',
     title: 'Liver Transplant Care',
     description: 'Expert pre and post-transplant liver care with specialized hepatology expertise.',
-    icon: 'transplant',
+    image: '/liver_transplant.webp',
     details: [
       'Pre-transplant evaluation',
       'Post-transplant management',
@@ -87,7 +87,7 @@ export const services = [
     id: 'fmt-procedure',
     title: 'Fecal Microbiota Transplantation',
     description: 'Advanced gut microbiome restoration therapy for serious digestive and liver conditions.',
-    icon: 'microbiota',
+    image: '/fmt.jpg',
     details: [
       'Patient screening',
       'Microbiota analysis',
