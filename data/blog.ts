@@ -28,11 +28,11 @@ export const blogPosts: BlogPost[] = [
     image: '/images/blog/gastritis.jpg',
     content: `Gastritis is inflammation of the stomach lining caused by various factors. This comprehensive guide covers everything you need to know about this common condition.
 
-## What is Gastritis?
+What is Gastritis?
 
 Gastritis occurs when the protective lining of your stomach becomes inflamed or irritated. This can happen suddenly (acute gastritis) or develop gradually over time (chronic gastritis).
 
-## Common Causes
+Common Causes
 
 The most common causes include:
 - H. pylori bacterial infection
@@ -42,7 +42,7 @@ The most common causes include:
 - Autoimmune disorders
 - Bile reflux
 
-## Symptoms to Watch For
+Symptoms to Watch For
 
 - Abdominal pain and cramping
 - Nausea and vomiting
@@ -51,7 +51,7 @@ The most common causes include:
 - Indigestion
 - Dark or bloody stools
 
-## Diagnosis
+Diagnosis
 
 Dr. Poudel recommends:
 - Endoscopy examination
@@ -59,7 +59,7 @@ Dr. Poudel recommends:
 - Blood tests
 - Stool analysis
 
-## Treatment Options
+Treatment Options
 
 Treatment depends on the underlying cause:
 1. Medication therapy
@@ -84,11 +84,11 @@ Early diagnosis and treatment can prevent complications like ulcers and bleeding
     image: '/images/blog/acid-reflux.jpg',
     content: `Acid reflux affects millions globally. Here's what you need to know about GERD and how to manage it effectively.
 
-## Understanding GERD
+Understanding GERD
 
 GERD occurs when stomach acid frequently flows back into the esophagus, causing discomfort and potential damage.
 
-## Risk Factors
+Risk Factors
 
 - Obesity
 - Pregnancy
@@ -98,7 +98,7 @@ GERD occurs when stomach acid frequently flows back into the esophagus, causing 
 - Certain medications
 - Hiatal hernia
 
-## Lifestyle Modifications
+Lifestyle Modifications
 
 1. Eat smaller, frequent meals
 2. Avoid trigger foods
@@ -107,14 +107,14 @@ GERD occurs when stomach acid frequently flows back into the esophagus, causing 
 5. Maintain healthy weight
 6. Quit smoking
 
-## Medical Treatment
+Medical Treatment
 
 - Antacids
 - H2 receptor blockers
 - Proton pump inhibitors
 - Surgical options for severe cases
 
-## When to See a Doctor
+When to See a Doctor
 
 Seek medical attention if:
 - Symptoms persist despite lifestyle changes
@@ -136,20 +136,20 @@ Seek medical attention if:
     image: '/images/blog/ibs.jpg',
     content: `Irritable Bowel Syndrome affects up to 15% of the population. Learn how to manage IBS effectively.
 
-## Types of IBS
+Types of IBS
 
 - IBS-D (diarrhea predominant)
 - IBS-C (constipation predominant)
 - IBS-M (mixed type)
 
-## Identifying Your Triggers
+Identifying Your Triggers
 
 Keep a food diary to identify:
 - Problematic foods
 - Stress patterns
 - Timing relationships
 
-## Dietary Recommendations
+Dietary Recommendations
 
 - Increase fiber gradually
 - Stay hydrated
@@ -158,7 +158,7 @@ Keep a food diary to identify:
 - Try low-FODMAP diet
 - Eat regularly
 
-## Stress Management
+Stress Management
 
 - Meditation
 - Yoga
@@ -167,7 +167,7 @@ Keep a food diary to identify:
 - Adequate sleep
 - Counseling if needed
 
-## Medical Treatments
+Medical Treatments
 
 - Dietary changes (first-line)
 - Medications for symptoms
@@ -189,7 +189,7 @@ Keep a food diary to identify:
     image: '/images/blog/liver-health.jpg',
     content: `Your liver is vital for survival. Learn how to keep it healthy and detect problems early.
 
-## Liver Functions
+Liver Functions
 
 - Detoxification
 - Protein synthesis
@@ -197,7 +197,7 @@ Keep a food diary to identify:
 - Nutrient storage
 - Immune function
 
-## Common Liver Diseases
+Common Liver Diseases
 
 - Hepatitis A, B, C
 - Fatty liver disease
@@ -205,7 +205,7 @@ Keep a food diary to identify:
 - Liver cancer
 - Alcoholic liver disease
 
-## Risk Factors
+Risk Factors
 
 - Viral hepatitis
 - Excessive alcohol
@@ -214,7 +214,7 @@ Keep a food diary to identify:
 - Autoimmune conditions
 - Genetic factors
 
-## Prevention Strategies
+Prevention Strategies
 
 1. Limit alcohol consumption
 2. Maintain healthy weight
@@ -224,13 +224,13 @@ Keep a food diary to identify:
 6. Regular exercise
 7. Avoid sharing personal items
 
-## Regular Screening
+Regular Screening
 
 - Annual liver function tests
 - Ultrasound screening
 - Specialized tests if at risk
 
-## Warning Signs
+Warning Signs
 
 Seek medical help for:
 - Jaundice (yellowing)
@@ -254,17 +254,17 @@ Seek medical help for:
     image: '/images/blog/endoscopy.jpg',
     content: `Understanding what endoscopy involves can help reduce anxiety and ensure proper preparation.
 
-## What is Endoscopy?
+What is Endoscopy?
 
 A minimally invasive procedure using a thin, flexible tube with a camera to visualize the upper digestive tract.
 
-## Types of Endoscopy
+Types of Endoscopy
 
 - Upper endoscopy (esophagus, stomach, duodenum)
 - Colonoscopy (large intestine)
 - ERCP (pancreatic and bile ducts)
 
-## Why Might You Need It?
+Why Might You Need It?
 
 - Persistent heartburn
 - Difficulty swallowing
@@ -272,14 +272,14 @@ A minimally invasive procedure using a thin, flexible tube with a camera to visu
 - Cancer screening
 - Treatment of bleeding
 
-## Pre-Procedure Preparation
+Pre-Procedure Preparation
 
 - Fasting for 6-8 hours
 - Medication adjustments
 - Arranged transportation
 - Comfortable clothing
 
-## During the Procedure
+During the Procedure
 
 - Sedation provided
 - Throat numbed
@@ -287,7 +287,7 @@ A minimally invasive procedure using a thin, flexible tube with a camera to visu
 - Minimal discomfort
 - Tissue samples if needed
 
-## Post-Procedure
+Post-Procedure
 
 - Observation period
 - Throat soreness
@@ -295,7 +295,7 @@ A minimally invasive procedure using a thin, flexible tube with a camera to visu
 - Normal diet gradually
 - Follow-up instructions
 
-## Recovery
+Recovery
 
 Most people recover within 24 hours with minimal side effects.`
   },
@@ -313,14 +313,14 @@ Most people recover within 24 hours with minimal side effects.`
     image: '/images/blog/hepatitis.jpg',
     content: `Hepatitis affects millions worldwide. Understanding each type is crucial for prevention and treatment.
 
-## Hepatitis A
+Hepatitis A
 
 - Transmission: Contaminated food/water
 - Duration: Acute, usually self-limiting
 - Prevention: Vaccination, hygiene
 - Prognosis: Excellent with supportive care
 
-## Hepatitis B
+Hepatitis B
 
 - Transmission: Blood, body fluids, sexual contact
 - Duration: Can become chronic
@@ -328,27 +328,27 @@ Most people recover within 24 hours with minimal side effects.`
 - Treatment: Antiviral medications
 - Complications: Cirrhosis, liver cancer
 
-## Hepatitis C
+Hepatitis C
 
 - Transmission: Blood contact (historically transfusions)
 - Duration: Often becomes chronic
 - Treatment: Direct-acting antivirals (cure rate >95%)
 - Prevention: Blood screening, safe practices
 
-## Hepatitis D
+Hepatitis D
 
 - Only in people with Hepatitis B
 - More severe than B alone
 - Vaccination against B prevents D
 
-## Hepatitis E
+Hepatitis E
 
 - Transmission: Contaminated water
 - Usually acute in healthy individuals
 - Serious in pregnant women
 - No vaccine currently available
 
-## Screening Recommendations
+Screening Recommendations
 
 Anyone with risk factors should be tested.`
   },
@@ -366,7 +366,7 @@ Anyone with risk factors should be tested.`
     image: '/images/blog/colonoscopy.jpg',
     content: `Colorectal cancer is preventable with regular screening. Here's why colonoscopy is important.
 
-## Cancer Prevention
+Cancer Prevention
 
 Colonoscopy can:
 - Detect cancer early
@@ -374,14 +374,14 @@ Colonoscopy can:
 - Prevent cancer development
 - Save lives
 
-## Screening Guidelines
+Screening Guidelines
 
 - Start at age 45
 - Every 10 years if normal
 - More frequent if polyps found
 - Earlier if family history
 
-## Risk Factors
+Risk Factors
 
 - Age over 45
 - Family history
@@ -391,14 +391,14 @@ Colonoscopy can:
 - Alcohol use
 - Red meat consumption
 
-## Preparation
+Preparation
 
 - Clear liquid diet
 - Bowel cleansing solution
 - Fasting 6-8 hours
 - Medication adjustments
 
-## What Happens
+What Happens
 
 - Sedation provided
 - Examination of entire colon
@@ -406,7 +406,7 @@ Colonoscopy can:
 - Tissue biopsy if needed
 - 30-60 minutes typically
 
-## After the Procedure
+After the Procedure
 
 - Recovery area observation
 - Diet restrictions lifted gradually
@@ -427,11 +427,11 @@ Colonoscopy can:
     image: '/images/blog/fatty-liver.jpg',
     content: `Fatty liver disease affects approximately 25% of the global population. The good news: it's often reversible.
 
-## Understanding NAFLD
+Understanding NAFLD
 
 Non-alcoholic fatty liver disease (NAFLD) involves fat accumulation in liver cells despite minimal alcohol consumption.
 
-## Risk Factors
+Risk Factors
 
 - Obesity
 - Diabetes
@@ -440,7 +440,7 @@ Non-alcoholic fatty liver disease (NAFLD) involves fat accumulation in liver cel
 - Insulin resistance
 - Sedentary lifestyle
 
-## NAFLD Progression
+NAFLD Progression
 
 1. Simple steatosis (fatty liver)
 2. NASH (with inflammation)
@@ -448,7 +448,7 @@ Non-alcoholic fatty liver disease (NAFLD) involves fat accumulation in liver cel
 4. Cirrhosis
 5. Liver failure
 
-## Can It Be Reversed?
+Can It Be Reversed?
 
 YES! Early stages are reversible through:
 
@@ -458,7 +458,7 @@ YES! Early stages are reversible through:
 4. Managing diabetes
 5. Treating cholesterol
 
-## Dietary Recommendations
+Dietary Recommendations
 
 - Mediterranean diet
 - Whole grains
@@ -467,7 +467,7 @@ YES! Early stages are reversible through:
 - Limited sugar
 - Reduced refined carbs
 
-## Medical Management
+Medical Management
 
 - No specific medications
 - Treat underlying conditions
@@ -475,7 +475,7 @@ YES! Early stages are reversible through:
 - Regular monitoring
 - Liver ultrasound screening
 
-## Prognosis
+Prognosis
 
 With lifestyle changes, many people normalize liver function and prevent progression.`
   },
@@ -493,21 +493,21 @@ With lifestyle changes, many people normalize liver function and prevent progres
     image: '/images/blog/digestion.jpg',
     content: `Good digestion is fundamental to overall health. Learn how your digestive system works.
 
-## Types of Digestive Enzymes
+Types of Digestive Enzymes
 
 1. Amylase - breaks down carbohydrates
 2. Protease - breaks down proteins
 3. Lipase - breaks down fats
 4. Maltase - breaks down sugars
 
-## Where Enzymes Are Produced
+Where Enzymes Are Produced
 
 - Salivary glands
 - Stomach
 - Small intestine
 - Pancreas
 
-## Optimal Digestion
+Optimal Digestion
 
 - Proper enzyme production
 - Balanced pH
@@ -515,7 +515,7 @@ With lifestyle changes, many people normalize liver function and prevent progres
 - Healthy gut bacteria
 - Sufficient fiber
 
-## Signs of Enzyme Deficiency
+Signs of Enzyme Deficiency
 
 - Bloating
 - Gas
@@ -523,7 +523,7 @@ With lifestyle changes, many people normalize liver function and prevent progres
 - Undigested food in stool
 - Nutrient deficiencies
 
-## Ways to Support Digestion
+Ways to Support Digestion
 
 1. Eat slowly and chew thoroughly
 2. Include fermented foods
@@ -533,7 +533,7 @@ With lifestyle changes, many people normalize liver function and prevent progres
 6. Exercise regularly
 7. Consume whole foods
 
-## When to See a Specialist
+When to See a Specialist
 
 Persistent digestive issues warrant professional evaluation.`
   },
@@ -551,11 +551,11 @@ Persistent digestive issues warrant professional evaluation.`
     image: '/images/blog/post-endoscopy-diet.jpg',
     content: `Proper nutrition after endoscopy supports healing and recovery. Here's what you should eat.
 
-## Immediately After (First 2 Hours)
+Immediately After (First 2 Hours)
 
 Wait before eating or drinking to ensure sedation wears off completely.
 
-## First 24 Hours
+First 24 Hours
 
 Soft, easy-to-digest foods:
 - Broths and soups
@@ -566,7 +566,7 @@ Soft, easy-to-digest foods:
 - Soft fruits (banana, applesauce)
 - Toast
 
-## Days 2-3
+Days 2-3
 
 Gradually introduce:
 - Lean proteins
@@ -575,7 +575,7 @@ Gradually introduce:
 - Pasta
 - Chicken
 
-## Foods to Avoid
+Foods to Avoid
 
 - Spicy foods
 - Alcohol
@@ -584,14 +584,14 @@ Gradually introduce:
 - High-fat foods
 - Hot beverages
 
-## Hydration
+Hydration
 
 - Water is best
 - Herbal tea
 - Coconut water
 - Avoid carbonated drinks initially
 
-## Special Considerations
+Special Considerations
 
 If polyps were removed:
 - Follow specific dietary recommendations
@@ -614,7 +614,7 @@ Contact your doctor if experiencing pain or complications.`
     image: '/images/blog/stress-gut.jpg',
     content: `The gut-brain axis is powerful. Stress directly impacts digestion and GI health.
 
-## How Stress Affects Digestion
+How Stress Affects Digestion
 
 1. Reduces stomach acid
 2. Impairs nutrient absorption
@@ -623,7 +623,7 @@ Contact your doctor if experiencing pain or complications.`
 5. Increases intestinal sensitivity
 6. Alters gut motility
 
-## Stress-Related Conditions
+Stress-Related Conditions
 
 - IBS symptoms worsen
 - Ulcers develop/worsen
@@ -631,36 +631,36 @@ Contact your doctor if experiencing pain or complications.`
 - Food intolerances increase
 - Constipation or diarrhea
 
-## Stress Management Techniques
+Stress Management Techniques
 
-### Physical Activity
+#Physical Activity
 - 30 minutes daily exercise
 - Walking, yoga, swimming
 - Reduces stress hormones
 
-### Mindfulness Practices
+#Mindfulness Practices
 - Meditation
 - Deep breathing
 - Progressive muscle relaxation
 
-### Dietary Support
+#Dietary Support
 - Omega-3 rich foods
 - Probiotic foods
 - Limit caffeine
 - Regular meal timing
 
-### Sleep Hygiene
+#Sleep Hygiene
 - 7-9 hours nightly
 - Consistent schedule
 - Dark, cool room
 - Limit screens before bed
 
-### Professional Support
+#Professional Support
 - Therapy (CBT)
 - Counseling
 - Medical treatment if needed
 
-## Integration Approach
+Integration Approach
 
 Holistic treatment addresses both physical and psychological aspects.`
   },
@@ -678,17 +678,17 @@ Holistic treatment addresses both physical and psychological aspects.`
     image: '/images/blog/probiotics.jpg',
     content: `Your gut microbiome contains trillions of bacteria crucial for health. Probiotics support beneficial bacteria.
 
-## What Are Probiotics?
+What Are Probiotics?
 
 Live beneficial bacteria that support digestive and immune health.
 
-## Key Strains
+Key Strains
 
 - Lactobacillus
 - Bifidobacterium
 - Saccharomyces boulardii
 
-## Benefits
+Benefits
 
 - Improved digestion
 - Enhanced immunity
@@ -697,7 +697,7 @@ Live beneficial bacteria that support digestive and immune health.
 - Potential allergy relief
 - Mental health support
 
-## Food Sources
+Food Sources
 
 - Yogurt (with live cultures)
 - Kefir
@@ -707,7 +707,7 @@ Live beneficial bacteria that support digestive and immune health.
 - Tempeh
 - Kombucha
 
-## Choosing Supplements
+Choosing Supplements
 
 - Look for CFU count
 - Multiple strains
@@ -715,7 +715,7 @@ Live beneficial bacteria that support digestive and immune health.
 - Reputable manufacturer
 - Check expiration
 
-## When to Use
+When to Use
 
 - Antibiotic courses
 - After food poisoning
@@ -723,7 +723,7 @@ Live beneficial bacteria that support digestive and immune health.
 - Immune support
 - During travel
 
-## Potential Side Effects
+Potential Side Effects
 
 - Temporary bloating
 - Mild gas
@@ -745,12 +745,12 @@ Consult before use if immunocompromised.`
     image: '/images/blog/hemorrhoids.jpg',
     content: `Hemorrhoids are common and treatable. Here's what you need to know.
 
-## Types
+Types
 
 Internal: Inside the rectum
 External: Under the skin around the anus
 
-## Causes
+Causes
 
 - Straining during bowel movements
 - Chronic constipation
@@ -759,7 +759,7 @@ External: Under the skin around the anus
 - Pregnancy
 - Heavy lifting
 
-## Symptoms
+Symptoms
 
 - Itching
 - Pain during bowel movements
@@ -767,7 +767,7 @@ External: Under the skin around the anus
 - Swelling
 - Lumps around anus
 
-## Prevention Strategies
+Prevention Strategies
 
 1. High-fiber diet
 2. Adequate hydration
@@ -777,7 +777,7 @@ External: Under the skin around the anus
 6. Limit time on toilet
 7. Avoid prolonged sitting
 
-## At-Home Treatment
+At-Home Treatment
 
 - Warm baths
 - Over-the-counter creams
@@ -785,14 +785,14 @@ External: Under the skin around the anus
 - Hydration
 - Ice packs for relief
 
-## Medical Treatments
+Medical Treatments
 
 - Rubber band ligation
 - Sclerotherapy
 - Infrared coagulation
 - Hemorrhoidectomy (surgery)
 
-## When to See a Doctor
+When to See a Doctor
 
 Persistent symptoms warrant professional evaluation.`
   },
@@ -810,11 +810,11 @@ Persistent symptoms warrant professional evaluation.`
     image: '/images/blog/celiac.jpg',
     content: `Celiac disease and gluten sensitivity are distinct conditions requiring different management approaches.
 
-## Celiac Disease
+Celiac Disease
 
 Autoimmune disorder triggered by gluten (wheat, barley, rye protein).
 
-### Symptoms
+#Symptoms
 - Abdominal pain
 - Diarrhea
 - Bloating
@@ -822,37 +822,37 @@ Autoimmune disorder triggered by gluten (wheat, barley, rye protein).
 - Malnutrition
 - Fatigue
 
-### Diagnosis
+#Diagnosis
 - Serology testing (tissue transglutaminase antibodies)
 - Endoscopy with biopsy
 - Genetic testing
 
-### Management
+#Management
 - Strict gluten-free diet
 - Regular monitoring
 - Nutritional supplementation
 - Bone density screening
 
-## Non-Celiac Gluten Sensitivity
+Non-Celiac Gluten Sensitivity
 
 Adverse reaction to gluten without autoimmune features.
 
-### Differences
+#Differences
 - No intestinal damage
 - Negative celiac serology
 - Similar symptoms
 - Improving on gluten-free diet
 
-## Wheat Allergy
+Wheat Allergy
 
 Immune reaction to wheat proteins.
 
-### Distinct from both conditions
+#Distinct from both conditions
 - Can outgrow in children
 - IgE-mediated
 - Can cause anaphylaxis
 
-## Gluten-Free Living
+Gluten-Free Living
 
 - Read food labels carefully
 - Risk of cross-contamination
@@ -860,7 +860,7 @@ Immune reaction to wheat proteins.
 - Support groups available
 - Professional guidance helpful
 
-## Prognosis
+Prognosis
 
 With proper management, both conditions have excellent outcomes.`
   },
@@ -878,54 +878,54 @@ With proper management, both conditions have excellent outcomes.`
     image: '/images/blog/ibd.jpg',
     content: `Inflammatory Bowel Disease includes two main types with different characteristics and treatment approaches.
 
-## Ulcerative Colitis
+Ulcerative Colitis
 
 Inflammation limited to colon and rectum.
 
-### Characteristics
+#Characteristics
 - Continuous inflammation
 - Affects mucosal layer
 - Begins in rectum
 - Can lead to cancer
 
-### Symptoms
+#Symptoms
 - Bloody diarrhea
 - Urgency
 - Tenesmus
 - Weight loss
 
-## Crohn's Disease
+Crohn's Disease
 
 Can affect entire GI tract (mouth to anus).
 
-### Characteristics
+#Characteristics
 - Patchy inflammation
 - Affects all layers
 - Skip lesions
 - Higher complication rate
 
-### Symptoms
+#Symptoms
 - Abdominal pain
 - Diarrhea (usually nonbloody)
 - Weight loss
 - Mouth sores
 - Perirectal disease
 
-## Key Differences
+Key Differences
 
 - Location affected
 - Continuity of inflammation
 - Depth of inflammation
 - Extraintestinal manifestations
 
-## Diagnosis
+Diagnosis
 
 - Colonoscopy with biopsy
 - CT/MRI imaging
 - Blood tests
 - Stool studies
 
-## Treatment
+Treatment
 
 - Anti-inflammatory drugs
 - Immunosuppressants
@@ -933,14 +933,14 @@ Can affect entire GI tract (mouth to anus).
 - Surgery for complications
 - Nutritional support
 
-## Lifestyle Management
+Lifestyle Management
 
 - Avoid triggers
 - Stress management
 - Adequate nutrients
 - Support groups
 
-## Prognosis
+Prognosis
 
 Modern treatments have improved significantly, with many people achieving remission.`
   },
@@ -958,7 +958,7 @@ Modern treatments have improved significantly, with many people achieving remiss
     image: '/images/blog/liver-transplant.jpg',
     content: `Liver transplantation is life-saving for patients with end-stage liver disease.
 
-## Who Needs a Transplant?
+Who Needs a Transplant?
 
 - Cirrhosis
 - Acute liver failure
@@ -968,7 +968,7 @@ Modern treatments have improved significantly, with many people achieving remiss
 - Primary biliary cholangitis
 - Primary sclerosing cholangitis
 
-## Eligibility Criteria
+Eligibility Criteria
 
 - Age and overall health
 - No active cancer (except HCC)
@@ -977,20 +977,20 @@ Modern treatments have improved significantly, with many people achieving remiss
 - Psychosocial factors
 - Financial considerations
 
-## Types of Transplants
+Types of Transplants
 
-### Orthotopic (Deceased donor)
+#Orthotopic (Deceased donor)
 - Entire liver replaced
 - Waiting list
 - May be urgent
 
-### Living donor
+#Living donor
 - Partial liver from relative/friend
 - Risks and benefits
 - Higher success rates
 - Coordination important
 
-## Pre-Transplant Evaluation
+Pre-Transplant Evaluation
 
 - Extensive testing
 - Organ compatibility
@@ -999,7 +999,7 @@ Modern treatments have improved significantly, with many people achieving remiss
 - Psychological evaluation
 - Financial counseling
 
-## The Surgery
+The Surgery
 
 - 4-8 hour procedure
 - General anesthesia
@@ -1007,7 +1007,7 @@ Modern treatments have improved significantly, with many people achieving remiss
 - Donor liver implanted
 - Vascular and bile duct anastomosis
 
-## Post-Transplant Life
+Post-Transplant Life
 
 - Lifelong immunosuppression
 - monthly check-ups initially
@@ -1018,7 +1018,7 @@ Modern treatments have improved significantly, with many people achieving remiss
 - Work possible
 - Pregnancy possible
 
-## Complications
+Complications
 
 Short-term:
 - Rejection
@@ -1032,13 +1032,13 @@ Long-term:
 - Malignancy risk
 - Metabolic issues
 
-## Success Rates
+Success Rates
 
 - 1-year survival: 85-90%
 - 5-year survival: 70-75%
 - Excellent quality of life improvement
 
-## Current Advances
+Current Advances
 
 - Dr. Poudel trained in latest techniques
 - LTSI certification ensures expertise
@@ -1059,11 +1059,11 @@ Long-term:
     image: '/images/blog/eus.jpg',
     content: `Endoscopic Ultrasound (EUS) combines endoscopy with ultrasound for detailed imaging.
 
-## What is EUS?
+What is EUS?
 
 Minimally invasive procedure using a special scope with ultrasound capabilities inserted through mouth or anus.
 
-## Advantages
+Advantages
 
 - High resolution images
 - Detailed layer-by-layer visualization
@@ -1072,7 +1072,7 @@ Minimally invasive procedure using a special scope with ultrasound capabilities 
 - Minimal invasion
 - Accurate diagnosis
 
-## Diagnostic Uses
+Diagnostic Uses
 
 - Pancreatic disorders
 - Bile duct imaging
@@ -1081,7 +1081,7 @@ Minimally invasive procedure using a special scope with ultrasound capabilities 
 - Lymph node assessment
 - Unexplained bleeding
 
-## Therapeutic Applications
+Therapeutic Applications
 
 - Tissue biopsy (FNA/FNB)
 - Cyst drainage
@@ -1090,14 +1090,14 @@ Minimally invasive procedure using a special scope with ultrasound capabilities 
 - Fiducial placement
 - Ablation therapies
 
-## Preparation
+Preparation
 
 - Similar to endoscopy
 - Fasting required
 - Sedation provided
 - Anticoagulants may need adjustment
 
-## Procedure
+Procedure
 
 - Takes 30-60 minutes
 - Minimal discomfort
@@ -1105,14 +1105,14 @@ Minimally invasive procedure using a special scope with ultrasound capabilities 
 - Tissue sampling possible
 - Therapeutic intervention if needed
 
-## Safety
+Safety
 
 - Complication rate: <1%
 - Generally safe
 - Perforation risk: minimal
 - Infection risk: very low
 
-## Results
+Results
 
 Rapid diagnosis allows timely treatment decisions.`
   },
@@ -1130,11 +1130,11 @@ Rapid diagnosis allows timely treatment decisions.`
     image: '/images/blog/ercp.jpg',
     content: `ERCP (Endoscopic Retrograde Cholangiopancreatography) treats bile and pancreatic duct problems.
 
-## What is ERCP?
+What is ERCP?
 
 Endoscopic procedure combining X-ray with endoscopy to visualize and treat pancreatic and biliary ducts.
 
-## Diagnostic Indications
+Diagnostic Indications
 
 - Jaundice evaluation
 - Pancreatitis
@@ -1142,7 +1142,7 @@ Endoscopic procedure combining X-ray with endoscopy to visualize and treat pancr
 - Pancreatic duct strictures
 - Suspected stones
 
-## Therapeutic Indications
+Therapeutic Indications
 
 - Gallstone removal
 - Stent placement
@@ -1150,7 +1150,7 @@ Endoscopic procedure combining X-ray with endoscopy to visualize and treat pancr
 - Debris extraction
 - Sphincterotomy
 
-## Preparation
+Preparation
 
 - Fasting 6-8 hours
 - Medication adjustments
@@ -1158,7 +1158,7 @@ Endoscopic procedure combining X-ray with endoscopy to visualize and treat pancr
 - Consent discussion
 - NPO status
 
-## The Procedure
+The Procedure
 
 - Scope passed orally
 - Bile duct identified
@@ -1167,7 +1167,7 @@ Endoscopic procedure combining X-ray with endoscopy to visualize and treat pancr
 - Therapeutic intervention
 - Duration: 30-90 minutes
 
-## Therapeutic Interventions
+Therapeutic Interventions
 
 - Papillotomy (sphincter cutting)
 - Stone extraction
@@ -1175,13 +1175,13 @@ Endoscopic procedure combining X-ray with endoscopy to visualize and treat pancr
 - Balloon dilation
 - Lithotripsy
 
-## Success Rate
+Success Rate
 
 - Stone removal: >90%
 - Stricture management: 60-80%
 - Depends on indication
 
-## Complications
+Complications
 
 - Acute pancreatitis (3-5%)
 - Bleeding (1-3%)
@@ -1189,7 +1189,7 @@ Endoscopic procedure combining X-ray with endoscopy to visualize and treat pancr
 - Infection (rare)
 - Usually manageable
 
-## Post-Procedure
+Post-Procedure
 
 - Medical monitoring
 - Pain management
@@ -1197,7 +1197,7 @@ Endoscopic procedure combining X-ray with endoscopy to visualize and treat pancr
 - Follow-up care
 - Activity restriction
 
-## When Necessary
+When Necessary
 
 Can be life-saving for serious biliary obstruction or pancreatitis.`
   },
@@ -1215,31 +1215,31 @@ Can be life-saving for serious biliary obstruction or pancreatitis.`
     image: '/images/blog/peptic-ulcer.jpg',
     content: `Peptic ulcers are common but treatable. Modern therapy has revolutionized management.
 
-## What is a Peptic Ulcer?
+What is a Peptic Ulcer?
 
 A break in the lining of the stomach, duodenum, or esophagus.
 
-## Causes
+Causes
 
-### H. pylori Infection (60%)
+#H. pylori Infection (60%)
 - Bacterial colonization
 - Triggers inflammation
 - Treatable with antibiotics
 
-### NSAIDs (30%)
+#NSAIDs (30%)
 - Aspirin
 - Ibuprofen
 - Naproxen
 - Celecoxib
 - Impairs protective mechanisms
 
-### Other Causes (10%)
+#Other Causes (10%)
 - Stress
 - Zollinger-Ellison syndrome
 - Malignancy
 - Radiation
 
-## Symptoms
+Symptoms
 
 - Abdominal pain (burning)
 - Bloating
@@ -1248,14 +1248,14 @@ A break in the lining of the stomach, duodenum, or esophagus.
 - Vomiting
 - Dark/bloody stools (severe)
 
-## Diagnosis
+Diagnosis
 
 - Endoscopy (gold standard)
 - H. pylori testing
 - Blood tests
 - Stool antigen
 
-## H. pylori Treatment
+H. pylori Treatment
 
 Triple or quadruple therapy:
 - Two antibiotics
@@ -1264,14 +1264,14 @@ Triple or quadruple therapy:
 - 10-14 days treatment
 - Excellent cure rates (90%+)
 
-## NSAID-Related Ulcers
+NSAID-Related Ulcers
 
 - Stop NSAID if possible
 - Use safer alternative
 - Add PPI or H2 blocker
 - Protective prostaglandins
 
-## Lifestyle Modifications
+Lifestyle Modifications
 
 - Stress reduction
 - Spicy food avoidance
@@ -1279,7 +1279,7 @@ Triple or quadruple therapy:
 - Smoking cessation
 - Alcohol moderation
 
-## Prognosis
+Prognosis
 
 With proper treatment, >95% heal without complications.`
   },
@@ -1297,11 +1297,11 @@ With proper treatment, >95% heal without complications.`
     image: '/images/blog/constipation.jpg',
     content: `Constipation affects many people. Most cases are manageable with lifestyle changes.
 
-## Definitions
+Definitions
 
 Fewer than 3 bowel movements per week, or difficult passage.
 
-## Causes
+Causes
 
 - Low fiber diet
 - Dehydration
@@ -1313,7 +1313,7 @@ Fewer than 3 bowel movements per week, or difficult passage.
 - Neurological conditions
 - Structural issues
 
-## Risk Factors
+Risk Factors
 
 - Age over 65
 - Female gender
@@ -1321,28 +1321,28 @@ Fewer than 3 bowel movements per week, or difficult passage.
 - Medications (opioids, antacids)
 - Lack of physical activity
 
-## Treatment Approaches
+Treatment Approaches
 
-### Dietary
+#Dietary
 - Increase fiber gradually
 - 25-30g daily
 - Fruits and vegetables
 - Whole grains
 - Legumes
 
-### Hydration
+#Hydration
 - 6-8 glasses water
 - Limit caffeine
 - Reduce alcohol
 
-### Lifestyle
+#Lifestyle
 - Regular exercise
 - Establish routine
 - Don't suppress urges
 - Take time for bowel movements
 - Relaxation
 
-### Medications
+#Medications
 
 Mild:
 - Stool softeners
@@ -1356,13 +1356,13 @@ Severe:
 - Stimulant laxatives
 - Prescription agents
 
-### Medical Interventions
+#Medical Interventions
 
 - Biofeedback
 - Colonic irrigation
 - Surgery (rare)
 
-## When to Seek Help
+When to Seek Help
 
 - Sudden change in habits
 - Persistent constipation
@@ -1385,12 +1385,12 @@ Severe:
     image: '/images/blog/diarrhea.jpg',
     content: `Diarrhea is common and usually self-limited, but can indicate serious conditions.
 
-## Types
+Types
 
 Acute: Less than 4 weeks duration
 Chronic: More than 4 weeks duration
 
-## Causes - Acute
+Causes - Acute
 
 - Viral infection (most common)
 - Bacterial infection
@@ -1399,7 +1399,7 @@ Chronic: More than 4 weeks duration
 - Antibiotics
 - Dietary changes
 
-## Causes - Chronic
+Causes - Chronic
 
 - IBS
 - Inflammatory bowel disease
@@ -1409,7 +1409,7 @@ Chronic: More than 4 weeks duration
 - Endocrine disorders
 - Structural abnormalities
 
-## Symptoms to Monitor
+Symptoms to Monitor
 
 - Frequency and consistency
 - Presence of blood/mucus
@@ -1417,7 +1417,7 @@ Chronic: More than 4 weeks duration
 - Abdominal pain
 - Weight changes
 
-## Home Management - Acute
+Home Management - Acute
 
 - Hydration (key)
 - Electrolyte replacement
@@ -1425,28 +1425,28 @@ Chronic: More than 4 weeks duration
 - Rest
 - Gradual food reintroduction
 
-## Hydration Solutions
+Hydration Solutions
 
 - Oral rehydration solutions
 - Water-based drinks
 - Broths
 - Avoid high-sugar drinks
 
-## Medications
+Medications
 
 - Antimotility agents (careful use)
 - Bismuth subsalicylate
 - Antibiotics (if bacterial)
 - Address underlying cause
 
-## Dietary Modifications
+Dietary Modifications
 
 - BRAT diet (Bananas, Rice, Applesauce, Toast)
 - Avoid dairy initially
 - Limit fat and fiber initially
 - Gradual reintroduction
 
-## When to Seek Medical Care
+When to Seek Medical Care
 
 - Severe dehydration
 - Blood or mucus present
@@ -1472,7 +1472,7 @@ Proper evaluation ensures appropriate treatment.`
     image: '/images/blog/colon-cancer.jpg',
     content: `Colorectal cancer is largely preventable with proper screening and lifestyle measures.
 
-## Risk Factors
+Risk Factors
 
 - Age over 45
 - Family history
@@ -1483,7 +1483,7 @@ Proper evaluation ensures appropriate treatment.`
 - Red meat consumption
 - Polyps
 
-## Prevention Strategies
+Prevention Strategies
 
 Lifestyle Modifications:
 - Increase physical activity
@@ -1494,46 +1494,46 @@ Lifestyle Modifications:
 - Limit alcohol
 - Adequate calcium and vitamin D
 
-## Screening Methods
+Screening Methods
 
-### Colonoscopy
+#Colonoscopy
 - Gold standard
 - Can remove polyps
 - Every 10 years if normal
 
-### FIT (Fecal Immunochemical Test)
+#FIT (Fecal Immunochemical Test)
 - Detects blood in stool
 - Annually if normal
 - Non-invasive
 
-### FOBT (Fecal Occult Blood Test)
+#FOBT (Fecal Occult Blood Test)
 - Older method
 - Annual testing
 
-### CT Colonography
+#CT Colonography
 - Virtual colonoscopy
 - Every 5 years if normal
 - Good for those refusing colonoscopy
 
-### Sigmoidoscopy
+#Sigmoidoscopy
 - Examines rectum and sigmoid colon
 - Every 5 years
 - Used with FIT
 
-## Screening Guidelines
+Screening Guidelines
 
 - Start at age 45
 - More frequent if risk factors
 - Continue to age 75
 - Individualize after 75
 
-## Early Detection
+Early Detection
 
 - Polyp detection and removal prevents 75-90% of cancers
 - Early-stage cancer has excellent prognosis
 - Regular screening is the best investment
 
-## Current Research
+Current Research
 
 Dr. Poudel stays updated on latest screening technologies and techniques.`
   },
@@ -1551,18 +1551,18 @@ Dr. Poudel stays updated on latest screening technologies and techniques.`
     image: '/images/blog/esophageal-cancer.jpg',
     content: `Esophageal cancer awareness and early detection are crucial for improving outcomes.
 
-## Types
+Types
 
-### Squamous Cell Carcinoma
+#Squamous Cell Carcinoma
 - Upper and middle esophagus
 - Associated with tobacco and alcohol
 
-### Adenocarcinoma
+#Adenocarcinoma
 - Lower esophagus
 - Associated with Barrett's esophagus
 - More common in developed countries
 
-## Risk Factors
+Risk Factors
 
 - Tobacco use
 - Alcohol consumption
@@ -1573,7 +1573,7 @@ Dr. Poudel stays updated on latest screening technologies and techniques.`
 - Caustic injury
 - Achalasia
 
-## Symptoms
+Symptoms
 
 - Difficulty swallowing
 - Chest pain
@@ -1582,35 +1582,35 @@ Dr. Poudel stays updated on latest screening technologies and techniques.`
 - Persistent cough
 - Vomiting
 
-## Diagnosis
+Diagnosis
 
 - Endoscopy with biopsy
 - CT imaging
 - Endoscopic ultrasound
 - Staging investigations
 
-## Treatment
+Treatment
 
 - Surgery (esophagectomy)
 - Chemotherapy and radiation
 - Palliative care
 - Combined modality therapy
 
-## Prognosis
+Prognosis
 
 - Depends on stage at diagnosis
 - Early-stage: better outcomes
 - Late-stage: guarded
 - Overall 5-year survival: 20%
 
-## Prevention
+Prevention
 
 - Avoid tobacco and alcohol
 - Manage GERD
 - Maintain healthy weight
 - Regular screening if at risk
 
-## Barrett's Esophagus Surveillance
+Barrett's Esophagus Surveillance
 
 - Endoscopy every 2-3 years
 - More frequent if dysplasia present
@@ -1630,11 +1630,11 @@ Dr. Poudel stays updated on latest screening technologies and techniques.`
     image: '/images/blog/pancreatitis.jpg',
     content: `Pancreatitis ranges from mild to life-threatening. Understanding it is crucial.
 
-## Acute Pancreatitis
+Acute Pancreatitis
 
 Sudden inflammation, usually self-limited.
 
-### Causes
+#Causes
 - Gallstones (most common)
 - Alcohol
 - Medications
@@ -1644,7 +1644,7 @@ Sudden inflammation, usually self-limited.
 - Trauma
 - Idiopathic
 
-### Symptoms
+#Symptoms
 - Upper abdominal pain (sudden)
 - Pain radiating to back
 - Nausea and vomiting
@@ -1652,13 +1652,13 @@ Sudden inflammation, usually self-limited.
 - Tachycardia
 - Possible shock
 
-### Diagnosis
+#Diagnosis
 - Elevated amylase and lipase
 - Imaging (ultrasound, CT)
 - Blood glucose changes
 - Liver function tests
 
-### Treatment
+#Treatment
 - Hospitalization (often)
 - Nil orally initially
 - Intravenous fluids
@@ -1666,18 +1666,18 @@ Sudden inflammation, usually self-limited.
 - Treat underlying cause
 - Monitor for complications
 
-### Complications
+#Complications
 - Necrosis
 - Infection
 - Systemic inflammatory response
 - Organ failure
 - Pseudocyst formation
 
-## Chronic Pancreatitis
+Chronic Pancreatitis
 
 Long-standing inflammation causing permanent damage.
 
-### Causes
+#Causes
 - Chronic alcohol use (major)
 - Obstruction
 - Genetic mutations
@@ -1685,14 +1685,14 @@ Long-standing inflammation causing permanent damage.
 - Metabolic
 - Idiopathic
 
-### Symptoms
+#Symptoms
 - Chronic pain
 - Steatorrhea
 - Malabsorption
 - Diabetes
 - Weight loss
 
-### Treatment
+#Treatment
 - Pain management
 - Enzyme supplements
 - Management of complications
@@ -1700,11 +1700,11 @@ Long-standing inflammation causing permanent damage.
 - Dietary modifications
 - ERCP for obstruction
 
-## Pancreatic Cancer Risk
+Pancreatic Cancer Risk
 
 Increased in chronic pancreatitis – requires surveillance.
 
-## Management with Dr. Poudel
+Management with Dr. Poudel
 
 Specialized expertise in complex pancreatic cases.`
   },
@@ -1722,18 +1722,18 @@ Specialized expertise in complex pancreatic cases.`
     image: '/images/blog/gallstones.jpg',
     content: `Gallstones are common, but only symptomatic ones require treatment.
 
-## What Are Gallstones?
+What Are Gallstones?
 
 Hardened deposits of bile in the gallbladder.
 
-## Risk Factors (4 Fs)
+Risk Factors (4 Fs)
 
 - Female
 - Forty (age)
 - Fat (obesity)
 - Fertile (multiparity)
 
-## Additional Factors
+Additional Factors
 
 - Rapid weight loss
 - Sedentary lifestyle
@@ -1742,18 +1742,18 @@ Hardened deposits of bile in the gallbladder.
 - Liver disease
 - Certain medications
 
-## Types
+Types
 
-### Cholesterol Stones (80%)
+#Cholesterol Stones (80%)
 - Most common
 - Form from bile supersaturation
 
-### Pigment Stones (20%)
+#Pigment Stones (20%)
 - Bilirubin-based
 - Often due to hemolysis
 - Associated with cirrhosis
 
-## Asymptomatic vs. Symptomatic
+Asymptomatic vs. Symptomatic
 
 Asymptomatic (80%):
 - No treatment needed
@@ -1765,7 +1765,7 @@ Symptomatic:
 - Pancreatitis
 - Requires intervention
 
-## Biliary Colic
+Biliary Colic
 
 Classic presentation:
 - Right upper quadrant pain
@@ -1775,26 +1775,26 @@ Classic presentation:
 - Lasts 30 minutes to several hours
 - May radiate to back or shoulder
 
-## Diagnosis
+Diagnosis
 
 - Ultrasound (first-line)
 - CT imaging
 - HIDA scan
 - Endoscopic ultrasound
 
-## Treatment
+Treatment
 
-### Medical Management
+#Medical Management
 - High-dose ursodeoxycholic acid
 - Long-term therapy
 - Success rate 50% (rarely used)
 
-### Surgical Management
+#Surgical Management
 - Laparoscopic cholecystectomy (standard)
 - Open surgery (if complicated)
 - Gold standard treatment
 
-### Complications
+#Complications
 
 If left untreated:
 - Cholecystitis
@@ -1804,7 +1804,7 @@ If left untreated:
 - Gallbladder perforation
 - Gallbladder cancer (rare but increased risk)
 
-## Outcomes
+Outcomes
 
 Cholecystectomy has excellent outcomes with symptomatic relief in >90% of cases.`
   }

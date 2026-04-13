@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { doctorProfile } from '@/data/doctor';
 import { motion } from 'framer-motion';
-import { Award, BookOpen, Stethoscope } from 'lucide-react';
 
 export default function AboutSection() {
   return (
@@ -50,36 +49,6 @@ export default function AboutSection() {
               {doctorProfile.bio}
             </p>
 
-            {/* Achievements Grid */}
-            <div className="grid grid-cols-1 gap-4 mb-8">
-              {doctorProfile.achievements.slice(0, 3).map((achievement, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-4 bg-gradient-to-r from-emerald-50 to-green-50 dark:from-emerald-900/30 dark:to-green-900/30 p-4 rounded-lg border border-emerald-200 dark:border-emerald-700/50"
-                >
-                  <Award size={24} className="text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">{achievement.title}</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">{achievement.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Qualifications Summary */}
-            <div className="grid grid-cols-2 gap-4 bg-gradient-to-r from-emerald-100 to-green-100 dark:from-emerald-900/40 dark:to-green-900/40 p-6 rounded-xl border border-emerald-200/50 dark:border-emerald-700/50">
-              <div>
-                <div className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">{doctorProfile.qualifications.length}</div>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Qualifications</p>
-              </div>
-              <div>
-                <div className="text-2xl font-bold bg-gradient-to-r from-green-600 to-teal-600 dark:from-green-400 dark:to-teal-400 bg-clip-text text-transparent">{doctorProfile.experience.length}</div>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Positions Held</p>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>

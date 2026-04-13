@@ -2,7 +2,8 @@
 
 import { services } from '@/data/services';
 import { motion } from 'framer-motion';
-import { Check } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ServicesSection() {
   return (
@@ -22,8 +23,8 @@ export default function ServicesSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.slice(0, 3).map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -44,6 +45,13 @@ export default function ServicesSection() {
                   </li>
                 ))}
               </ul>
+              <Link 
+                href={`/services/${service.id}`} 
+                className="inline-flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 hover:text-green-600 dark:hover:text-green-400 font-semibold transition text-sm mt-4"
+              >
+                <span>Learn More</span>
+                <ArrowRight size={16} />
+              </Link>
             </motion.div>
           ))}
         </div>

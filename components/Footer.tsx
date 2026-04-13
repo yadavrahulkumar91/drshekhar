@@ -45,11 +45,18 @@ export default function Footer() {
             </div>
             <div className="flex items-center space-x-2">
               <Send size={16} className="text-emerald-400" />
-              <a href="https://wa.me/977-9765199777" className="hover:text-emerald-400 transition">WhatsApp</a>
+              <a href="https://wa.me/9779765199777" className="hover:text-emerald-400 transition">WhatsApp</a>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin size={16} className="text-emerald-400" />
-              <span>Kathmandu, Nepal</span>
+              <a 
+                href="https://maps.google.com/maps?q=National+Gastro+Liver+Center,+M89C+2JG+Karmachari+Sanchaykosh+Bhawan,+Hospital+Rd,+Lalitpur+44700,+Nepal" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-emerald-400 transition"
+              >
+                Kathmandu, Nepal
+              </a>
             </div>
           </div>
         </div>

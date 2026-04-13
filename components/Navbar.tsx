@@ -25,7 +25,9 @@ export default function Navbar() {
             <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Home</Link>
             <Link href="/about" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">About</Link>
             <Link href="/services" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Services</Link>
-            <Link href="/blog" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Blog</Link>
+            <Link href="/gallery" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Gallery</Link>
+            <Link href="/testimonials" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Testimonials</Link>
+            <Link href="/blog" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Blogs</Link>
             <Link href="/contact" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Contact</Link>
           </div>
 
@@ -50,6 +52,8 @@ export default function Navbar() {
             <Link href="/" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Home</Link>
             <Link href="/about" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">About</Link>
             <Link href="/services" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Services</Link>
+            <Link href="/gallery" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Gallery</Link>
+            <Link href="/testimonials" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Testimonials</Link>
             <Link href="/blog" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Blog</Link>
             <Link href="/contact" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Contact</Link>
           </div>
