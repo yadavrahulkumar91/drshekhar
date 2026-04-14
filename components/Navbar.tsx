@@ -35,8 +35,8 @@ export default function Navbar() {
           </div>
 
           {/* Right Side */}
-          {/* <div className="flex items-center space-x-4">
-            <button 
+          <div className="flex items-center space-x-4">
+            {/* <button 
               onClick={() => {
                 console.log('Button clicked!');
                 toggleTheme();
@@ -46,13 +46,13 @@ export default function Navbar() {
               type="button"
             >
               {isDark ? <Sun size={20} className="text-amber-500" /> : <Moon size={20} className="text-slate-700" />}
-            </button>
+            </button> */}
 
-           
+            {/* Mobile Menu Button */}
             <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-          </div> */}
+          </div>
         </div>
 
         {/* Mobile Menu */}
