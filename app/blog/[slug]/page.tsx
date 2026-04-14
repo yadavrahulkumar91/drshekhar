@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock, Share2, Twitter, Facebook, MessageCircle } from 'lucide-react';
+import ImageWithFallback from '@/components/ImageWithFallback';
 
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const params = await props.params;
@@ -80,11 +81,15 @@ export default async function BlogPost(props: { params: Promise<{ slug: string }
         </div>
 
         {/* Featured Image */}
-        <div className="mb-12 h-96 bg-gradient-to-br from-emerald-200 to-teal-200 dark:from-emerald-800 dark:to-teal-800 rounded-2xl flex items-center justify-center border border-emerald-200 dark:border-emerald-700/50">
-          <div className="text-center">
-            <span className="text-6xl">📑</span>
-            <p className="text-gray-600 dark:text-gray-300 mt-4">Featured Image</p>
-          </div>
+        <div className="mb-12 relative h-96 bg-gradient-to-br from-emerald-200 to-teal-200 dark:from-emerald-800 dark:to-teal-800 rounded-2xl overflow-hidden border border-emerald-200 dark:border-emerald-700/50">
+          <ImageWithFallback
+            src={post.image}
+            fallbackSrc={post.fallbackImage}
+            alt={post.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 65vw"
+          />
         </div>
 
         {/* Content */}

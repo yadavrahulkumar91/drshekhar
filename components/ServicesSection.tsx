@@ -5,11 +5,12 @@ import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import ViewAllButton from "@/components/ViewAllButton";
 
 export default function ServicesSection() {
   return (
     <section className="py-20 bg-gradient-to-b from-white to-emerald-50 dark:from-gray-900 dark:to-emerald-950/30">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 mb-12">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,6 +29,7 @@ export default function ServicesSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.slice(0, 3).map((service, index) => (
             <Link
+              key={service.id}
               href={`/services/${service.id}`}
               className="inline-flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 hover:text-green-600 dark:hover:text-green-400 font-semibold transition text-sm mt-4"
             >
@@ -70,15 +72,11 @@ export default function ServicesSection() {
                 {/* <span>Learn More</span>
                 <ArrowRight size={16} /> */}
               </motion.div>
-
             </Link>
           ))}
         </div>
-        <Link href="/services" className="inline-flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 hover:text-green-600 dark:hover:text-green-400 font-semibold transition mt-8">
-          <span>View All Services</span>
-          <ArrowRight size={16} />
-        </Link>
       </div>
+      <ViewAllButton href="/services" text="View All Services" />
     </section>
   );
 }

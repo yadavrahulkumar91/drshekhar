@@ -2,63 +2,72 @@
 
 import { motion } from 'framer-motion';
 import { Camera, Heart, Stethoscope, Microscope } from 'lucide-react';
+import ImageWithFallback from '@/components/ImageWithFallback';
 
 const galleryItems = [
   {
     id: 1,
     title: 'Endoscopy Suite',
     description: 'State-of-the-art endoscopy equipment for advanced diagnostic procedures',
-    icon: '🔬',
+    image: '/endoscopy.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     category: 'Equipment',
   },
   {
     id: 2,
-    title: 'Consultation Room',
-    description: 'Comfortable and private consultation space for patient discussions',
-    icon: '🏥',
-    category: 'Facility',
+    title: 'GERD Management',
+    description: 'Comprehensive treatment for gastroesophageal reflux disease',
+    image: '/gerd.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/12/34/abdomen-1209783_640.jpg',
+    category: 'Treatment',
   },
   {
     id: 3,
-    title: 'Liver Care Unit',
-    description: 'Specialized area for hepatology treatments and monitoring',
-    icon: '❤️',
+    title: 'Liver Disease Care',
+    description: 'Specialized hepatology treatments and liver disease management',
+    image: '/liver_disease.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2017/07/19/11/41/liver-2519045_640.jpg',
     category: 'Specialty',
   },
   {
     id: 4,
-    title: 'Diagnostic Laboratory',
+    title: 'Inflammatory Bowel Disease',
     description: 'Advanced laboratory facilities for comprehensive testing',
-    icon: '🧪',
-    category: 'Equipment',
+    image: '/ibd.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/10/06/03/24/intestine-1717444_640.jpg',
+    category: 'Treatment',
   },
   {
     id: 5,
-    title: 'Patient Care Area',
-    description: 'Comfortable recovery and waiting areas for patient comfort',
-    icon: '🛋️',
-    category: 'Facility',
+    title: 'Gastritis Treatment',
+    description: 'Expert care for gastric inflammation and stomach conditions',
+    image: '/gastritis.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/12/33/stomach-1209785_640.jpg',
+    category: 'Treatment',
   },
   {
     id: 6,
-    title: 'Medical Team',
-    description: 'Our dedicated healthcare professionals committed to patient care',
-    icon: '👨‍⚕️',
-    category: 'Team',
+    title: 'Liver Transplant Care',
+    description: 'Advanced hepatology with transplant expertise and support',
+    image: '/liver_transplant.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/49/surgery-1209782_640.jpg',
+    category: 'Specialty',
   },
   {
     id: 7,
     title: 'EUS Equipment',
     description: 'Advanced Endoscopic Ultrasound technology for precise diagnosis',
-    icon: '📡',
+    image: '/eus.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/11/21/14/53/ultrasound-1747156_640.jpg',
     category: 'Equipment',
   },
   {
     id: 8,
-    title: 'Reception Area',
-    description: 'Welcoming reception area designed for patient comfort',
-    icon: '📋',
-    category: 'Facility',
+    title: 'FMT Therapy',
+    description: 'Fecal Microbiota Transplantation for gut health restoration',
+    image: '/fmt.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/11/42/laboratory-1209779_640.jpg',
+    category: 'Treatment',
   },
 ];
 
@@ -84,13 +93,23 @@ export default function GalleryPage() {
         {/* Gallery Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {galleryItems.map((item, index) => (
-            <div
+            <motion.div
               key={item.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative bg-gradient-to-br from-white to-emerald-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-emerald-200 dark:hover:shadow-emerald-900/50 transition-all duration-300 border border-emerald-200/50 dark:border-emerald-700/50"
             >
-              {/* Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-emerald-200 to-teal-200 dark:from-emerald-800 dark:to-teal-800 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                <span className="text-6xl">{item.icon}</span>
+              {/* Image */}
+              <div className="relative h-48 bg-gradient-to-br from-emerald-200 to-teal-200 dark:from-emerald-800 dark:to-teal-800 overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                <ImageWithFallback
+                  src={item.image}
+                  fallbackSrc={item.fallbackImage}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
               </div>
 
               {/* Content */}
@@ -110,7 +129,7 @@ export default function GalleryPage() {
 
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
+            </motion.div>
           ))}
         </div>
 

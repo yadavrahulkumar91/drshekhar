@@ -5,6 +5,7 @@ export interface BlogPost {
   description: string;
   content: string;
   image: string;
+  fallbackImage: string;
   category: string;
   author: string;
   date: string;
@@ -25,7 +26,8 @@ export const blogPosts: BlogPost[] = [
     readTime: 8,
     keywords: ['gastritis', 'stomach inflammation', 'gastritis treatment', 'causes of gastritis'],
     featured: true,
-    image: '/images/blog/gastritis.jpg',
+    image: '/gastrirtisb1.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/12/33/stomach-1209785_640.jpg',
     content: `Gastritis is inflammation of the stomach lining caused by various factors. This comprehensive guide covers everything you need to know about this common condition.
 
 What is Gastritis?
@@ -68,7 +70,13 @@ Treatment depends on the underlying cause:
 4. Dietary changes
 5. Stress management
 
-Early diagnosis and treatment can prevent complications like ulcers and bleeding.`
+Early diagnosis and treatment can prevent complications like ulcers and bleeding.
+
+References & Sources:
+- Mayo Clinic - Gastritis: https://www.mayoclinic.org/diseases-conditions/gastritis
+- NIH - Gastritis and Associated Disorders: https://www.ncbi.nlm.nih.gov/books/NBK534116/
+- American College of Gastroenterology (ACG) - Gastritis Guidelines
+- CDC - Helicobacter pylori Infection: https://www.cdc.gov/cancer/stomach/basic_info/h_pylori.htm`
   },
   {
     id: '2',
@@ -81,7 +89,8 @@ Early diagnosis and treatment can prevent complications like ulcers and bleeding
     readTime: 7,
     keywords: ['acid reflux', 'GERD', 'heartburn', 'reflux disease'],
     featured: true,
-    image: '/images/blog/acid-reflux.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/12/34/abdomen-1209783_640.jpg',
+    image: '/GERDb2.jpg',
     content: `Acid reflux affects millions globally. Here's what you need to know about GERD and how to manage it effectively.
 
 Understanding GERD
@@ -120,7 +129,12 @@ Seek medical attention if:
 - Symptoms persist despite lifestyle changes
 - You have difficulty swallowing
 - You experience chest pain
-- You have unexplained weight loss`
+- You have unexplained weight loss
+
+References & Sources:
+- Mayo Clinic - GERD: https://www.mayoclinic.org/diseases-conditions/gerd
+- American College of Gastroenterology - GERD Guidelines
+- NIH - Gastroesophageal Reflux Disease: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5987305/`
   },
   {
     id: '3',
@@ -133,7 +147,8 @@ Seek medical attention if:
     readTime: 9,
     keywords: ['IBS', 'irritable bowel syndrome', 'IBS diet', 'IBS treatment'],
     featured: true,
-    image: '/images/blog/ibs.jpg',
+    image: '/IBDb3.png',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/10/06/03/24/intestine-1717444_640.jpg',
     content: `Irritable Bowel Syndrome affects up to 15% of the population. Learn how to manage IBS effectively.
 
 Types of IBS
@@ -155,7 +170,6 @@ Dietary Recommendations
 - Stay hydrated
 - Limit caffeine
 - Reduce fat intake
-- Try low-FODMAP diet
 - Eat regularly
 
 Stress Management
@@ -168,12 +182,18 @@ Stress Management
 - Counseling if needed
 
 Medical Treatments
+-Antispasmodic medications to relieve abdominal pain and cramping
+-Laxatives for IBS-C (constipation)
+-Antidiarrheal medications for IBS-D (diarrhea)
+-Fiber supplements (e.g., psyllium husk) to regulate bowel movements
+-Probiotics to improve gut health and balance intestinal bacteria
 
-- Dietary changes (first-line)
-- Medications for symptoms
-- Probiotics
-- Psychological therapies
-- Specialty consultations`
+
+References & Sources:
+- Mayo Clinic - Irritable Bowel Syndrome: https://www.mayoclinic.org/diseases-conditions/ibs
+- American College of Gastroenterology - IBS Guidelines
+- Rome Foundation - IBS Diagnostic Criteria: https://theromefoundation.org/
+- NIH - Irritable Bowel Syndrome Research: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6539318/`
   },
   {
     id: '4',
@@ -186,7 +206,8 @@ Medical Treatments
     readTime: 8,
     keywords: ['liver health', 'liver disease', 'hepatitis', 'liver prevention'],
     featured: true,
-    image: '/images/blog/liver-health.jpg',
+    image: '/LIverhealth preventionb4.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2017/07/19/11/41/liver-2519045_640.jpg',
     content: `Your liver is vital for survival. Learn how to keep it healthy and detect problems early.
 
 Liver Functions
@@ -232,13 +253,11 @@ Regular Screening
 
 Warning Signs
 
-Seek medical help for:
-- Jaundice (yellowing)
-- Abdominal pain
-- Swelling
-- Dark urine
-- Pale stools
-- Easy bruising`
+Seek medical he
+
+References & Sources:
+- Mayo Clinic - Liver Disease: https://www.mayoclinic.org/diseases-conditions/liver-disease
+- NIH - Liver Diseases: https://www.ncbi.nlm.nih.gov/books/NBK481616/`
   },
   {
     id: '5',
@@ -251,7 +270,8 @@ Seek medical help for:
     readTime: 6,
     keywords: ['endoscopy', 'upper endoscopy', 'endoscopy procedure', 'endoscopy preparation'],
     featured: false,
-    image: '/images/blog/endoscopy.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: '/Endospcopy.jpg',
     content: `Understanding what endoscopy involves can help reduce anxiety and ensure proper preparation.
 
 What is Endoscopy?
@@ -297,7 +317,12 @@ Post-Procedure
 
 Recovery
 
-Most people recover within 24 hours with minimal side effects.`
+Most people recover within 24 hours with minimal side effects.
+
+References & Sources:
+- Mayo Clinic - Endoscopy: https://www.mayoclinic.org/tests-procedures/endoscopy
+- American Society for Gastrointestinal Endoscopy (ASGE): https://www.asge.org/
+- NIH - Gastrointestinal Endoscopy: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6007622/`
   },
   {
     id: '6',
@@ -310,7 +335,8 @@ Most people recover within 24 hours with minimal side effects.`
     readTime: 10,
     keywords: ['hepatitis', 'hepatitis A', 'hepatitis B', 'hepatitis C', 'viral hepatitis'],
     featured: true,
-    image: '/images/blog/hepatitis.jpg',
+    image: '/Hepatitis.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Hepatitis affects millions worldwide. Understanding each type is crucial for prevention and treatment.
 
 Hepatitis A
@@ -350,7 +376,13 @@ Hepatitis E
 
 Screening Recommendations
 
-Anyone with risk factors should be tested.`
+Anyone with risk factors should be tested.
+
+References & Sources:
+- CDC - Viral Hepatitis: https://www.cdc.gov/hepatitis
+- WHO - Hepatitis: https://www.who.int/news/fact-sheets/detail/hepatitis
+- Mayo Clinic - Hepatitis: https://www.mayoclinic.org/diseases-conditions/hepatitis
+- NIH - Hepatitis Information: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5815181/`
   },
   {
     id: '7',
@@ -363,7 +395,8 @@ Anyone with risk factors should be tested.`
     readTime: 7,
     keywords: ['colonoscopy', 'colon cancer', 'cancer screening', 'colorectal cancer'],
     featured: false,
-    image: '/images/blog/colonoscopy.jpg',
+    image: '/CRC.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Colorectal cancer is preventable with regular screening. Here's why colonoscopy is important.
 
 Cancer Prevention
@@ -411,7 +444,13 @@ After the Procedure
 - Recovery area observation
 - Diet restrictions lifted gradually
 - Results usually available in 1-2 weeks
-- Follow-up recommendations`
+- Follow-up recommendations
+
+References & Sources:
+- American Cancer Society - Colorectal Cancer Screening: https://www.cancer.org/cancer/colon-rectal-cancer.html
+- Mayo Clinic - Colorectal Cancer: https://www.mayoclinic.org/diseases-conditions/colon-cancer
+- NIH - Colorectal Cancer Screening: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8274046/
+- USPSTF - Colorectal Cancer Screening Recommendations`
   },
   {
     id: '8',
@@ -424,7 +463,8 @@ After the Procedure
     readTime: 8,
     keywords: ['fatty liver', 'NAFLD', 'liver disease', 'fatty liver treatment'],
     featured: true,
-    image: '/images/blog/fatty-liver.jpg',
+    image: '/Fattyliber.jpeg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Fatty liver disease affects approximately 25% of the global population. The good news: it's often reversible.
 
 Understanding NAFLD
@@ -477,7 +517,13 @@ Medical Management
 
 Prognosis
 
-With lifestyle changes, many people normalize liver function and prevent progression.`
+With lifestyle changes, many people normalize liver function and prevent progression.
+
+References & Sources:
+- Mayo Clinic - Fatty Liver Disease: https://www.mayoclinic.org/diseases-conditions/fatty-liver-disease
+- NIH - Non-alcoholic Fatty Liver Disease: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6015251/
+- AASLD - NAFLD Guidelines: https://www.aasld.org/
+- Hepatology Journal - NAFLD Management`
   },
   {
     id: '9',
@@ -490,7 +536,8 @@ With lifestyle changes, many people normalize liver function and prevent progres
     readTime: 7,
     keywords: ['digestive enzymes', 'gut health', 'digestion', 'probiotics'],
     featured: false,
-    image: '/images/blog/digestion.jpg',
+    image: '/Guthealth.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Good digestion is fundamental to overall health. Learn how your digestive system works.
 
 Types of Digestive Enzymes
@@ -535,7 +582,13 @@ Ways to Support Digestion
 
 When to See a Specialist
 
-Persistent digestive issues warrant professional evaluation.`
+Persistent digestive issues warrant professional evaluation.
+
+References & Sources:
+- NIH - Digestive Enzymes: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3715154/
+- Mayo Clinic - Digestive Health: https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating
+- American Journal of Gastroenterology - Enzyme Disorders
+- National Pancreas Foundation - Digestive Enzymes`
   },
   {
     id: '10',
@@ -548,7 +601,8 @@ Persistent digestive issues warrant professional evaluation.`
     readTime: 5,
     keywords: ['post-endoscopy diet', 'endoscopy recovery', 'recovery nutrition'],
     featured: false,
-    image: '/images/blog/post-endoscopy-diet.jpg',
+    image: '/diet after endocopy.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Proper nutrition after endoscopy supports healing and recovery. Here's what you should eat.
 
 Immediately After (First 2 Hours)
@@ -598,7 +652,13 @@ If polyps were removed:
 - Avoid strenuous activity
 - Follow-up appointments essential
 
-Contact your doctor if experiencing pain or complications.`
+Contact your doctor if experiencing pain or complications.
+
+References & Sources:
+- American Journal of Gastroenterology - Post-Endoscopy Care
+- ASGE - Patient Education: https://www.asge.org/home/for-patients
+- Mayo Clinic - Endoscopy Recovery: https://www.mayoclinic.org/tests-procedures/endoscopy
+- NIH - Post-procedural Recovery Guidelines`
   },
   {
     id: '11',
@@ -611,7 +671,8 @@ Contact your doctor if experiencing pain or complications.`
     readTime: 8,
     keywords: ['stress management', 'gut health', 'stress anxiety', 'IBS stress'],
     featured: true,
-    image: '/images/blog/stress-gut.jpg',
+    image: '/Gut-Brain-Connection.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `The gut-brain axis is powerful. Stress directly impacts digestion and GI health.
 
 How Stress Affects Digestion
@@ -662,7 +723,13 @@ Stress Management Techniques
 
 Integration Approach
 
-Holistic treatment addresses both physical and psychological aspects.`
+Holistic treatment addresses both physical and psychological aspects.
+
+References & Sources:
+- NIH - Gut-Brain Axis: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7695857/
+- Mayo Clinic - Stress and Digestive Health
+- American Psychological Association - Stress Effects
+- Gastroenterology Journal - Psychosomatic Gastrointestinal Disorders`
   },
   {
     id: '12',
@@ -675,7 +742,8 @@ Holistic treatment addresses both physical and psychological aspects.`
     readTime: 7,
     keywords: ['probiotics', 'gut microbiome', 'beneficial bacteria', 'gut health'],
     featured: false,
-    image: '/images/blog/probiotics.jpg',
+    image: '/Gutmicrbiome.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Your gut microbiome contains trillions of bacteria crucial for health. Probiotics support beneficial bacteria.
 
 What Are Probiotics?
@@ -729,7 +797,13 @@ Potential Side Effects
 - Mild gas
 - Usually resolves quickly
 
-Consult before use if immunocompromised.`
+Consult before use if immunocompromised.
+
+References & Sources:
+- Mayo Clinic - Probiotics: https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/probiotics/faq-20058065
+- NIH - Probiotics and Health: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3539293/
+- American Gastroenterological Association - Probiotics
+- Nature Reviews - Microbiome Research`
   },
   {
     id: '13',
@@ -742,7 +816,8 @@ Consult before use if immunocompromised.`
     readTime: 6,
     keywords: ['hemorrhoids', 'piles', 'hemorrhoid treatment', 'hemorrhoid prevention'],
     featured: false,
-    image: '/images/blog/hemorrhoids.jpg',
+    image: '/Hemorrhioids.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Hemorrhoids are common and treatable. Here's what you need to know.
 
 Types
@@ -794,7 +869,12 @@ Medical Treatments
 
 When to See a Doctor
 
-Persistent symptoms warrant professional evaluation.`
+Persistent symptoms warrant professional evaluation.
+
+References & Sources:
+- Mayo Clinic - Hemorrhoids: https://www.mayoclinic.org/diseases-conditions/hemorrhoids
+- American College of Gastroenterology - Hemorrhoid Management
+- NIH - Hemorrhoids Overview: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5774152/`
   },
   {
     id: '14',
@@ -807,7 +887,8 @@ Persistent symptoms warrant professional evaluation.`
     readTime: 8,
     keywords: ['celiac disease', 'gluten sensitivity', 'gluten-free', 'digestive health'],
     featured: true,
-    image: '/images/blog/celiac.jpg',
+    image: '/celiac-disease.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Celiac disease and gluten sensitivity are distinct conditions requiring different management approaches.
 
 Celiac Disease
@@ -862,7 +943,13 @@ Gluten-Free Living
 
 Prognosis
 
-With proper management, both conditions have excellent outcomes.`
+With proper management, both conditions have excellent outcomes.
+
+References & Sources:
+- Mayo Clinic - Celiac Disease: https://www.mayoclinic.org/diseases-conditions/celiac-disease
+- NIH - Celiac Disease: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6481814/
+- American College of Gastroenterology - Celiac Guidelines
+- Celiac Disease Foundation: https://celiac.org/`
   },
   {
     id: '15',
@@ -875,7 +962,8 @@ With proper management, both conditions have excellent outcomes.`
     readTime: 9,
     keywords: ['ulcerative colitis', 'Crohn\'s disease', 'IBD', 'inflammatory bowel disease'],
     featured: true,
-    image: '/images/blog/ibd.jpg',
+    image: '/inflammatory-bowel-disease-ibd.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Inflammatory Bowel Disease includes two main types with different characteristics and treatment approaches.
 
 Ulcerative Colitis
@@ -942,7 +1030,13 @@ Lifestyle Management
 
 Prognosis
 
-Modern treatments have improved significantly, with many people achieving remission.`
+Modern treatments have improved significantly, with many people achieving remission.
+
+References & Sources:
+- Mayo Clinic - Inflammatory Bowel Disease: https://www.mayoclinic.org/diseases-conditions/inflammatory-bowel-disease
+- Crohn's & Colitis Foundation: https://www.crohnscolitisfoundation.org/
+- NIH - IBD Research: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6474080/
+- American College of Gastroenterology - IBD Guidelines`
   },
   {
     id: '16',
@@ -955,7 +1049,8 @@ Modern treatments have improved significantly, with many people achieving remiss
     readTime: 10,
     keywords: ['liver transplant', 'organ transplant', 'transplantation', 'liver failure'],
     featured: true,
-    image: '/images/blog/liver-transplant.jpg',
+    image: '/liver-transplantation.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Liver transplantation is life-saving for patients with end-stage liver disease.
 
 Who Needs a Transplant?
@@ -1043,7 +1138,13 @@ Current Advances
 - Dr. Poudel trained in latest techniques
 - LTSI certification ensures expertise
 - Improved outcome tracking
-- Better immunosuppression`
+- Better immunosuppression
+
+References & Sources:
+- Mayo Clinic - Liver Transplant: https://www.mayoclinic.org/tests-procedures/liver-transplant
+- AASLD - Liver Transplant Guidelines: https://www.aasld.org/
+- American Society of Transplantation: https://www.astro.org/
+- NIH - Organ Transplantation: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2827505/`
   },
   {
     id: '17',
@@ -1056,7 +1157,8 @@ Current Advances
     readTime: 7,
     keywords: ['EUS', 'endoscopic ultrasound', 'diagnosis', 'GI procedures'],
     featured: false,
-    image: '/images/blog/eus.jpg',
+    image: '/EUS.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Endoscopic Ultrasound (EUS) combines endoscopy with ultrasound for detailed imaging.
 
 What is EUS?
@@ -1114,7 +1216,12 @@ Safety
 
 Results
 
-Rapid diagnosis allows timely treatment decisions.`
+Rapid diagnosis allows timely treatment decisions.
+
+References & Sources:
+- ASGE - Endoscopic Ultrasound: https://www.asge.org/
+- Mayo Clinic - EUS: https://www.mayoclinic.org/tests-procedures/endoscopic-ultrasound
+- NIH - EUS Applications: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6032533/`
   },
   {
     id: '18',
@@ -1127,7 +1234,8 @@ Rapid diagnosis allows timely treatment decisions.`
     readTime: 8,
     keywords: ['ERCP', 'bile duct', 'pancreatic duct', 'biliary disease'],
     featured: true,
-    image: '/images/blog/ercp.jpg',
+    image: '/ERCP.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `ERCP (Endoscopic Retrograde Cholangiopancreatography) treats bile and pancreatic duct problems.
 
 What is ERCP?
@@ -1199,7 +1307,13 @@ Post-Procedure
 
 When Necessary
 
-Can be life-saving for serious biliary obstruction or pancreatitis.`
+Can be life-saving for serious biliary obstruction or pancreatitis.
+
+References & Sources:
+- ASGE - ERCP Guidelines: https://www.asge.org/
+- Mayo Clinic - ERCP: https://www.mayoclinic.org/tests-procedures/ercp
+- American Journal of Gastroenterology - ERCP Outcomes
+- NIH - ERCP Research: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7202449/`
   },
   {
     id: '19',
@@ -1212,7 +1326,8 @@ Can be life-saving for serious biliary obstruction or pancreatitis.`
     readTime: 8,
     keywords: ['peptic ulcer', 'ulcer disease', 'H. pylori', 'stomach ulcer'],
     featured: true,
-    image: '/images/blog/peptic-ulcer.jpg',
+    image: '/peptic-ulcer.png',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Peptic ulcers are common but treatable. Modern therapy has revolutionized management.
 
 What is a Peptic Ulcer?
@@ -1281,7 +1396,13 @@ Lifestyle Modifications
 
 Prognosis
 
-With proper treatment, >95% heal without complications.`
+With proper treatment, >95% heal without complications.
+
+References & Sources:
+- Mayo Clinic - Peptic Ulcer: https://www.mayoclinic.org/diseases-conditions/peptic-ulcer
+- NIH - Peptic Ulcer Disease: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3879513/
+- American College of Gastroenterology - Ulcer Management
+- Helicobacter Journal - Treatment Guidelines`
   },
   {
     id: '20',
@@ -1294,7 +1415,8 @@ With proper treatment, >95% heal without complications.`
     readTime: 7,
     keywords: ['constipation', 'bowel movement', 'constipation relief', 'chronic constipation'],
     featured: false,
-    image: '/images/blog/constipation.jpg',
+    image: '/Constipation.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Constipation affects many people. Most cases are manageable with lifestyle changes.
 
 Definitions
@@ -1369,7 +1491,13 @@ When to Seek Help
 - Blood in stool
 - Severe pain
 - Weight loss
-- Family history of cancer`
+- Family history of cancer
+
+References & Sources:
+- Mayo Clinic - Constipation: https://www.mayoclinic.org/diseases-conditions/constipation
+- NIH - Constipation Management: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315390/
+- American College of Gastroenterology - Constipation Guidelines
+- Gastroenterology Journal - Chronic Constipation`
   },
   {
     id: '21',
@@ -1382,7 +1510,8 @@ When to Seek Help
     readTime: 7,
     keywords: ['diarrhea', 'loose stools', 'gastroenteritis', 'chronic diarrhea'],
     featured: false,
-    image: '/images/blog/diarrhea.jpg',
+    image: '/Diarrhea.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Diarrhea is common and usually self-limited, but can indicate serious conditions.
 
 Types
@@ -1469,7 +1598,8 @@ Proper evaluation ensures appropriate treatment.`
     readTime: 8,
     keywords: ['colon cancer', 'cancer prevention', 'cancer screening', 'bowel cancer'],
     featured: true,
-    image: '/images/blog/colon-cancer.jpg',
+    image: '/CRC.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Colorectal cancer is largely preventable with proper screening and lifestyle measures.
 
 Risk Factors
@@ -1548,7 +1678,8 @@ Dr. Poudel stays updated on latest screening technologies and techniques.`
     readTime: 9,
     keywords: ['esophageal cancer', 'throat cancer', 'cancer awareness', 'cancer diagnosis'],
     featured: false,
-    image: '/images/blog/esophageal-cancer.jpg',
+    image: '/Esophageal cancer.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Esophageal cancer awareness and early detection are crucial for improving outcomes.
 
 Types
@@ -1614,7 +1745,13 @@ Barrett's Esophagus Surveillance
 
 - Endoscopy every 2-3 years
 - More frequent if dysplasia present
-- Early detection prevents cancer`
+- Early detection prevents cancer
+
+References & Sources:
+- Mayo Clinic - Esophageal Cancer: https://www.mayoclinic.org/diseases-conditions/esophageal-cancer
+- American Cancer Society - Esophageal Cancer
+- NIH - Esophageal Cancer: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7047066/
+- Gastric Cancer Journal - Cancer Prevention`
   },
   {
     id: '24',
@@ -1627,7 +1764,8 @@ Barrett's Esophagus Surveillance
     readTime: 9,
     keywords: ['pancreatitis', 'pancreas inflammation', 'acute pancreatitis', 'chronic pancreatitis'],
     featured: true,
-    image: '/images/blog/pancreatitis.jpg',
+    image: '/Acute pancreatitis.jpg',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Pancreatitis ranges from mild to life-threatening. Understanding it is crucial.
 
 Acute Pancreatitis
@@ -1706,7 +1844,12 @@ Increased in chronic pancreatitis – requires surveillance.
 
 Management with Dr. Poudel
 
-Specialized expertise in complex pancreatic cases.`
+Specialized expertise in complex pancreatic cases.
+
+References & Sources:
+- Mayo Clinic - Pancreatitis: https://www.mayoclinic.org/diseases-conditions/pancreatitis
+- American Pancreatic Association: https://americanpancreatic.org/
+- NIH - Pancreatitis: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8253066/`
   },
   {
     id: '25',
@@ -1719,7 +1862,8 @@ Specialized expertise in complex pancreatic cases.`
     readTime: 8,
     keywords: ['gallstones', 'biliary colic', 'cholecystectomy', 'gallbladder disease'],
     featured: false,
-    image: '/images/blog/gallstones.jpg',
+    image: '/gallstones.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
     content: `Gallstones are common, but only symptomatic ones require treatment.
 
 What Are Gallstones?
@@ -1806,6 +1950,10 @@ If left untreated:
 
 Outcomes
 
-Cholecystectomy has excellent outcomes with symptomatic relief in >90% of cases.`
+Cholecystectomy has excellent outcomes with symptomatic relief in >90% of cases.
+
+References & Sources:
+- Mayo Clinic - Gallstones: https://www.mayoclinic.org/diseases-conditions/gallstones
+- NIH - Cholelithiasis: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8074046/`
   }
 ];

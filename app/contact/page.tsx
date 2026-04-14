@@ -236,7 +236,7 @@ export default function ContactPage() {
                   </svg>
                 </a>
                 <a
-                  href="https://tiktok.com/@drshekhar"
+                  href="https://tiktok.com/@dr.shekhar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-black hover:bg-gray-800 text-white rounded-full flex items-center justify-center transition-colors duration-300 hover:scale-110 overflow-hidden"

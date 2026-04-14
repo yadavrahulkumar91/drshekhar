@@ -2,6 +2,7 @@ import { blogPosts } from "@/data/blog";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Search, Calendar, Clock } from "lucide-react";
+import ImageWithFallback from "@/components/ImageWithFallback";
 
 export const metadata: Metadata = {
   title: "Medical Blog - Dr. Shekhar Poudel",
@@ -45,8 +46,15 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-emerald-200 dark:hover:shadow-emerald-900/50 transition border border-emerald-200/50 dark:border-emerald-700/50"
               >
-                <div className="h-48 bg-gradient-to-br from-emerald-200 to-teal-200 dark:from-emerald-800 dark:to-teal-800 flex items-center justify-center">
-                  <span className="text-5xl">📰</span>
+                <div className="relative h-48 bg-gradient-to-br from-emerald-200 to-teal-200 dark:from-emerald-800 dark:to-teal-800 overflow-hidden group hover:scale-105 transition-transform duration-300">
+                  <ImageWithFallback
+                    src={post.image}
+                    fallbackSrc={post.fallbackImage}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
                 </div>
                 <div className="p-6">
                   <p className="text-emerald-600 dark:text-emerald-400 text-sm font-semibold mb-2">

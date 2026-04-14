@@ -3,6 +3,7 @@
 import { doctorProfile } from '@/data/doctor';
 import { motion } from 'framer-motion';
 import { Star, Quote, Heart, Award } from 'lucide-react';
+import Image from 'next/image';
 
 export default function TestimonialsPage() {
   const testimonials = doctorProfile.testimonials;
@@ -38,7 +39,7 @@ export default function TestimonialsPage() {
         >
           <div className="bg-gradient-to-br from-white to-emerald-50 dark:from-emerald-900/20 dark:to-teal-900/20 p-6 rounded-xl text-center border border-emerald-200/50 dark:border-emerald-700/50">
             <Award size={32} className="text-emerald-600 dark:text-emerald-400 mx-auto mb-2" />
-            <div className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">500+</div>
+            <div className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">{testimonials.length}+</div>
             <div className="text-sm text-gray-600 dark:text-gray-300">Happy Patients</div>
           </div>
           <div className="bg-gradient-to-br from-white to-emerald-50 dark:from-emerald-900/20 dark:to-teal-900/20 p-6 rounded-xl text-center border border-emerald-200/50 dark:border-emerald-700/50">
@@ -66,11 +67,26 @@ export default function TestimonialsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-white to-emerald-50 dark:from-emerald-900/20 dark:to-teal-900/20 p-8 rounded-xl border border-emerald-200/50 dark:border-emerald-700/50 hover:shadow-xl hover:shadow-emerald-200 dark:hover:shadow-emerald-900/50 transition-all duration-300"
+              className="bg-gradient-to-br from-white to-emerald-50 dark:from-emerald-900/20 dark:to-teal-900/20 p-8 rounded-xl border border-emerald-200/50 dark:border-emerald-700/50 hover:shadow-xl hover:shadow-emerald-200 dark:hover:shadow-emerald-900/50 transition-all duration-300 flex flex-col h-full"
             >
               {/* Quote Icon */}
               <div className="flex justify-center mb-4">
                 <Quote size={32} className="text-emerald-400" />
+              </div>
+
+              {/* Profile Picture */}
+              <div className="flex justify-center mb-6">
+                <div className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-emerald-200 dark:border-emerald-700">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    fill
+                    className="object-cover"
+                    onError={(e) => {
+                      e.currentTarget.src = 'https://api.dicebear.com/7.x/avataaars/svg?seed=' + testimonial.name;
+                    }}
+                  />
+                </div>
               </div>
 
               {/* Stars */}
@@ -81,7 +97,7 @@ export default function TestimonialsPage() {
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-gray-600 dark:text-gray-300 mb-6 text-center italic leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 mb-6 text-center italic leading-relaxed flex-grow">
                 "{testimonial.text}"
               </p>
 

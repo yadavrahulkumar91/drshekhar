@@ -27,8 +27,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            html.dark {
+              color-scheme: dark;
+              background-color: #111827;
+              color: #f3f4f6;
+            }
+            html.dark body {
+              background-color: #111827;
+              color: #f3f4f6;
+            }
+          `
+        }} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              const savedTheme = localStorage.getItem('app-theme');
+              const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              const isDark = savedTheme ? savedTheme === 'dark' : systemDark;
+              if (isDark) document.documentElement.classList.add('dark');
+              else document.documentElement.classList.remove('dark');
+            `,
+          }}
+        />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(doctorSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       </head>

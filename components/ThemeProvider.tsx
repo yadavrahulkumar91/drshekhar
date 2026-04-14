@@ -1,58 +1,71 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useContext, ReactNode, useEffect, useState } from 'react';
 
 interface ThemeContextType {
   isDark: boolean;
   toggleTheme: () => void;
-  mounted: boolean;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [isDark, setIsDark] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
-  // Initialize theme on mount
   useEffect(() => {
-    try {
-      const savedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const isDarkMode = savedTheme === 'dark' || (!savedTheme && prefersDark);
-      
-      setIsDark(isDarkMode);
-      updateTheme(isDarkMode);
-    } catch (e) {
-      // Silently fail in case localStorage is not available
+    // Initialize on mount
+    const html = document.documentElement;
+    const saved = localStorage.getItem('app-theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const dark = saved ? saved === 'dark' : systemDark;
+    
+    setIsDark(dark);
+    
+    if (dark) {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
     }
-    setMounted(true);
+
+    // Listen for theme changes from other tabs
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === 'app-theme') {
+        const newDark = e.newValue === 'dark';
+        setIsDark(newDark);
+        if (newDark) {
+          html.classList.add('dark');
+        } else {
+          html.classList.remove('dark');
+        }
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
 
-  const updateTheme = (dark: boolean) => {
-    try {
-      if (dark) {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
-    } catch (e) {
-      // Silently fail
-    }
-  };
-
   const toggleTheme = () => {
-    setIsDark(prev => {
-      const newValue = !prev;
-      updateTheme(newValue);
-      return newValue;
-    });
+    const html = document.documentElement;
+    const newDark = !isDark;
+
+    // Update state
+    setIsDark(newDark);
+
+    // Update DOM
+    if (newDark) {
+      html.classList.add('dark');
+      localStorage.setItem('app-theme', 'dark');
+    } else {
+      html.classList.remove('dark');
+      localStorage.setItem('app-theme', 'light');
+    }
+
+    // Force a manual update to ensure it works
+    console.log('Theme toggled to:', newDark ? 'dark' : 'light');
   };
 
   return (
-    <ThemeContext.Provider value={{ isDark, toggleTheme, mounted }}>
+    <ThemeContext.Provider value={{ isDark, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
@@ -61,7 +74,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 export function useTheme() {
   const context = useContext(ThemeContext);
   if (!context) {
-    return { isDark: false, toggleTheme: () => {}, mounted: false };
+    return { isDark: false, toggleTheme: () => {} };
   }
   return context;
 }

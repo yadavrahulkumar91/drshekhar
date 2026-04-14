@@ -8,7 +8,7 @@ import Image  from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { isDark, toggleTheme, mounted } = useTheme();
+  const { isDark, toggleTheme } = useTheme();
 
   return (
     <nav className="sticky top-0 z-50 bg-gradient-to-r from-white to-emerald-50 dark:from-gray-900 dark:to-emerald-900/30 shadow-md border-b border-emerald-200/50 dark:border-emerald-700/50">
@@ -29,17 +29,24 @@ export default function Navbar() {
             <Link href="/services" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Services</Link>
             <Link href="/gallery" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Gallery</Link>
             <Link href="/testimonials" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Testimonials</Link>
+            <Link href="/vlogs" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Vlogs</Link>
             <Link href="/blog" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Blogs</Link>
             <Link href="/contact" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Contact</Link>
           </div>
 
           {/* Right Side */}
           <div className="flex items-center space-x-4">
-            {mounted && (
-              <button onClick={toggleTheme} className="p-2 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 rounded transition" title="Toggle dark mode">
-                {isDark ? <Sun size={20} className="text-amber-500" /> : <Moon size={20} className="text-slate-700" />}
-              </button>
-            )}
+            <button 
+              onClick={() => {
+                console.log('Button clicked!');
+                toggleTheme();
+              }} 
+              className="p-2 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 rounded transition cursor-pointer" 
+              title="Toggle dark mode"
+              type="button"
+            >
+              {isDark ? <Sun size={20} className="text-amber-500" /> : <Moon size={20} className="text-slate-700" />}
+            </button>
 
             {/* Mobile Menu Button */}
             <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2">
@@ -56,6 +63,7 @@ export default function Navbar() {
             <Link href="/services" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Services</Link>
             <Link href="/gallery" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Gallery</Link>
             <Link href="/testimonials" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Testimonials</Link>
+            <Link href="/vlogs" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Vlogs</Link>
             <Link href="/blog" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Blog</Link>
             <Link href="/contact" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Contact</Link>
           </div>
