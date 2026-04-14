@@ -61,15 +61,17 @@ export default async function ServiceDetail(props: {
 
         {/* Header */}
         <div className="mb-12">
-          <div className="w-150 h-100 p-2 bg-gradient-to-br from-emerald-200 to-green-200 dark:from-emerald-700 dark:to-green-700 rounded-2xl flex items-center justify-center mb-6">
+          <div className="w-full sm:w-96 md:max-w-2xl lg:max-w-4xl h-auto sm:h-72 md:h-auto lg:h-auto p-2 bg-gradient-to-br from-emerald-200 to-green-200 dark:from-emerald-700 dark:to-green-700 rounded-2xl flex items-center justify-center mb-6">
             {/* <span className="text-4xl"> */}
 
             <Image
               src={service.image}
               alt="Dr. Shekhar Poudel"
-              className=" rounded-2xl"
+              className="rounded-2xl"
               width={600}
               height={400}
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 384px, (max-width: 1024px) 560px, 600px"
+              style={{ width: 'auto', height: 'auto' }}
             />
             {/* </span> */}
           </div>
@@ -195,13 +197,15 @@ export default async function ServiceDetail(props: {
                   href={`/services/${relatedService.id}`}
                   className="bg-white dark:bg-gray-800 rounded-lg p-6 transition border border-emerald-200/50 hover:shadow-lg hover:shadow-emerald-200 dark:hover:shadow-emerald-900/50"
                 >
-                  <div className="w-28 h-20 p-0.5 bg-gradient-to-br from-emerald-200 to-green-200 dark:from-emerald-700 dark:to-green-700 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-full sm:w-28 h-auto sm:h-20 p-0.5 bg-gradient-to-br from-emerald-200 to-green-200 dark:from-emerald-700 dark:to-green-700 rounded-lg flex items-center justify-center mb-4">
                     <Image
                       width={112}
                       height={80}
                       src={relatedService.image}
                       alt={relatedService.title}
                       className="rounded-lg"
+                      sizes="(max-width: 640px) 100vw, 112px"
+                      style={{ width: 'auto', height: 'auto' }}
                     />
                   </div>
                   <h3 className="font-bold text-gray-900 dark:text-white mb-3">
