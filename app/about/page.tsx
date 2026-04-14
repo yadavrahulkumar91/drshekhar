@@ -38,9 +38,9 @@ export default function AboutPage() {
               <div className="bg-gradient-to-br from-emerald-200/40 to-teal-200/40 rounded-3xl p-8">
                 <div className="w-full bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg overflow-hidden">
                   <div className="text-center">
-                    <div className="w-40 h-40 rounded-full overflow-hidden mx-auto mb-4">
+                    <div className="w-40 h-40 rounded-2xl overflow-hidden mx-auto mb-4">
                       <Image
-                        src="/dr-shekhar-poudel_BaxEz1X.jpg"
+                        src="/dr-shekhar-poudel_BaxEz1X.png"
                         alt="Dr. Shekhar Poudel - Gastroenterologist"
                         width={160}
                         height={160}
