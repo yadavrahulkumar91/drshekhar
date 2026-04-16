@@ -19,19 +19,65 @@ export default function Navbar() {
               D
             </div>
             <span className="hidden sm:inline font-bold bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent">Dr. Shekhar</span> */}
-            <Image src='/Sekhar.png' alt='Dr. Shekhar Poudel' width={300} height={40} className='rounded-full' />
+            <Image
+              src="/logo.svg"
+              alt="Dr. Shekhar Poudel"
+              width={300}
+              height={40}
+              className="rounded-full"
+            />
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Home</Link>
-            <Link href="/about" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">About</Link>
-            <Link href="/services" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Services</Link>
-            <Link href="/gallery" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Gallery</Link>
-            <Link href="/testimonials" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Testimonials</Link>
-            <Link href="/vlogs" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Vlogs</Link>
-            <Link href="/blog" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Blogs</Link>
-            <Link href="/contact" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Contact</Link>
+            <Link
+              href="/"
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              About
+            </Link>
+            <Link
+              href="/services"
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Services
+            </Link>
+            <Link
+              href="/gallery"
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Gallery
+            </Link>
+            <Link
+              href="/testimonials"
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Testimonials
+            </Link>
+            <Link
+              href="/vlogs"
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Vlogs
+            </Link>
+            <Link
+              href="/blog"
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Blogs
+            </Link>
+            <Link
+              href="/contact"
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Contact
+            </Link>
           </div>
 
           {/* Right Side */}
@@ -49,7 +95,10 @@ export default function Navbar() {
             </button> */}
 
             {/* Mobile Menu Button */}
-            <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden p-2"
+            >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -58,14 +107,54 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pb-4 space-y-2 bg-gradient-to-b from-emerald-50 to-transparent dark:from-emerald-900/20">
-            <Link href="/" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Home</Link>
-            <Link href="/about" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">About</Link>
-            <Link href="/services" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Services</Link>
-            <Link href="/gallery" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Gallery</Link>
-            <Link href="/testimonials" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Testimonials</Link>
-            <Link href="/vlogs" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Vlogs</Link>
-            <Link href="/blog" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Blog</Link>
-            <Link href="/contact" className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition">Contact</Link>
+            <Link
+              href="/"
+              className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              About
+            </Link>
+            <Link
+              href="/services"
+              className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Services
+            </Link>
+            <Link
+              href="/gallery"
+              className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Gallery
+            </Link>
+            <Link
+              href="/testimonials"
+              className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Testimonials
+            </Link>
+            <Link
+              href="/vlogs"
+              className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Vlogs
+            </Link>
+            <Link
+              href="/blog"
+              className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/contact"
+              className="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition"
+            >
+              Contact
+            </Link>
           </div>
         )}
       </div>

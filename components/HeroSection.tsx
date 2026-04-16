@@ -117,7 +117,7 @@ export default function HeroSection() {
             <div className="w-full bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg overflow-hidden">
               <div className="w-full aspect-square rounded-xl overflow-hidden relative">
                 <Image
-                  src="/dr-shekhar-poudel_BaxEz1X.jpg"
+                  src="/dr-shekhar-poudel_BaxEz1X.png"
                   alt="Dr. Shekhar Poudel - Gastroenterologist & Transplant Hepatologist"
                   width={400}
                   height={400}

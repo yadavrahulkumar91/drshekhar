@@ -1,0 +1,6 @@
+{
+    "hosting": {
+        "site": "drshekhar",
+        "public": "out"
+    }
+}

@@ -2,9 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: process.env.EXPORT_STATIC === 'true' ? 'export' : undefined,
+  output: 'export',
   images: {
-    unoptimized: process.env.EXPORT_STATIC === 'true',
+    unoptimized: true,
     formats: ['image/avif', 'image/webp'],
   },
   compress: true,
