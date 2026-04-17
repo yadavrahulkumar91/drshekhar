@@ -95,4 +95,17 @@ export const services = [
       'Follow-up monitoring',
     ],
   },
+  {
+    id: 'teleconsultation',
+    title: 'Teleconsultation',
+    description: 'Virtual consultation with Dr. Shekhar Poudel for expert medical advice without travel. Book your appointment online and consult from the comfort of your home.',
+    image: '/teleconsultation.jpg',
+    details: [
+      'Online consultation',
+      'Easy appointment booking',
+      'No login required',
+      'Expert gastroenterology advice',
+      'Prescription & advice via email',
+    ],
+  },
 ];

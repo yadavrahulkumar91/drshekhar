@@ -1,0 +1,46 @@
+
+> drshekhar-medical@1.0.0 build C:\Users\ASUS\Desktop\GitHub1\drshekhar
+> next build
+
+Γû▓ Next.js 16.2.3 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 5.6s
+  Running TypeScript ...
+  Finished TypeScript in 10.3s ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/46) ...
+  Generating static pages using 7 workers (11/46) 
+  Generating static pages using 7 workers (22/46) 
+  Generating static pages using 7 workers (34/46) 
+Γ£ô Generating static pages using 7 workers (46/46) in 6.9s
+  Finalizing page optimization ...
+
+Route (app)
+Γöî Γùï /
+Γö£ Γùï /_not-found
+Γö£ Γùï /about
+Γö£ Γùï /blog
+Γö£ ΓùÅ /blog/[slug]
+Γöé Γö£ /blog/gastritis-causes-symptoms-treatment
+Γöé Γö£ /blog/acid-reflux-gerd-solutions
+Γöé Γö£ /blog/ibs-management-diet-lifestyle
+Γöé Γöö [+22 more paths]
+Γö£ Γùï /contact
+Γö£ Γùï /gallery
+Γö£ Γùï /services
+Γö£ ΓùÅ /services/[id]
+Γöé Γö£ /services/gastritis-treatment
+Γöé Γö£ /services/acid-reflux-gerd
+Γöé Γö£ /services/ibs-treatment
+Γöé Γöö [+6 more paths]
+Γö£ Γùï /services/teleconsultation
+Γö£ Γùï /teleconsultation
+Γö£ Γùï /testimonials
+Γöö Γùï /vlogs
+
+
+Γùï  (Static)  prerendered as static content
+ΓùÅ  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
