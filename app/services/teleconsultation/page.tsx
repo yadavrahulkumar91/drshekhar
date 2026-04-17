@@ -118,15 +118,25 @@ export default function TeleconsultationPage() {
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white">Duration:</p>
-                <p>30-45 minutes per consultation</p>
+                <p>10 minutes per consultation slot</p>
               </div>
 
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white">Time Slots:</p>
-                <p>
-                  Morning: 9:00 AM - 12:00 PM
+                <p className="font-semibold text-gray-900 dark:text-white">Available Time Slots:</p>
+                <p className="text-sm mt-2">
+                  <strong>Sunday:</strong> 8:00 AM - 9:50 AM, 3:00 PM - 6:00 PM
                   <br />
-                  Afternoon: 2:00 PM - 5:00 PM
+                  <strong>Monday:</strong> 8:00 AM - 10:00 AM, 3:00 PM - 6:00 PM
+                  <br />
+                  <strong>Tuesday:</strong> 8:00 AM - 9:50 AM, 2:30 PM - 6:00 PM
+                  <br />
+                  <strong>Wednesday:</strong> 8:10 AM - 9:50 AM, 2:30 PM - 6:00 PM
+                  <br />
+                  <strong>Thursday:</strong> 8:00 AM - 9:50 AM, 2:30 PM - 6:00 PM
+                  <br />
+                  <strong>Friday:</strong> 8:00 AM - 9:50 AM, 2:30 PM - 6:00 PM
+                  <br />
+                  <strong>Saturday:</strong> 8:00 AM - 12:00 PM (Extended Morning Shift)
                 </p>
               </div>
 
@@ -141,7 +151,7 @@ export default function TeleconsultationPage() {
                   <li>Medical history (if applicable)</li>
                   <li>Current medications list</li>
                   <li>Recent test reports (if available)</li>
-                  <li>A quiet, well-lit space</li>
+                  <li>A quiet, well-lit space with good internet connection</li>
                 </ul>
               </div>
             </div>

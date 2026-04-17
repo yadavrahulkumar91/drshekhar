@@ -33,7 +33,7 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Link
-              href="/contact"
+              href="/appointment"
               className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white px-8 py-3 rounded-lg flex items-center justify-center space-x-2 transition transform hover:scale-105 shadow-lg hover:shadow-emerald-300/50 dark:hover:shadow-emerald-900/50"
             >
               <span className="font-bold">Book Appointment</span>

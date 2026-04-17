@@ -108,4 +108,18 @@ export const services = [
       'Prescription & advice via email',
     ],
   },
+  {
+    id: 'appointment',
+    title: 'Hospital Appointment',
+    description: 'Book an in-person consultation with Dr. Shekhar Poudel at National Gastro Liver Center or Norvic Hospital. Comprehensive physical examination with direct face-to-face consultation.',
+    image: '/hospital.jpg',
+    details: [
+      'In-person consultation',
+      'Hospital appointment booking',
+      'Multiple hospital locations',
+      'No login required',
+      'Advanced diagnostic facilities',
+      'Direct expert consultation',
+    ],
+  },
 ];

@@ -1,7 +1,7 @@
 # Teleconsultation Service Implementation
 
 ## Overview
-A complete teleconsultation booking system has been added to the Dr. Shekhar Poudel medical website. Users can book virtual consultations without requiring login.
+A complete teleconsultation booking system has been added to the Dr. Shekhar Poudel medical website. Users can book virtual consultations without requiring login. Time slots now vary by day of week with specific availability for each day.
 
 ## Files Created/Modified
 
@@ -11,102 +11,114 @@ A complete teleconsultation booking system has been added to the Dr. Shekhar Pou
   - Service ID: `teleconsultation`
   - Includes title, description, and key features
 
+- **Created**: [data/teleconsultation.ts](data/teleconsultation.ts) ⭐ NEW
+  - Centralized schedule management with day-of-week based time slots
+  - `TimeSlot` interface for time display
+  - `DaySchedule` interface for organizing slots by shift
+  - `SCHEDULE_BY_DAY` object with complete schedules for all 7 days
+  - Helper functions:
+    - `getTimeSlotsByDay()` - Get slots organized by shift
+    - `getAllTimeSlotsByDay()` - Get flattened array of slots
+    - `getDayName()` - Convert day number to name
+
 ### 2. **Email Service**
-- **Created**: [lib/emailService.ts](lib/emailService.ts)
-  - `sendEmail()` - Sends emails via the SMTP API endpoint
-  - `createAppointmentEmailBody()` - Generates HTML email content for appointments
-  - Handles API communication with: `https://whatsapp-api-kappa.vercel.app/api/gmail/send`
-  - Accepts: `{to, subject, message}`
+- **Modified**: [lib/emailService.ts](lib/emailService.ts)
+  - Updated to use `html` instead of `message` parameter
+  - `sendEmail()` - Sends emails via SMTP API endpoint
+  - `createAppointmentEmailBody()` - Patient confirmation email
+  - `createDoctorEmailBody()` - Doctor notification email
+  - Uses: `https://whatsapp-api-kappa.vercel.app/api/gmail/send`
 
 ### 3. **Booking Component**
-- **Created**: [components/TeleconsultationBooking.tsx](components/TeleconsultationBooking.tsx)
-  - Client-side React component for appointment booking
-  - Features:
-    - Full name input field
-    - Email address input with validation
-    - Phone number input
-    - Date picker (calendar) - prevents past dates
-    - Time slot selector (dropdown with 12 predefined time slots)
-    - Form validation before submission
-    - Error/success message handling
-    - Loading state during submission
+- **Modified**: [components/TeleconsultationBooking.tsx](components/TeleconsultationBooking.tsx)
+  - Now imports time slots from [data/teleconsultation.ts](data/teleconsultation.ts)
+  - Dynamic time slot loading based on selected date
+  - Uses `useMemo` to calculate available slots based on day of week
+  - Resets time slot when date changes
+  - Shows selected day name in the time selection label
+  - Disables time selection until a date is chosen
+  - Displays helpful message if date not selected
 
 ### 4. **Teleconsultation Page**
-- **Created**: [app/services/teleconsultation/page.tsx](app/services/teleconsultation/page.tsx)
-  - Full-featured service page at `/services/teleconsultation`
-  - Includes:
-    - Service overview with benefits
-    - Why choose teleconsultation section
-    - Consultation details (duration, time slots, communication)
-    - Embedded booking form
-    - FAQ section with 6 common questions
-    - SEO metadata
+- **Modified**: [app/services/teleconsultation/page.tsx](app/services/teleconsultation/page.tsx)
+  - Updated "Consultation Details" section with new schedule information
+  - Shows availability for each day of the week
+  - Updated duration to 10 minutes per slot
+  - Enhanced "What to Have Ready" section
+
+## Schedule Details
+
+### **Sunday (Day 0)**
+- Morning: 8:00 AM - 9:50 AM (11 slots)
+- Afternoon: 3:00 PM - 6:00 PM (18 slots)
+- Evening: 6:00 PM - 7:00 PM (6 slots)
+
+### **Monday (Day 1)**
+- Morning: 8:00 AM - 10:00 AM (12 slots)
+- Afternoon: 3:00 PM - 6:00 PM (18 slots)
+- Evening: 6:00 PM - 7:00 PM (6 slots)
+
+### **Tuesday (Day 2)**
+- Morning: 8:00 AM - 9:50 AM (11 slots)
+- Afternoon: 2:30 PM - 6:00 PM (21 slots)
+- Evening: 6:00 PM - 7:00 PM (6 slots)
+
+### **Wednesday (Day 3)**
+- Morning: 8:10 AM - 9:50 AM (10 slots)
+- Afternoon: 2:30 PM - 6:00 PM (21 slots)
+- Evening: 6:00 PM - 7:00 PM (6 slots)
+
+### **Thursday (Day 4)**
+- Morning: 8:00 AM - 9:50 AM (11 slots)
+- Afternoon: 2:30 PM - 6:00 PM (21 slots)
+- Evening: 6:00 PM - 7:00 PM (6 slots)
+
+### **Friday (Day 5)**
+- Morning: 8:00 AM - 9:50 AM (11 slots)
+- Afternoon: 2:30 PM - 6:00 PM (21 slots)
+- Evening: 6:00 PM - 7:00 PM (6 slots)
+
+### **Saturday (Day 6)** - Extended Hours
+- Morning: 8:00 AM - 12:00 PM (24 slots)
+- No afternoon/evening slots
 
 ## Features
 
+### Dynamic Time Slot Selection
+- Time slots update automatically based on selected date
+- Users see only available slots for the chosen day
+- Day name displayed with time selection
+- Time slot resets when date changes
+
 ### Booking Form
 - **No Login Required**: Completely open for any user
-- **Calendar Date Picker**: Select appointment date with validation
-- **Time Slots**: 12 predefined time slots
-  - Morning: 9:00 AM - 11:30 AM
-  - Afternoon: 2:00 PM - 4:30 PM
+- **Calendar Date Picker**: HTML5 date input with past date prevention
+- **Dynamic Time Slots**: 10-minute appointment windows
+- **Form Validation**: All fields required with email validation
+- **User-Friendly**: Shows feedback for missing dates before time selection
 
 ### Email Notifications
-1. **Patient Email**: Confirmation email sent to patient with appointment details
-2. **Doctor Email**: Notification sent to `yadavrahulkumar91@gmail.com` with patient information
+1. **Patient Email**: Confirmation with appointment details
+2. **Doctor Email**: Notification to `yadavrahulkumar91@gmail.com`
 
 ### Email Content
 - Professional HTML-formatted emails
 - Patient details included (name, email, phone)
-- Appointment date and time
-- Call-to-action notes
+- Appointment date, time, and service type
+- Day-specific availability information
 
-### Validation
-- Name: Required
-- Email: Required + regex validation
-- Phone: Required
-- Date: Required + cannot be in the past
-- Time: Required
+## Technical Improvements
 
-## How It Works
+✅ **Centralized Data Management**: Time slots stored in single data file
+✅ **Type Safety**: TypeScript interfaces for data structures
+✅ **Performance**: useMemo for efficient recalculation
+✅ **User Experience**: Dynamic slot updates without page reload
+✅ **Maintainability**: Easy to update schedules by editing data file
+✅ **Scalability**: Structure supports adding more days or special schedules
 
-1. User navigates to `/services/teleconsultation`
-2. User fills in the booking form:
-   - Full name
-   - Email address
-   - Phone number
-   - Select date from calendar
-   - Select time from dropdown
-3. Form validates all inputs
-4. On submission:
-   - Confirmation email sent to patient
-   - Notification sent to doctor
-   - Success message displayed
-   - Form resets for next booking
+## Build Status
 
-## API Integration
-
-The system integrates with the email API endpoint:
-- **URL**: `https://whatsapp-api-kappa.vercel.app/api/gmail/send`
-- **Method**: POST
-- **Headers**: `Content-Type: application/json`
-- **Body**: `{ to: string, subject: string, message: string }`
-
-## Styling
-
-- Consistent with existing design system (Emerald/Green/Teal gradient)
-- Dark mode support throughout
-- Responsive design for mobile, tablet, and desktop
-- Tailwind CSS with custom gradient backgrounds
-- Lucide React icons for visual elements
-
-## Time Slots Available
-
-Morning (9:00 AM - 12:00 PM):
-- 9:00 AM, 9:30 AM, 10:00 AM, 10:30 AM, 11:00 AM, 11:30 AM
-
-Afternoon (2:00 PM - 5:00 PM):
-- 2:00 PM, 2:30 PM, 3:00 PM, 3:30 PM, 4:00 PM, 4:30 PM
+✅ **Successful Build** - All TypeScript checks pass, 46 static pages generated
 
 ## Testing Checklist
 
@@ -115,19 +127,22 @@ Afternoon (2:00 PM - 5:00 PM):
 - [x] Service appears in services list
 - [x] Booking page loads at `/services/teleconsultation`
 - [x] Calendar date picker works
-- [x] Time slot dropdown functional
+- [x] Time slots update based on selected date
+- [x] Past dates cannot be selected
 - [x] Email validation works
 - [x] Success/error messages display correctly
-- [x] Past dates cannot be selected
 - [x] Responsive design verified
+- [x] Time slot dropdown shows day-specific slots
+- [x] Day name displays in time selection label
 
 ## Next Steps (Optional)
 
-If you want to enhance this further:
-1. Add database integration to store appointments
-2. Add email templates for better formatting
-3. Implement payment processing if needed
-4. Add SMS notifications to patients
-5. Create admin dashboard to view booked appointments
-6. Add calendar view for available slots
-7. Implement appointment reminder emails
+1. Add database integration to persist appointments
+2. Implement appointment confirmation with unique booking ID
+3. Add SMS reminder notifications
+4. Create admin dashboard for appointment management
+5. Implement real-time availability checking
+6. Add payment processing if needed
+7. Create automated reminder emails
+8. Add ability to reschedule appointments
+
