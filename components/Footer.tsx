@@ -11,7 +11,7 @@ import {
   Send,
 } from "lucide-react";
 import { navBarItems } from "@/data/navbar";
-import { services } from "@/data/services";
+import { servicesList } from "@/data/serviceList";
 
 export default function Footer() {
   return (
@@ -32,7 +32,10 @@ export default function Footer() {
           <h4 className="font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm text-gray-300">
             {navBarItems
-              .filter((link) => !["Teleconsultation", "Appointment"].includes(link.name))
+              .filter(
+                (link) =>
+                  !["Teleconsultation", "Appointment"].includes(link.name),
+              )
               .map((link) => (
                 <li key={link.href}>
                   <Link
@@ -46,19 +49,17 @@ export default function Footer() {
           </ul>
         </div>
 
-        
-
         {/* Services */}
         <div>
           <h4 className="font-semibold mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-gray-300">
-            {services.map((service) => (
+            {servicesList.map((service) => (
               <li key={service.id}>
                 <Link
-                  href={`/services/${service.id}`}
+                  href={service.link}
                   className="hover:text-emerald-400 transition"
                 >
-                  {service.title}
+                  {service.id}
                 </Link>
               </li>
             ))}

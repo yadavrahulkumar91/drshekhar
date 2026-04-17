@@ -19,6 +19,6 @@ export const servicesList = [
   },
   {
     id: "Consultation",
-    link: "/consultation",
+    link: "/appointment",
   },
 ];
