@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { motion } from "framer-motion";
 import { Award, Briefcase, BookOpen } from "lucide-react";
 import Achievement from "@/components/Achievement";
+import CertificatesSection from "@/components/CertificatesSection";
 
 export const metadata: Metadata = {
   title: "About Dr. Shekhar Poudel - Gastroenterologist Nepal",
@@ -181,6 +182,9 @@ export default function AboutPage() {
 
           {/* Achievement Section */}
           <Achievement />
+
+          {/* Certificates Section */}
+          <CertificatesSection />
         </div>
       </div>
     </>

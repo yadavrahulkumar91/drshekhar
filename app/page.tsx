@@ -6,6 +6,7 @@ import AboutSection from '@/components/AboutSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import VlogsSection from '@/components/VlogsSection';
 import CTASection from '@/components/CTASection';
+import CertificatesSection from '@/components/CertificatesSection';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <HeroSection />
       <ServicesSection />
+      <CertificatesSection />
       {/* <AboutSection /> */}
       <TestimonialsSection />
       <VlogsSection />
