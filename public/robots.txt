@@ -1,12 +1,49 @@
+# Allow all robots
 User-agent: *
 Allow: /
 Allow: /blog/
 Allow: /services/
+Allow: /services/teleconsultation
 Allow: /about/
 Allow: /contact/
+Allow: /appointment/
+Allow: /gallery/
+Allow: /testimonials/
+Allow: /vlogs/
 
+# Disallow private and admin areas
 Disallow: /admin/
 Disallow: /.next/
 Disallow: /private/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /*?*sort=
+Disallow: /*?*filter=
 
+# Crawl delay for search engines
+Crawl-delay: 1
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemaps
 Sitemap: https://drsekharpoudel.com.np/sitemap.xml
+Sitemap: https://drsekharpoudel.com.np/sitemap-blog.xml
+Sitemap: https://drsekharpoudel.com.np/sitemap-services.xml
