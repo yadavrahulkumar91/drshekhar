@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Check, Phone } from "lucide-react";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 export async function generateMetadata(props: {
   params: Promise<{ id: string }>;
@@ -64,7 +64,7 @@ export default async function ServiceDetail(props: {
           <div className="w-full sm:w-96 md:max-w-2xl lg:max-w-4xl h-auto sm:h-72 md:h-auto lg:h-auto p-2 bg-gradient-to-br from-emerald-200 to-green-200 dark:from-emerald-700 dark:to-green-700 rounded-2xl flex items-center justify-center mb-6">
             {/* <span className="text-4xl"> */}
 
-            <Image
+            <ExportedImage
               src={service.image}
               alt="Dr. Shekhar Poudel"
               className="rounded-2xl"
@@ -198,7 +198,7 @@ export default async function ServiceDetail(props: {
                   className="bg-white dark:bg-gray-800 rounded-lg p-6 transition border border-emerald-200/50 hover:shadow-lg hover:shadow-emerald-200 dark:hover:shadow-emerald-900/50"
                 >
                   <div className="w-full sm:w-28 h-auto sm:h-20 p-0.5 bg-gradient-to-br from-emerald-200 to-green-200 dark:from-emerald-700 dark:to-green-700 rounded-lg flex items-center justify-center mb-4">
-                    <Image
+                    <ExportedImage
                       width={112}
                       height={80}
                       src={relatedService.image}

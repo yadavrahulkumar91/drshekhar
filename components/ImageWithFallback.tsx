@@ -1,7 +1,8 @@
 'use client';
 
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import { useState } from 'react';
+import { getImagePath } from '@/lib/imageOptimizer';
 
 interface ImageWithFallbackProps {
   src: string;
@@ -24,19 +25,18 @@ export default function ImageWithFallback({
   width,
   height,
 }: ImageWithFallbackProps) {
-  const [imgSrc, setImgSrc] = useState(src);
+  const [imgSrc, setImgSrc] = useState(getImagePath(src));
 
   return (
-    <Image
+    <ExportedImage
       src={imgSrc}
       alt={alt}
-      fill={fill}
       className={className}
-      sizes={sizes}
-      width={width}
-      height={height}
+      {...(width && height && { width, height })}
+      {...(fill && { fill: true })}
+      {...(sizes && { sizes })}
       onError={() => {
-        setImgSrc(fallbackSrc);
+        setImgSrc(getImagePath(fallbackSrc));
       }}
     />
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { useState } from "react";
 import { X } from "lucide-react";
 
@@ -112,7 +112,7 @@ export default function CertificatesSection() {
             >
               <div className="relative bg-gradient-to-br from-emerald-100 to-green-100 dark:from-emerald-900/30 dark:to-green-900/30 rounded-lg p-2 shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-emerald-200 dark:border-emerald-700/50">
                 <div className="relative w-full h-40 bg-white dark:bg-gray-800 rounded-md overflow-hidden">
-                  <Image
+                  <ExportedImage
                     src={cert.path}
                     alt={cert.name}
                     fill
@@ -153,7 +153,7 @@ export default function CertificatesSection() {
               <X className="w-6 h-6 text-gray-900 dark:text-white" />
             </button>
             <div className="relative w-full h-full bg-white dark:bg-gray-900 rounded-lg overflow-auto">
-              <Image
+              <ExportedImage
                 src={selectedImage}
                 alt="Certificate Preview"
                 width={1200}

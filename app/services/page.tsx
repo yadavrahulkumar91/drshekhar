@@ -2,7 +2,7 @@ import { services } from "@/data/services";
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check, Phone } from "lucide-react";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 export const metadata: Metadata = {
   title: "Medical Services - Dr. Shekhar Poudel",
@@ -42,7 +42,7 @@ export default function ServicesPage() {
                 className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 p-8 rounded-2xl hover:shadow-xl hover:shadow-emerald-200 dark:hover:shadow-emerald-900/50 transition border border-emerald-200/50 dark:border-emerald-700/50"
               >
                 <div className="w-28 h-20 p-0.5 bg-gradient-to-br from-emerald-200 to-green-200 dark:from-emerald-700 dark:to-green-700 rounded-lg flex items-center justify-center mb-4">
-                  <Image
+                  <ExportedImage
                     width={112}
                     height={80}
                     src={service.image}

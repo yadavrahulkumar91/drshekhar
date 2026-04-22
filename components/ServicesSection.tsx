@@ -4,8 +4,9 @@ import { services } from "@/data/services";
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import ViewAllButton from "@/components/ViewAllButton";
+import { getImagePath } from "@/lib/imageOptimizer";
 
 export default function ServicesSection() {
   return (
@@ -41,12 +42,13 @@ export default function ServicesSection() {
                 className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 p-6 rounded-xl hover:shadow-lg hover:shadow-emerald-200 dark:hover:shadow-emerald-900/50 transition border border-emerald-200/50 dark:border-emerald-700/50"
               >
                 <div className="w-28 h-20 p-0.5 bg-gradient-to-br from-emerald-200 to-green-200 dark:from-emerald-700 dark:to-green-700 rounded-lg flex items-center justify-center mb-4">
-                  <Image
+                  <ExportedImage
                     width={112}
                     height={80}
-                    src={service.image}
+                    src={getImagePath(service.image)}
                     alt={service.title}
-                    className="rounded-lg"
+                    className="rounded-lg object-cover"
+                    priority={index === 0}
                   />
                 </div>
                 <h3 className="text-lg font-semibold bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent mb-2">

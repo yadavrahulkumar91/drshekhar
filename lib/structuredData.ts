@@ -1,5 +1,5 @@
 // This component injects structured data (JSON-LD) into the page head for SEO purposes
-import { Script } from 'next/document';
+// import { Script } from 'next/document';
 
 interface StructuredDataProps {
   data: Record<string, any>;

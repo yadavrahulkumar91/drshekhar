@@ -1,5 +1,5 @@
 import { doctorProfile } from "@/data/doctor";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { Metadata } from "next";
 import { motion } from "framer-motion";
 import { Award, Briefcase, BookOpen } from "lucide-react";
@@ -40,7 +40,7 @@ export default function AboutPage() {
                 <div className="w-full bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg overflow-hidden">
                   <div className="text-center">
                     <div className="w-40 h-40 rounded-2xl overflow-hidden mx-auto mb-4">
-                      <Image
+                      <ExportedImage
                         src="/dr-shekhar-poudel_BaxEz1X.png"
                         alt="Dr. Shekhar Poudel - Gastroenterologist"
                         width={160}

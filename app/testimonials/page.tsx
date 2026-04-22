@@ -3,7 +3,7 @@
 import { doctorProfile } from '@/data/doctor';
 import { motion } from 'framer-motion';
 import { Star, Quote, Heart, Award } from 'lucide-react';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 
 export default function TestimonialsPage() {
   const testimonials = doctorProfile.testimonials;
@@ -77,7 +77,7 @@ export default function TestimonialsPage() {
               {/* Profile Picture */}
               <div className="flex justify-center mb-6">
                 <div className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-emerald-200 dark:border-emerald-700">
-                  <Image
+                  <ExportedImage
                     src={testimonial.image}
                     alt={testimonial.name}
                     fill

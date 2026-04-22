@@ -1,10 +1,11 @@
 "use client";
 
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 import { doctorProfile } from "@/data/doctor";
+import { getImagePath } from "@/lib/imageOptimizer";
 
 export default function HeroSection() {
   return (
@@ -97,7 +98,7 @@ export default function HeroSection() {
           <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-2xl overflow-hidden">
               <Link href="/about" >
             <div className="w-full h-80 rounded-2xl flex items-center justify-center relative overflow-hidden">
-              <Image
+              <ExportedImage
                 src="/dr-shekhar-poudel_BaxEz1X.jpg"
                 alt="Dr. Shekhar Poudel - Gastroenterologist & Transplant Hepatologist"
                 width={400}
@@ -116,12 +117,13 @@ export default function HeroSection() {
            <Link href="/about" >
             <div className="w-full bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg overflow-hidden">
               <div className="w-full aspect-square rounded-xl overflow-hidden relative">
-                <Image
-                  src="/dr-shekhar-poudel_BaxEz1X.png"
+                <ExportedImage
+                  src={getImagePath("/dr-shekhar-poudel_BaxEz1X.png")}
                   alt="Dr. Shekhar Poudel - Gastroenterologist & Transplant Hepatologist"
                   width={400}
                   height={400}
                   className="w-full h-full object-cover"
+                  priority
                 />
               </div>
               <div className="text-center mt-6">

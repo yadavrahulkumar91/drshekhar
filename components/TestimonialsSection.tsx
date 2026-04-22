@@ -4,9 +4,10 @@ import { doctorProfile } from '@/data/doctor';
 import { motion } from 'framer-motion';
 import { Star, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import Link from 'next/link';
 import ViewAllButton from '@/components/ViewAllButton';
+import { getImagePath } from '@/lib/imageOptimizer';
 
 export default function TestimonialsSection() {
   const displayedTestimonials = doctorProfile.testimonials.slice(0, 3);
@@ -48,14 +49,12 @@ export default function TestimonialsSection() {
               {/* Profile Picture */}
               <div className="flex justify-center mb-4">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden border-4 border-emerald-200 dark:border-emerald-700">
-                  <Image
-                    src={testimonial.image}
+                  <ExportedImage
+                    src={getImagePath(testimonial.image)}
                     alt={testimonial.name}
-                    fill
-                    className="object-cover"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://api.dicebear.com/7.x/avataaars/svg?seed=' + testimonial.name;
-                    }}
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>

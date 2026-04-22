@@ -4,8 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { navBarItems } from "@/data/navbar";
+import { getImagePath } from "@/lib/imageOptimizer";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,8 +17,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/logo.svg"
+            <ExportedImage
+              src={getImagePath("/logo.svg")}
               alt="Dr. Shekhar Poudel"
               width={300}
               height={40}

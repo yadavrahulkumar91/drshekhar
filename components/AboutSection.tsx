@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import { doctorProfile } from '@/data/doctor';
 import { motion } from 'framer-motion';
 
@@ -18,7 +18,7 @@ export default function AboutSection() {
             <div className="bg-gradient-to-br from-emerald-200/40 to-teal-200/40 rounded-3xl p-8">
               <div className="w-full bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg overflow-hidden">
                 <div className="w-full aspect-square rounded-xl overflow-hidden relative">
-                  <Image
+                  <ExportedImage
                     src="/dr-shekhar-poudel_BaxEz1X.jpg"
                     alt="Dr. Shekhar Poudel - Gastroenterologist & Transplant Hepatologist"
                     width={400}
