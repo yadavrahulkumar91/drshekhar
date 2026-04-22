@@ -309,6 +309,40 @@ export const generateReviewSchema = (reviews: Array<{ author: string; rating: nu
   };
 };
 
+// Review/Rating Schema builder
+export function buildReviewSchema(
+  businessName: string,
+  reviews: Array<{
+    author: string;
+    rating: number;
+    comment: string;
+    date: string;
+  }>
+) {
+  const avgRating =
+    reviews.length > 0
+      ? (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length).toFixed(1)
+      : '5';
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: businessName,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: avgRating,
+      reviewCount: reviews.length,
+    },
+    review: reviews.map((review) => ({
+      '@type': 'Review',
+      author: { '@type': 'Person', name: review.author },
+      datePublished: review.date,
+      reviewRating: { '@type': 'Rating', ratingValue: review.rating },
+      reviewBody: review.comment,
+    })),
+  };
+}
+
 // Video Schema for vlogs/educational content
 export const generateVideoSchema = (video: { title: string; description: string; thumbnailUrl: string; uploadDate: string; duration: string; url: string }) => {
   return {
