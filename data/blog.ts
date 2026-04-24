@@ -1,4 +1,5 @@
 export interface BlogPost {
+  authorImage: string | undefined;
   id: string;
   slug: string;
   title: string;
@@ -12,143 +13,426 @@ export interface BlogPost {
   readTime: number;
   keywords: string[];
   featured: boolean;
+  // Wikipedia-style sections (optional)
+  quickSummary?: string[];
+  whatIs?: string;
+  causes?: { [key: string]: string[] };
+  riskFactors?: { [key: string]: string[] };
+  symptoms?: string[];
+  redFlagSigns?: string[];
+  diagnosis?: string[];
+  treatment?: { [key: string]: string[] };
+  complications?: string[];
+  prevention?: string[];
+  faq?: Array<{ question: string; answer: string }>;
+  authorBio?: string;
+  medicalDisclaimer?: string;
+  references?: string[];
 }
 
 export const blogPosts: BlogPost[] = [
   {
-    id: '1',
-    slug: 'gastritis-causes-symptoms-treatment',
-    title: 'Gastritis: Causes, Symptoms, and Treatment Options',
-    description: 'Complete guide to gastritis including causes, symptoms, diagnosis, and effective treatment strategies.',
-    category: 'Gastritis',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-01-15',
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    id: "1",
+    slug: "gastritis-causes-symptoms-treatment",
+    title: "Gastritis: Causes, Symptoms, and Treatment Options",
+    description:
+      "Complete guide to gastritis including causes, symptoms, diagnosis, and effective treatment strategies.",
+    category: "Gastritis",
+    author: "Dr. Shekhar Poudel",
+    date: "2024-01-15",
+    readTime: 10,
+    keywords: [
+      "gastritis",
+      "stomach inflammation",
+      "gastritis treatment",
+      "causes of gastritis",
+    ],
+    featured: true,
+    image: "/gastrirtisb1.jpg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/12/33/stomach-1209785_640.jpg",
+    content:
+      "Gastritis is inflammation of the stomach lining caused by various factors.",
+    quickSummary: [
+      "Gastritis is inflammation of the stomach lining that can be acute or chronic, affecting millions worldwide.",
+      "The most common causes include H. pylori bacterial infection, excessive NSAID use, alcohol, stress, and bile reflux.",
+      "Key symptoms include abdominal pain, nausea, vomiting, bloating, loss of appetite, and sometimes bleeding.",
+      "Diagnosis requires blood tests, stool analysis, and upper endoscopy (OGD) to visualize the stomach.",
+      "Most cases respond well to medications (antacids, PPIs, antibiotics) combined with lifestyle changes.",
+      "Preventing gastritis involves regular meals, avoiding NSAIDs, limiting alcohol, managing stress, and treating H. pylori infection.",
+      "Untreated gastritis can lead to ulcers, bleeding, anemia, and rarely, stomach cancer.",
+    ],
+    whatIs:
+      "Gastritis is inflammation or irritation of the protective lining of the stomach. This lining protects the stomach wall from the corrosive effects of gastric acid. When the lining becomes inflamed, it can cause pain, discomfort, and other symptoms. Gastritis can develop suddenly (acute) or gradually over time (chronic). While gastritis is often mild and resolves on its own, chronic gastritis requires medical evaluation and treatment to prevent serious complications like ulcers and bleeding.",
+    causes: {
+      "H. pylori Infection (Most Common)": [
+        "Helicobacter pylori is a bacterium that colonizes the stomach lining",
+        "Affects an estimated 50% of the global population, especially in developing countries",
+        "In Nepal, H. pylori prevalence is particularly high (60-80% in some populations)",
+        "Transmitted through contaminated food, water, and close contact",
+        "Triggers a chronic inflammatory response leading to gastritis",
+      ],
+      "Medication-Related (NSAIDs)": [
+        "Aspirin, ibuprofen, naproxen, and other NSAIDs damage the protective stomach lining",
+        "Particularly risky when used chronically or without food",
+        "Responsible for approximately 30% of gastritis cases",
+      ],
+      "Alcohol Consumption": [
+        "Alcohol directly irritates and erodes the stomach lining",
+        "Can cause acute gastritis after heavy drinking",
+        "Chronic alcohol use leads to chronic gastritis and increased ulcer risk",
+      ],
+      Stress: [
+        "Emotional stress and anxiety trigger increased acid production",
+        "Stress-induced gastritis often worsens during periods of psychological strain",
+      ],
+      "Other Causes": [
+        "Bile reflux from the small intestine",
+        "Autoimmune disorders (autoimmune gastritis)",
+        "Severe illness or major surgery",
+        "Radiation therapy to the stomach area",
+      ],
+    },
+    riskFactors: {
+      "Lifestyle Factors": [
+        "Irregular meal times and skipping meals",
+        "Drinking strong tea or coffee on an empty stomach (very common in Nepal)",
+        "Consuming spicy, oily, or fried foods regularly",
+        "Smoking",
+        "Excessive alcohol consumption",
+      ],
+      "Medical Factors": [
+        "History of H. pylori infection",
+        "Chronic NSAID use for arthritis, heart disease, or other conditions",
+        "Autoimmune disorders",
+        "Severe stress or major life events",
+      ],
+      "Geographic/Social Factors": [
+        "Living in areas with high H. pylori prevalence",
+        "Limited access to clean water",
+        "Crowded living conditions",
+        "Low socioeconomic status",
+      ],
+    },
+    symptoms: [
+      "Burning abdominal pain or discomfort, often in the upper abdomen",
+      "Nausea and vomiting",
+      "Loss of appetite",
+      "Bloating and feeling full quickly",
+      "Indigestion and heartburn",
+      "In severe cases: vomiting blood or dark coffee-ground material",
+      "In severe cases: black, tarry stools (melena) indicating gastrointestinal bleeding",
+      "General weakness and fatigue (if bleeding causes anemia)",
+    ],
+    redFlagSigns: [
+      "Vomiting blood or coffee-ground material—indicates active bleeding",
+      "Black, tarry, foul-smelling stools—sign of upper GI bleeding",
+      "Severe abdominal pain unresponsive to medication",
+      "Persistent vomiting preventing adequate nutrition and hydration",
+      "Unexplained weight loss over weeks",
+      "Pale appearance or shortness of breath with exertion (signs of anemia)",
+      "Symptoms persisting despite medical treatment for more than 3-4 weeks",
+    ],
+    diagnosis: [
+      "Blood tests: Complete blood count to check for anemia, liver function tests",
+      "Stool antigen test: Detects H. pylori in stool samples (non-invasive, widely available)",
+      "Urea breath test: Patient drinks isotope-labeled urea; if H. pylori present, radioactive CO₂ is exhaled and detected",
+      "Upper GI Endoscopy (OGD Scopy): A thin camera is passed through the mouth to visualize the stomach lining, identify gastritis, and take tissue biopsies. This is the gold standard for diagnosis.",
+      "Rapid urease test (RUT): Performed during endoscopy; biopsy tissue is tested for H. pylori enzyme",
+      "Endoscopic biopsy: Tissue samples are examined under microscope to confirm gastritis, assess severity, and rule out cancer",
+    ],
+    treatment: {
+      "Medications for H. pylori Eradication": [
+        "Combination therapy (triple or quadruple regimen) for 10-14 days",
+        "Usually includes: two antibiotics (clarithromycin + amoxicillin, or metronidazole) + one proton pump inhibitor (PPI)",
+        "Sometimes includes bismuth compound for additional protection",
+        "Cure rate: >90% with full adherence",
+        "Must complete full course to prevent antibiotic resistance",
+      ],
+      "Acid-Suppressing Medications": [
+        "Proton Pump Inhibitors (PPIs): omeprazole, pantoprazole, rabeprazole—most potent acid reducers, taken once daily",
+        "H2 receptor blockers: famotidine, ranitidine—less potent than PPIs but adequate for mild-moderate cases",
+        "Antacids: aluminum hydroxide, magnesium hydroxide—provide rapid symptom relief but short-acting",
+      ],
+      "Protective Medications": [
+        "Sucralfate: coats and protects the stomach lining",
+        "Bismuth compounds: have antimicrobial and protective properties",
+      ],
+      "Lifestyle Modifications": [
+        "Eat regular meals at consistent times—prevents acid build-up",
+        "Avoid tea/coffee on empty stomach—skip the traditional morning tea, eat first",
+        "Reduce spicy, oily, and fried foods gradually",
+        "Eliminate NSAIDs if possible, or use safer alternatives",
+        "Limit alcohol or abstain completely",
+        "Manage stress through yoga, meditation, or counseling",
+        "Stop smoking",
+      ],
+    },
+    complications: [
+      "Peptic Ulcer Disease: Chronic gastritis can progress to ulcers that erode through the stomach wall, causing severe pain and bleeding.",
+      "Gastrointestinal Bleeding: Erosion of blood vessels in the stomach lining can cause potentially life-threatening bleeding (haematemesis or melena).",
+      "Anemia: Chronic slow bleeding from gastritis leads to iron deficiency anemia, causing fatigue, weakness, and shortness of breath.",
+      "Gastric Perforation: A severely eroded area can perforate (break through), allowing stomach contents to spill into the abdominal cavity, causing peritonitis—a medical emergency.",
+      "Pyloric Obstruction: Chronic inflammation can cause scarring and narrowing of the pylorus (outlet from stomach), leading to obstruction and vomiting.",
+      "Gastric Cancer: Long-standing H. pylori-induced gastritis is a known risk factor for stomach cancer, especially if associated with intestinal metaplasia.",
+      "Pernicious Anemia: In autoimmune gastritis, destruction of acid-producing cells can reduce absorption of vitamin B12, leading to pernicious anemia.",
+    ],
+    prevention: [
+      "Eat three regular meals per day at consistent times",
+      "Do not drink strong tea or coffee on an empty stomach—always eat or drink water first",
+      "Wash hands thoroughly before eating and after using the toilet",
+      "Drink clean, boiled, or filtered water, especially during monsoon",
+      "Get tested for H. pylori if you have persistent upper abdominal symptoms or family history of gastritis/ulcers",
+      "If tested positive, complete full eradication therapy exactly as prescribed",
+      "Limit or eliminate NSAIDs; if long-term NSAIDs are needed, take a PPI alongside for stomach protection",
+      "Limit or stop alcohol consumption",
+      "Manage stress through exercise, yoga, meditation, or professional counseling",
+      "Do not self-medicate with antacids for prolonged periods—seek medical evaluation if symptoms persist",
+    ],
+    faq: [
+      {
+        question: "Is gastritis the same as an ulcer?",
+        answer:
+          "No. Gastritis is inflammation of the stomach lining, while an ulcer is a hole or erosion that goes deeper and can bleed. Gastritis can progress to an ulcer if not treated, but they are different conditions.",
+      },
+      {
+        question: "Can gastritis go away on its own?",
+        answer:
+          "Acute gastritis (sudden onset) may improve with rest and dietary changes. However, chronic gastritis, especially if caused by H. pylori or NSAIDs, requires medical treatment. Untreated chronic gastritis can lead to serious complications.",
+      },
+      {
+        question: "Is H. pylori contagious?",
+        answer:
+          "Yes, H. pylori spreads through contaminated food and water, and through close contact with infected individuals (sharing utensils, toothbrushes). If one family member is diagnosed, it's worth discussing screening with other family members.",
+      },
+      {
+        question: "Why is drinking tea on an empty stomach bad?",
+        answer:
+          "Tea, especially strong black tea, stimulates stomach acid production. On an empty stomach, this acid irritates the stomach lining directly, causing or worsening gastritis. Always eat something before your morning tea.",
+      },
+      {
+        question: "Can I continue NSAIDs if I have gastritis?",
+        answer:
+          "If possible, avoid NSAIDs or switch to safer alternatives. If NSAIDs are essential (e.g., for arthritis), take them with food and always use a PPI to protect your stomach lining.",
+      },
+    ],
+    authorBio:
+      'Dr. Shekhar Poudel is a Senior Gastroenterologist and Hepatologist with a DM from AIIMS New Delhi and specialized training in advanced endoscopy techniques. He is the founding physician of the <a href="https://nglc.com.np/" class="text-blue-500 hover:underline">National Gastro Liver Center</a> in Kathmandu and senior consultant at <a href="https://norvichospital.com/" class="text-blue-500 hover:underline">Norvic International Hospital</a> and has extensive experience in diagnosing and treating gastritis and H. pylori-related diseases in Nepali populations.',
+    medicalDisclaimer:
+      "This article is intended for educational purposes only and does not constitute medical advice. The information provided is based on current medical evidence and is not a substitute for consultation with a qualified healthcare professional. Individual circumstances vary, and patients should always consult their physician or a gastroenterologist for personalized medical advice regarding their condition. The author and NGLC accept no responsibility for actions taken based solely on this article.",
+    references: [
+      "Malfertheiner P, Megraud F, O'Morain CA, et al. Management of Helicobacter pylori infection—the Maastricht V/Florence Consensus Report. Gut. 2017;66(1):6-30.",
+      "NIH - Gastritis and Associated Disorders: https://www.ncbi.nlm.nih.gov/books/NBK534116/",
+      "Mayo Clinic - Gastritis: https://www.mayoclinic.org/diseases-conditions/gastritis",
+      "American College of Gastroenterology (ACG) - Gastritis Guidelines",
+      "CDC - Helicobacter pylori Infection: https://www.cdc.gov/cancer/stomach/basic_info/h_pylori.htm",
+      "Ansari S, Gautam R, Sherchand JB, et al. Helicobacter pylori colonization in Nepal. BMC Research Notes. 2016;9:59.",
+    ],
+  },
+  {
+    id: "2",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    slug: "acid-reflux-gerd-solutions",
+    title: "Managing Acid Reflux and GERD: Expert Solutions",
+    description:
+      "Effective strategies and medical treatments for acid reflux and gastroesophageal reflux disease.",
+    category: "GERD",
+    author: "Dr. Shekhar Poudel",
+    date: "2024-01-20",
     readTime: 8,
-    keywords: ['gastritis', 'stomach inflammation', 'gastritis treatment', 'causes of gastritis'],
+    keywords: ["acid reflux", "GERD", "heartburn", "reflux disease"],
     featured: true,
-    image: '/gastrirtisb1.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/12/33/stomach-1209785_640.jpg',
-    content: `Gastritis is inflammation of the stomach lining caused by various factors. This comprehensive guide covers everything you need to know about this common condition.
-
-What is Gastritis?
-
-Gastritis occurs when the protective lining of your stomach becomes inflamed or irritated. This can happen suddenly (acute gastritis) or develop gradually over time (chronic gastritis).
-
-Common Causes
-
-The most common causes include:
-- H. pylori bacterial infection
-- Prolonged use of NSAIDs (aspirin, ibuprofen)
-- Alcohol consumption
-- Stress and anxiety
-- Autoimmune disorders
-- Bile reflux
-
-Symptoms to Watch For
-
-- Abdominal pain and cramping
-- Nausea and vomiting
-- Loss of appetite
-- Bloating
-- Indigestion
-- Dark or bloody stools
-
-Diagnosis
-
-Dr. Poudel recommends:
-- Endoscopy examination
-- H. pylori testing
-- Blood tests
-- Stool analysis
-
-Treatment Options
-
-Treatment depends on the underlying cause:
-1. Medication therapy
-2. H. pylori eradication
-3. Lifestyle modifications
-4. Dietary changes
-5. Stress management
-
-Early diagnosis and treatment can prevent complications like ulcers and bleeding.
-
-References & Sources:
-- Mayo Clinic - Gastritis: https://www.mayoclinic.org/diseases-conditions/gastritis
-- NIH - Gastritis and Associated Disorders: https://www.ncbi.nlm.nih.gov/books/NBK534116/
-- American College of Gastroenterology (ACG) - Gastritis Guidelines
-- CDC - Helicobacter pylori Infection: https://www.cdc.gov/cancer/stomach/basic_info/h_pylori.htm`
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/12/34/abdomen-1209783_640.jpg",
+    image: "/GERDb2.jpg",
+    content: "Acid reflux affects millions globally.",
+    quickSummary: [
+      "GERD (Gastroesophageal Reflux Disease) occurs when stomach acid repeatedly flows back into the esophagus, causing discomfort and tissue damage.",
+      "Common triggers include obesity, smoking, alcohol, caffeine, large meals, and lying down soon after eating.",
+      "Symptoms range from occasional heartburn to chronic burning chest pain, difficulty swallowing, and regurgitation.",
+      "GERD is diagnosed through symptom history, upper endoscopy, or pH monitoring studies.",
+      "Most cases respond well to lifestyle modifications and medications (PPIs or H2 blockers).",
+      "Untreated chronic GERD can lead to Barrett's esophagus, esophageal ulcers, strictures, and rarely, esophageal cancer.",
+      "Prevention focuses on dietary changes, weight management, stress reduction, and avoiding known triggers.",
+    ],
+    whatIs:
+      "GERD (Gastroesophageal Reflux Disease) is a chronic condition in which stomach acid regularly flows backward (refluxes) into the esophagus—the tube that carries food from your mouth to your stomach. The esophagus lacks the protective lining that the stomach has, so acid irritates and damages it, causing the characteristic burning sensation known as heartburn. While occasional acid reflux is common and normal, GERD is diagnosed when reflux occurs more than twice weekly and significantly impacts daily life or causes tissue damage.",
+    causes: {
+      "Mechanical Factors": [
+        "Weak or relaxed lower esophageal sphincter (LES)—the valve that normally prevents acid backflow",
+        "Hiatal hernia—part of the stomach pushes through the diaphragm into the chest",
+        "Delayed gastric emptying—food stays in the stomach longer than normal",
+      ],
+      "Lifestyle and Dietary Factors": [
+        "Obesity—excess abdominal fat increases pressure on the stomach",
+        "Large or fatty meals—take longer to digest and increase acid production",
+        "Smoking—weakens the LES and increases acid production",
+        "Alcohol consumption—relaxes the LES and stimulates acid secretion",
+        "Caffeine and caffeinated beverages—stimulate acid production",
+        "Spicy foods—irritate the esophagus",
+        "Chocolate—contains compounds that relax the LES",
+        "Lying down or bending over soon after eating—gravity worsens reflux",
+      ],
+      "Medication-Related": [
+        "Certain medications relax the LES: calcium channel blockers, nitrates, anticholinergics",
+        "NSAIDs: aspirin and ibuprofen irritate the esophageal lining",
+        "Bisphosphonates: osteoporosis medications can cause esophageal damage",
+      ],
+      "Medical Conditions": [
+        "Pregnancy—hormonal changes and increased abdominal pressure",
+        "Diabetes—affects stomach motility",
+        "Asthma—can worsen GERD and vice versa",
+        "Zollinger-Ellison syndrome—produces excessive stomach acid",
+      ],
+    },
+    riskFactors: {
+      "Modifiable Risk Factors": [
+        "Obesity: increased abdominal pressure worsens reflux",
+        "Smoking: weakens LES function",
+        "Excessive alcohol: relaxes LES and increases acid",
+        "High-fat diet: delays stomach emptying",
+        "Late-night eating: acid produced while lying down",
+        "Stress and anxiety: trigger increased acid production",
+      ],
+      "Non-Modifiable Risk Factors": [
+        "Pregnancy",
+        "Age over 50: LES function declines with age",
+        "Family history of GERD",
+        "Male gender: men develop GERD more than women",
+      ],
+    },
+    symptoms: [
+      "Heartburn—burning sensation in the chest behind the breastbone, especially after eating",
+      "Regurgitation—food or liquid backing up into the mouth",
+      "Difficulty swallowing (dysphagia)—sensation of food stuck in the throat",
+      "Persistent dry cough—especially at night or when lying down",
+      "Laryngitis—hoarse voice or chronic sore throat",
+      "Asthma symptoms—acid irritates airways",
+      "Chest pain—can mimic cardiac chest pain",
+      "Sensation of lump in throat (globus sensation)",
+      "Nausea",
+      "Bad breath or taste in mouth—from gastric contents",
+    ],
+    redFlagSigns: [
+      "Chest pain associated with shortness of breath, sweating, or arm pain—seek immediate cardiac evaluation",
+      "Difficulty swallowing liquids or solids—may indicate stricture or malignancy",
+      "Vomiting blood or dark material—indicates bleeding",
+      "Black, tarry stools—sign of upper GI bleeding",
+      "Persistent difficulty swallowing despite treatment",
+      "Unexplained weight loss",
+      "Symptoms progressing despite medical therapy for 3-4 weeks",
+      "Signs of aspiration: frequent coughing after eating, recurrent pneumonia, or aspiration pneumonia",
+    ],
+    diagnosis: [
+      "Clinical diagnosis: Based on symptoms and response to treatment; no test needed if symptoms are typical",
+      "Upper GI Endoscopy (OGD): Gold standard for evaluating chronic GERD; identifies erosions, Barrett's esophagus, ulcers, or malignancy",
+      "pH monitoring: 24-48 hour esophageal pH probe measures acid exposure in the esophagus; confirms GERD diagnosis objectively",
+      "Impedance monitoring: Detects non-acid reflux (bile or food)",
+      "Barium swallow: X-ray study with swallowed contrast; can visualize structural abnormalities",
+      "High-resolution manometry: Measures esophageal and LES pressure; assesses motility",
+    ],
+    treatment: {
+      "Lifestyle Modifications (First-Line)": [
+        "Weight loss: Even 5-10% reduction can improve symptoms significantly",
+        "Elevate head of bed: Sleep on 4-6 inch blocks under the head",
+        "Avoid eating 2-3 hours before sleep",
+        "Avoid large meals: Eat smaller, frequent meals",
+        "Reduce fat intake: Fat delays gastric emptying",
+        "Eliminate known triggers: Spicy foods, caffeine, alcohol, chocolate",
+        "Stop smoking",
+        "Manage stress: Stress triggers acid production",
+        "Avoid tight clothing: Can increase abdominal pressure",
+      ],
+      Medications: [
+        "Antacids: Neutralize stomach acid, provide rapid relief (e.g., aluminum hydroxide, magnesium hydroxide)",
+        "H2 receptor blockers: Reduce acid production (famotidine, ranitidine); take 15-30 minutes before meals",
+        "Proton pump inhibitors (PPIs): Most potent acid suppressants (omeprazole, pantoprazole); take once daily before breakfast",
+        "Prokinetic agents: Improve stomach emptying (domperidone); used less commonly now",
+      ],
+      "Surgical Options": [
+        "Nissen fundoplication: Wraps upper stomach around LES to strengthen it; considered for patients not responding to PPIs or unable to tolerate long-term medication",
+        "LINX procedure: Magnetic ring device placed around LES; less invasive than fundoplication",
+        "Newer endoscopic procedures: Transoral incisionless fundoplication (TIF), radiofrequency ablation (Stretta)",
+      ],
+    },
+    complications: [
+      "Esophageal Erosions and Ulcers: Chronic acid exposure erodes the esophageal lining, causing pain and bleeding.",
+      "Barrett's Esophagus: Prolonged GERD changes the cell lining of the esophagus (metaplasia); increases risk of esophageal adenocarcinoma 30-125 fold.",
+      "Esophageal Stricture: Scarring from chronic ulcers narrows the esophagus, causing progressive dysphagia.",
+      "Esophageal Adenocarcinoma: Rare but serious complication of long-standing GERD and Barrett's esophagus.",
+      "Aspiration and Respiratory Complications: Refluxed acid can enter the lungs, causing aspiration pneumonia, asthma exacerbation, or chronic cough.",
+      "Anemia: Chronic slow bleeding from esophageal erosions can cause iron deficiency anemia.",
+      "Dental Erosion: Repeated acid exposure erodes tooth enamel, causing tooth sensitivity and decay.",
+    ],
+    prevention: [
+      "Maintain healthy weight—obesity is a major risk factor",
+      "Eat smaller, more frequent meals instead of large meals",
+      "Avoid eating within 3 hours of bedtime",
+      "Eliminate or reduce alcohol consumption",
+      "Stop smoking",
+      "Limit caffeine and caffeinated beverages",
+      "Reduce spicy and fatty foods",
+      "Elevate the head of your bed 4-6 inches",
+      "Manage stress through exercise, yoga, or meditation",
+      "Avoid tight-fitting clothing around the abdomen",
+      "Take NSAIDs only with food and only if necessary",
+    ],
+    faq: [
+      {
+        question: "Can GERD go away on its own?",
+        answer:
+          "Occasional acid reflux is normal and usually resolves on its own. However, GERD is chronic and requires ongoing management. If left untreated, GERD typically worsens and can cause serious complications like Barrett's esophagus and esophageal cancer.",
+      },
+      {
+        question: "Why is my GERD worse at night?",
+        answer:
+          "Lying down reduces the effect of gravity, allowing stomach acid to flow backward more easily. Also, acid production continues while you sleep, but stomach acid normally drains downward during the day. Elevate your head and avoid eating 3 hours before bed to help.",
+      },
+      {
+        question: "Is it safe to take PPIs long-term?",
+        answer:
+          "PPIs are generally safe for long-term use, but prolonged use is associated with slight increases in bone fracture risk, vitamin B12 deficiency, and possibly increased pneumonia risk. Use the lowest effective dose. Regular monitoring by your doctor is recommended.",
+      },
+      {
+        question: "Can diet alone treat GERD?",
+        answer:
+          "Dietary changes and lifestyle modifications help significantly, but are often insufficient alone for moderate-to-severe GERD. Most patients require medication (PPIs or H2 blockers) in addition to lifestyle changes.",
+      },
+      {
+        question: "What if GERD medications don't work?",
+        answer:
+          "If symptoms persist despite 8 weeks of high-dose PPI therapy, further evaluation with endoscopy is recommended to check for Barrett's esophagus, ulcers, or malignancy. Some patients may benefit from surgical options like fundoplication.",
+      },
+    ],
+    authorBio:
+      "Dr. Shekhar Poudel, DM Gastroenterology from AIIMS New Delhi, has extensive experience in managing GERD and its complications. He specializes in advanced endoscopy techniques for diagnosing and treating severe reflux disease and Barrett's esophagus.",
+    medicalDisclaimer:
+      "This article is for educational purposes only and should not replace professional medical advice. GERD is a chronic condition requiring personalized management. Always consult with your physician or gastroenterologist for diagnosis and treatment recommendations tailored to your individual circumstances.",
+    references: [
+      "Katz PO, Gerson LB, Vela MF. Guidelines for the diagnosis and management of gastroesophageal reflux disease. Am J Gastroenterol. 2013;108(3):308-328.",
+      "Mayo Clinic - GERD: https://www.mayoclinic.org/diseases-conditions/gerd",
+      "American College of Gastroenterology - GERD Guidelines",
+      "NIH - Gastroesophageal Reflux Disease: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5987305/",
+      "Modlin IM, Kidd M, Lye KD. From Galen to the present: a history of peptic ulcer disease. Semin Laparosc Surg. 2002;9(3):135-146.",
+    ],
   },
   {
-    id: '2',
-    slug: 'acid-reflux-gerd-solutions',
-    title: 'Managing Acid Reflux and GERD: Expert Solutions',
-    description: 'Effective strategies and medical treatments for acid reflux and gastroesophageal reflux disease.',
-    category: 'GERD',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-01-20',
-    readTime: 7,
-    keywords: ['acid reflux', 'GERD', 'heartburn', 'reflux disease'],
-    featured: true,
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/12/34/abdomen-1209783_640.jpg',
-    image: '/GERDb2.jpg',
-    content: `Acid reflux affects millions globally. Here's what you need to know about GERD and how to manage it effectively.
-
-Understanding GERD
-
-GERD occurs when stomach acid frequently flows back into the esophagus, causing discomfort and potential damage.
-
-Risk Factors
-
-- Obesity
-- Pregnancy
-- Smoking
-- Excessive alcohol
-- Large meals
-- Certain medications
-- Hiatal hernia
-
-Lifestyle Modifications
-
-1. Eat smaller, frequent meals
-2. Avoid trigger foods
-3. Don't eat 2-3 hours before bed
-4. Elevate your head while sleeping
-5. Maintain healthy weight
-6. Quit smoking
-
-Medical Treatment
-
-- Antacids
-- H2 receptor blockers
-- Proton pump inhibitors
-- Surgical options for severe cases
-
-When to See a Doctor
-
-Seek medical attention if:
-- Symptoms persist despite lifestyle changes
-- You have difficulty swallowing
-- You experience chest pain
-- You have unexplained weight loss
-
-References & Sources:
-- Mayo Clinic - GERD: https://www.mayoclinic.org/diseases-conditions/gerd
-- American College of Gastroenterology - GERD Guidelines
-- NIH - Gastroesophageal Reflux Disease: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5987305/`
-  },
-  {
-    id: '3',
-    slug: 'ibs-management-diet-lifestyle',
-    title: 'IBS Management: Diet, Triggers, and Lifestyle Tips',
-    description: 'Comprehensive guide to managing Irritable Bowel Syndrome through diet and lifestyle changes.',
-    category: 'IBS',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-01-25',
+    id: "3",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    slug: "ibs-management-diet-lifestyle",
+    title: "IBS Management: Diet, Triggers, and Lifestyle Tips",
+    description:
+      "Comprehensive guide to managing Irritable Bowel Syndrome through diet and lifestyle changes.",
+    category: "IBS",
+    author: "Dr. Shekhar Poudel",
+    date: "2024-01-25",
     readTime: 9,
-    keywords: ['IBS', 'irritable bowel syndrome', 'IBS diet', 'IBS treatment'],
+    keywords: ["IBS", "irritable bowel syndrome", "IBS diet", "IBS treatment"],
     featured: true,
-    image: '/IBDb3.png',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/10/06/03/24/intestine-1717444_640.jpg',
+    image: "/IBDb3.png",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/10/06/03/24/intestine-1717444_640.jpg",
     content: `Irritable Bowel Syndrome affects up to 15% of the population. Learn how to manage IBS effectively.
 
 Types of IBS
@@ -193,21 +477,29 @@ References & Sources:
 - Mayo Clinic - Irritable Bowel Syndrome: https://www.mayoclinic.org/diseases-conditions/ibs
 - American College of Gastroenterology - IBS Guidelines
 - Rome Foundation - IBS Diagnostic Criteria: https://theromefoundation.org/
-- NIH - Irritable Bowel Syndrome Research: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6539318/`
+- NIH - Irritable Bowel Syndrome Research: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6539318/`,
   },
   {
-    id: '4',
-    slug: 'liver-health-prevention',
-    title: 'Liver Health: Prevention and Early Detection',
-    description: 'Essential information about liver health, common diseases, and prevention strategies.',
-    category: 'Liver Health',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-02-01',
+    id: "4",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    slug: "liver-health-prevention",
+    title: "Liver Health: Prevention and Early Detection",
+    description:
+      "Essential information about liver health, common diseases, and prevention strategies.",
+    category: "Liver Health",
+    author: "Dr. Shekhar Poudel",
+    date: "2024-02-01",
     readTime: 8,
-    keywords: ['liver health', 'liver disease', 'hepatitis', 'liver prevention'],
+    keywords: [
+      "liver health",
+      "liver disease",
+      "hepatitis",
+      "liver prevention",
+    ],
     featured: true,
-    image: '/LIverhealth preventionb4.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2017/07/19/11/41/liver-2519045_640.jpg',
+    image: "/LIverhealth preventionb4.jpg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2017/07/19/11/41/liver-2519045_640.jpg",
     content: `Your liver is vital for survival. Learn how to keep it healthy and detect problems early.
 
 Liver Functions
@@ -257,21 +549,29 @@ Seek medical he
 
 References & Sources:
 - Mayo Clinic - Liver Disease: https://www.mayoclinic.org/diseases-conditions/liver-disease
-- NIH - Liver Diseases: https://www.ncbi.nlm.nih.gov/books/NBK481616/`
+- NIH - Liver Diseases: https://www.ncbi.nlm.nih.gov/books/NBK481616/`,
   },
   {
-    id: '5',
-    slug: 'endoscopy-procedure-guide',
-    title: 'Endoscopy Explained: What to Expect',
-    description: 'Complete guide to endoscopy procedures, preparation, and what to expect before and after.',
-    category: 'Procedures',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-02-05',
+    id: "5",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    slug: "endoscopy-procedure-guide",
+    title: "Endoscopy Explained: What to Expect",
+    description:
+      "Complete guide to endoscopy procedures, preparation, and what to expect before and after.",
+    category: "Procedures",
+    author: "Dr. Shekhar Poudel",
+    date: "2024-02-05",
     readTime: 6,
-    keywords: ['endoscopy', 'upper endoscopy', 'endoscopy procedure', 'endoscopy preparation'],
+    keywords: [
+      "endoscopy",
+      "upper endoscopy",
+      "endoscopy procedure",
+      "endoscopy preparation",
+    ],
     featured: false,
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
-    image: '/Endospcopy.jpg',
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
+    image: "/Endospcopy.jpg",
     content: `Understanding what endoscopy involves can help reduce anxiety and ensure proper preparation.
 
 What is Endoscopy?
@@ -322,21 +622,30 @@ Most people recover within 24 hours with minimal side effects.
 References & Sources:
 - Mayo Clinic - Endoscopy: https://www.mayoclinic.org/tests-procedures/endoscopy
 - American Society for Gastrointestinal Endoscopy (ASGE): https://www.asge.org/
-- NIH - Gastrointestinal Endoscopy: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6007622/`
+- NIH - Gastrointestinal Endoscopy: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6007622/`,
   },
   {
-    id: '6',
-    slug: 'hepatitis-types-prevention',
-    title: 'Hepatitis Types: Understanding A, B, C, D, and E',
-    description: 'Comprehensive overview of all hepatitis types, transmission, prevention, and treatment.',
-    category: 'Liver Health',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-02-10',
+    id: "6",
+    slug: "hepatitis-types-prevention",
+    title: "Hepatitis Types: Understanding A, B, C, D, and E",
+    description:
+      "Comprehensive overview of all hepatitis types, transmission, prevention, and treatment.",
+    category: "Liver Health",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-02-10",
     readTime: 10,
-    keywords: ['hepatitis', 'hepatitis A', 'hepatitis B', 'hepatitis C', 'viral hepatitis'],
+    keywords: [
+      "hepatitis",
+      "hepatitis A",
+      "hepatitis B",
+      "hepatitis C",
+      "viral hepatitis",
+    ],
     featured: true,
-    image: '/Hepatitis.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/Hepatitis.jpg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Hepatitis affects millions worldwide. Understanding each type is crucial for prevention and treatment.
 
 Hepatitis A
@@ -382,21 +691,29 @@ References & Sources:
 - CDC - Viral Hepatitis: https://www.cdc.gov/hepatitis
 - WHO - Hepatitis: https://www.who.int/news/fact-sheets/detail/hepatitis
 - Mayo Clinic - Hepatitis: https://www.mayoclinic.org/diseases-conditions/hepatitis
-- NIH - Hepatitis Information: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5815181/`
+- NIH - Hepatitis Information: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5815181/`,
   },
   {
-    id: '7',
-    slug: 'colonoscopy-cancer-screening',
-    title: 'Colorectal Cancer Screening: Why Colonoscopy Matters',
-    description: 'Importance of colonoscopy for cancer prevention and early detection.',
-    category: 'Prevention',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-02-15',
+    id: "7",
+    slug: "colonoscopy-cancer-screening",
+    title: "Colorectal Cancer Screening: Why Colonoscopy Matters",
+    description:
+      "Importance of colonoscopy for cancer prevention and early detection.",
+    category: "Prevention",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-02-15",
     readTime: 7,
-    keywords: ['colonoscopy', 'colon cancer', 'cancer screening', 'colorectal cancer'],
+    keywords: [
+      "colonoscopy",
+      "colon cancer",
+      "cancer screening",
+      "colorectal cancer",
+    ],
     featured: false,
-    image: '/CRC.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/CRC.jpg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Colorectal cancer is preventable with regular screening. Here's why colonoscopy is important.
 
 Cancer Prevention
@@ -450,21 +767,29 @@ References & Sources:
 - American Cancer Society - Colorectal Cancer Screening: https://www.cancer.org/cancer/colon-rectal-cancer.html
 - Mayo Clinic - Colorectal Cancer: https://www.mayoclinic.org/diseases-conditions/colon-cancer
 - NIH - Colorectal Cancer Screening: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8274046/
-- USPSTF - Colorectal Cancer Screening Recommendations`
+- USPSTF - Colorectal Cancer Screening Recommendations`,
   },
   {
-    id: '8',
-    slug: 'fatty-liver-disease-reversal',
-    title: 'Fatty Liver Disease: Can It Be Reversed?',
-    description: 'Understanding non-alcoholic fatty liver disease and strategies for reversal.',
-    category: 'Liver Health',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-02-20',
+    id: "8",
+    slug: "fatty-liver-disease-reversal",
+    title: "Fatty Liver Disease: Can It Be Reversed?",
+    description:
+      "Understanding non-alcoholic fatty liver disease and strategies for reversal.",
+    category: "Liver Health",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-02-20",
     readTime: 8,
-    keywords: ['fatty liver', 'NAFLD', 'liver disease', 'fatty liver treatment'],
+    keywords: [
+      "fatty liver",
+      "NAFLD",
+      "liver disease",
+      "fatty liver treatment",
+    ],
     featured: true,
-    image: '/Fattyliber.jpeg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/Fattyliber.jpeg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Fatty liver disease affects approximately 25% of the global population. The good news: it's often reversible.
 
 Understanding NAFLD
@@ -523,21 +848,24 @@ References & Sources:
 - Mayo Clinic - Fatty Liver Disease: https://www.mayoclinic.org/diseases-conditions/fatty-liver-disease
 - NIH - Non-alcoholic Fatty Liver Disease: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6015251/
 - AASLD - NAFLD Guidelines: https://www.aasld.org/
-- Hepatology Journal - NAFLD Management`
+- Hepatology Journal - NAFLD Management`,
   },
   {
-    id: '9',
-    slug: 'digestive-enzymes-gut-health',
-    title: 'Digestive Enzymes and Gut Health: Complete Guide',
-    description: 'How digestive enzymes work and strategies to improve gut health and digestion.',
-    category: 'Digestion',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-02-25',
+    id: "9",
+    slug: "digestive-enzymes-gut-health",
+    title: "Digestive Enzymes and Gut Health: Complete Guide",
+    description:
+      "How digestive enzymes work and strategies to improve gut health and digestion.",
+    category: "Digestion",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",  
+    date: "2024-02-25",
     readTime: 7,
-    keywords: ['digestive enzymes', 'gut health', 'digestion', 'probiotics'],
+    keywords: ["digestive enzymes", "gut health", "digestion", "probiotics"],
     featured: false,
-    image: '/Guthealth.webp',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/Guthealth.webp",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Good digestion is fundamental to overall health. Learn how your digestive system works.
 
 Types of Digestive Enzymes
@@ -588,21 +916,27 @@ References & Sources:
 - NIH - Digestive Enzymes: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3715154/
 - Mayo Clinic - Digestive Health: https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating
 - American Journal of Gastroenterology - Enzyme Disorders
-- National Pancreas Foundation - Digestive Enzymes`
+- National Pancreas Foundation - Digestive Enzymes`,
   },
   {
-    id: '10',
-    slug: 'diet-after-endoscopy-recovery',
-    title: 'Diet After Endoscopy: Recovery Nutrition Guide',
-    description: 'What to eat and avoid after endoscopy for optimal recovery.',
-    category: 'Recovery',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-03-01',
+    id: "10",
+    slug: "diet-after-endoscopy-recovery",
+    title: "Diet After Endoscopy: Recovery Nutrition Guide",
+    description: "What to eat and avoid after endoscopy for optimal recovery.",
+    category: "Recovery",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-03-01",
     readTime: 5,
-    keywords: ['post-endoscopy diet', 'endoscopy recovery', 'recovery nutrition'],
+    keywords: [
+      "post-endoscopy diet",
+      "endoscopy recovery",
+      "recovery nutrition",
+    ],
     featured: false,
-    image: '/diet after endocopy.webp',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/diet after endocopy.webp",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Proper nutrition after endoscopy supports healing and recovery. Here's what you should eat.
 
 Immediately After (First 2 Hours)
@@ -658,21 +992,29 @@ References & Sources:
 - American Journal of Gastroenterology - Post-Endoscopy Care
 - ASGE - Patient Education: https://www.asge.org/home/for-patients
 - Mayo Clinic - Endoscopy Recovery: https://www.mayoclinic.org/tests-procedures/endoscopy
-- NIH - Post-procedural Recovery Guidelines`
+- NIH - Post-procedural Recovery Guidelines`,
   },
   {
-    id: '11',
-    slug: 'stress-management-gut-health',
-    title: 'The Gut-Brain Connection: Stress and Digestive Health',
-    description: 'How stress affects digestion and strategies for managing stress-related GI issues.',
-    category: 'Lifestyle',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-03-05',
+    id: "11",
+    slug: "stress-management-gut-health",
+    title: "The Gut-Brain Connection: Stress and Digestive Health",
+    description:
+      "How stress affects digestion and strategies for managing stress-related GI issues.",
+    category: "Lifestyle",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-03-05",
     readTime: 8,
-    keywords: ['stress management', 'gut health', 'stress anxiety', 'IBS stress'],
+    keywords: [
+      "stress management",
+      "gut health",
+      "stress anxiety",
+      "IBS stress",
+    ],
     featured: true,
-    image: '/Gut-Brain-Connection.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/Gut-Brain-Connection.jpg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `The gut-brain axis is powerful. Stress directly impacts digestion and GI health.
 
 How Stress Affects Digestion
@@ -729,21 +1071,29 @@ References & Sources:
 - NIH - Gut-Brain Axis: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7695857/
 - Mayo Clinic - Stress and Digestive Health
 - American Psychological Association - Stress Effects
-- Gastroenterology Journal - Psychosomatic Gastrointestinal Disorders`
+- Gastroenterology Journal - Psychosomatic Gastrointestinal Disorders`,
   },
   {
-    id: '12',
-    slug: 'probiotics-gut-microbiome',
-    title: 'Probiotics and Gut Microbiome: What You Need to Know',
-    description: 'Understanding probiotics, their benefits, and how to choose quality products.',
-    category: 'Nutrition',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-03-10',
+    id: "12",
+    slug: "probiotics-gut-microbiome",
+    title: "Probiotics and Gut Microbiome: What You Need to Know",
+    description:
+      "Understanding probiotics, their benefits, and how to choose quality products.",
+    category: "Nutrition",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-03-10",
     readTime: 7,
-    keywords: ['probiotics', 'gut microbiome', 'beneficial bacteria', 'gut health'],
+    keywords: [
+      "probiotics",
+      "gut microbiome",
+      "beneficial bacteria",
+      "gut health",
+    ],
     featured: false,
-    image: '/Gutmicrbiome.webp',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/Gutmicrbiome.webp",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Your gut microbiome contains trillions of bacteria crucial for health. Probiotics support beneficial bacteria.
 
 What Are Probiotics?
@@ -803,21 +1153,29 @@ References & Sources:
 - Mayo Clinic - Probiotics: https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/probiotics/faq-20058065
 - NIH - Probiotics and Health: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3539293/
 - American Gastroenterological Association - Probiotics
-- Nature Reviews - Microbiome Research`
+- Nature Reviews - Microbiome Research`,
   },
   {
-    id: '13',
-    slug: 'hemorrhoids-treatment-prevention',
-    title: 'Hemorrhoids: Prevention and Treatment Options',
-    description: 'Everything you need to know about hemorrhoid prevention and treatment.',
-    category: 'Conditions',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-03-15',
+    id: "13",
+    slug: "hemorrhoids-treatment-prevention",
+    title: "Hemorrhoids: Prevention and Treatment Options",
+    description:
+      "Everything you need to know about hemorrhoid prevention and treatment.",
+    category: "Conditions",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-03-15",
     readTime: 6,
-    keywords: ['hemorrhoids', 'piles', 'hemorrhoid treatment', 'hemorrhoid prevention'],
+    keywords: [
+      "hemorrhoids",
+      "piles",
+      "hemorrhoid treatment",
+      "hemorrhoid prevention",
+    ],
     featured: false,
-    image: '/Hemorrhioids.webp',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/Hemorrhioids.webp",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Hemorrhoids are common and treatable. Here's what you need to know.
 
 Types
@@ -874,21 +1232,29 @@ Persistent symptoms warrant professional evaluation.
 References & Sources:
 - Mayo Clinic - Hemorrhoids: https://www.mayoclinic.org/diseases-conditions/hemorrhoids
 - American College of Gastroenterology - Hemorrhoid Management
-- NIH - Hemorrhoids Overview: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5774152/`
+- NIH - Hemorrhoids Overview: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5774152/`,
   },
   {
-    id: '14',
-    slug: 'celiac-disease-gluten-sensitivity',
-    title: 'Celiac Disease vs. Gluten Sensitivity: Key Differences',
-    description: 'Understanding celiac disease, gluten sensitivity, and proper diagnosis and management.',
-    category: 'Conditions',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-03-20',
+    id: "14",
+    slug: "celiac-disease-gluten-sensitivity",
+    title: "Celiac Disease vs. Gluten Sensitivity: Key Differences",
+    description:
+      "Understanding celiac disease, gluten sensitivity, and proper diagnosis and management.",
+    category: "Conditions",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-03-20",
     readTime: 8,
-    keywords: ['celiac disease', 'gluten sensitivity', 'gluten-free', 'digestive health'],
+    keywords: [
+      "celiac disease",
+      "gluten sensitivity",
+      "gluten-free",
+      "digestive health",
+    ],
     featured: true,
-    image: '/celiac-disease.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/celiac-disease.jpg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Celiac disease and gluten sensitivity are distinct conditions requiring different management approaches.
 
 Celiac Disease
@@ -949,21 +1315,29 @@ References & Sources:
 - Mayo Clinic - Celiac Disease: https://www.mayoclinic.org/diseases-conditions/celiac-disease
 - NIH - Celiac Disease: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6481814/
 - American College of Gastroenterology - Celiac Guidelines
-- Celiac Disease Foundation: https://celiac.org/`
+- Celiac Disease Foundation: https://celiac.org/`,
   },
   {
-    id: '15',
-    slug: 'ulcerative-colitis-crohns-disease',
-    title: 'IBD Explained: Ulcerative Colitis vs. Crohn\'s Disease',
-    description: 'Comprehensive comparison of ulcerative colitis and Crohn\'s disease with treatment options.',
-    category: 'IBD',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-03-25',
+    id: "15",
+    slug: "ulcerative-colitis-crohns-disease",
+    title: "IBD Explained: Ulcerative Colitis vs. Crohn's Disease",
+    description:
+      "Comprehensive comparison of ulcerative colitis and Crohn's disease with treatment options.",
+    category: "IBD",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-03-25",
     readTime: 9,
-    keywords: ['ulcerative colitis', 'Crohn\'s disease', 'IBD', 'inflammatory bowel disease'],
+    keywords: [
+      "ulcerative colitis",
+      "Crohn's disease",
+      "IBD",
+      "inflammatory bowel disease",
+    ],
     featured: true,
-    image: '/inflammatory-bowel-disease-ibd.webp',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/inflammatory-bowel-disease-ibd.webp",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Inflammatory Bowel Disease includes two main types with different characteristics and treatment approaches.
 
 Ulcerative Colitis
@@ -1036,21 +1410,29 @@ References & Sources:
 - Mayo Clinic - Inflammatory Bowel Disease: https://www.mayoclinic.org/diseases-conditions/inflammatory-bowel-disease
 - Crohn's & Colitis Foundation: https://www.crohnscolitisfoundation.org/
 - NIH - IBD Research: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6474080/
-- American College of Gastroenterology - IBD Guidelines`
+- American College of Gastroenterology - IBD Guidelines`,
   },
   {
-    id: '16',
-    slug: 'liver-transplantation-guide',
-    title: 'Liver Transplantation: What You Need to Know',
-    description: 'Comprehensive guide to liver transplantation, eligibility, process, and outcomes.',
-    category: 'Treatment',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-04-01',
+    id: "16",
+    slug: "liver-transplantation-guide",
+    title: "Liver Transplantation: What You Need to Know",
+    description:
+      "Comprehensive guide to liver transplantation, eligibility, process, and outcomes.",
+    category: "Treatment",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-04-01",
     readTime: 10,
-    keywords: ['liver transplant', 'organ transplant', 'transplantation', 'liver failure'],
+    keywords: [
+      "liver transplant",
+      "organ transplant",
+      "transplantation",
+      "liver failure",
+    ],
     featured: true,
-    image: '/liver-transplantation.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/liver-transplantation.jpg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Liver transplantation is life-saving for patients with end-stage liver disease.
 
 Who Needs a Transplant?
@@ -1144,21 +1526,24 @@ References & Sources:
 - Mayo Clinic - Liver Transplant: https://www.mayoclinic.org/tests-procedures/liver-transplant
 - AASLD - Liver Transplant Guidelines: https://www.aasld.org/
 - American Society of Transplantation: https://www.astro.org/
-- NIH - Organ Transplantation: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2827505/`
+- NIH - Organ Transplantation: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2827505/`,
   },
   {
-    id: '17',
-    slug: 'endoscopic-ultrasound-eus',
-    title: 'EUS (Endoscopic Ultrasound): Advanced Diagnostic Tool',
-    description: 'Understanding EUS technology and its applications in gastroenterology.',
-    category: 'Procedures',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-04-05',
+    id: "17",
+    slug: "endoscopic-ultrasound-eus",
+    title: "EUS (Endoscopic Ultrasound): Advanced Diagnostic Tool",
+    description:
+      "Understanding EUS technology and its applications in gastroenterology.",
+    category: "Procedures",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-04-05",
     readTime: 7,
-    keywords: ['EUS', 'endoscopic ultrasound', 'diagnosis', 'GI procedures'],
+    keywords: ["EUS", "endoscopic ultrasound", "diagnosis", "GI procedures"],
     featured: false,
-    image: '/EUS.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/EUS.jpg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Endoscopic Ultrasound (EUS) combines endoscopy with ultrasound for detailed imaging.
 
 What is EUS?
@@ -1221,21 +1606,24 @@ Rapid diagnosis allows timely treatment decisions.
 References & Sources:
 - ASGE - Endoscopic Ultrasound: https://www.asge.org/
 - Mayo Clinic - EUS: https://www.mayoclinic.org/tests-procedures/endoscopic-ultrasound
-- NIH - EUS Applications: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6032533/`
+- NIH - EUS Applications: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6032533/`,
   },
   {
-    id: '18',
-    slug: 'ercp-pancreatic-bile-duct',
-    title: 'ERCP Procedures: Pancreatic and Bile Duct Treatment',
-    description: 'Understanding ERCP technology and its role in treating biliary and pancreatic diseases.',
-    category: 'Procedures',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-04-10',
+    id: "18",
+    slug: "ercp-pancreatic-bile-duct",
+    title: "ERCP Procedures: Pancreatic and Bile Duct Treatment",
+    description:
+      "Understanding ERCP technology and its role in treating biliary and pancreatic diseases.",
+    category: "Procedures",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-04-10",
     readTime: 8,
-    keywords: ['ERCP', 'bile duct', 'pancreatic duct', 'biliary disease'],
+    keywords: ["ERCP", "bile duct", "pancreatic duct", "biliary disease"],
     featured: true,
-    image: '/ERCP.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/ERCP.jpg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `ERCP (Endoscopic Retrograde Cholangiopancreatography) treats bile and pancreatic duct problems.
 
 What is ERCP?
@@ -1313,21 +1701,24 @@ References & Sources:
 - ASGE - ERCP Guidelines: https://www.asge.org/
 - Mayo Clinic - ERCP: https://www.mayoclinic.org/tests-procedures/ercp
 - American Journal of Gastroenterology - ERCP Outcomes
-- NIH - ERCP Research: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7202449/`
+- NIH - ERCP Research: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7202449/`,
   },
   {
-    id: '19',
-    slug: 'peptic-ulcer-disease-treatment',
-    title: 'Peptic Ulcer Disease: Causes, Treatment, and Prevention',
-    description: 'Complete guide to peptic ulcer disease, H. pylori infection, and modern treatment.',
-    category: 'Ulcers',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-04-15',
+    id: "19",
+    slug: "peptic-ulcer-disease-treatment",
+    title: "Peptic Ulcer Disease: Causes, Treatment, and Prevention",
+    description:
+      "Complete guide to peptic ulcer disease, H. pylori infection, and modern treatment.",
+    category: "Ulcers",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-04-15",
     readTime: 8,
-    keywords: ['peptic ulcer', 'ulcer disease', 'H. pylori', 'stomach ulcer'],
+    keywords: ["peptic ulcer", "ulcer disease", "H. pylori", "stomach ulcer"],
     featured: true,
-    image: '/peptic-ulcer.png',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/peptic-ulcer.png",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Peptic ulcers are common but treatable. Modern therapy has revolutionized management.
 
 What is a Peptic Ulcer?
@@ -1402,21 +1793,29 @@ References & Sources:
 - Mayo Clinic - Peptic Ulcer: https://www.mayoclinic.org/diseases-conditions/peptic-ulcer
 - NIH - Peptic Ulcer Disease: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3879513/
 - American College of Gastroenterology - Ulcer Management
-- Helicobacter Journal - Treatment Guidelines`
+- Helicobacter Journal - Treatment Guidelines`,
   },
   {
-    id: '20',
-    slug: 'constipation-management-solutions',
-    title: 'Constipation: When It\'s Serious and How to Treat It',
-    description: 'Comprehensive guide to constipation causes, treatment, and when to see a doctor.',
-    category: 'Digestion',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-04-20',
+    id: "20",
+    slug: "constipation-management-solutions",
+    title: "Constipation: When It's Serious and How to Treat It",
+    description:
+      "Comprehensive guide to constipation causes, treatment, and when to see a doctor.",
+    category: "Digestion",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-04-20",
     readTime: 7,
-    keywords: ['constipation', 'bowel movement', 'constipation relief', 'chronic constipation'],
+    keywords: [
+      "constipation",
+      "bowel movement",
+      "constipation relief",
+      "chronic constipation",
+    ],
     featured: false,
-    image: '/Constipation.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/Constipation.jpg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Constipation affects many people. Most cases are manageable with lifestyle changes.
 
 Definitions
@@ -1497,21 +1896,29 @@ References & Sources:
 - Mayo Clinic - Constipation: https://www.mayoclinic.org/diseases-conditions/constipation
 - NIH - Constipation Management: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315390/
 - American College of Gastroenterology - Constipation Guidelines
-- Gastroenterology Journal - Chronic Constipation`
+- Gastroenterology Journal - Chronic Constipation`,
   },
   {
-    id: '21',
-    slug: 'diarrhea-causes-treatment',
-    title: 'Diarrhea: Causes, Treatment, and When to Worry',
-    description: 'Understanding acute and chronic diarrhea, causes, and appropriate management.',
-    category: 'Digestion',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-04-25',
+    id: "21",
+    slug: "diarrhea-causes-treatment",
+    title: "Diarrhea: Causes, Treatment, and When to Worry",
+    description:
+      "Understanding acute and chronic diarrhea, causes, and appropriate management.",
+    category: "Digestion",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-04-25",
     readTime: 7,
-    keywords: ['diarrhea', 'loose stools', 'gastroenteritis', 'chronic diarrhea'],
+    keywords: [
+      "diarrhea",
+      "loose stools",
+      "gastroenteritis",
+      "chronic diarrhea",
+    ],
     featured: false,
-    image: '/Diarrhea.webp',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/Diarrhea.webp",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Diarrhea is common and usually self-limited, but can indicate serious conditions.
 
 Types
@@ -1585,21 +1992,29 @@ When to Seek Medical Care
 - Immunocompromised
 - Extreme age or infancy
 
-Proper evaluation ensures appropriate treatment.`
+Proper evaluation ensures appropriate treatment.`,
   },
   {
-    id: '22',
-    slug: 'colon-cancer-prevention-screening',
-    title: 'Colon Cancer Prevention and Early Screening',
-    description: 'Strategies for colon cancer prevention and the importance of screening programs.',
-    category: 'Prevention',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-05-01',
+    id: "22",
+    slug: "colon-cancer-prevention-screening",
+    title: "Colon Cancer Prevention and Early Screening",
+    description:
+      "Strategies for colon cancer prevention and the importance of screening programs.",
+    category: "Prevention",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-05-01",
     readTime: 8,
-    keywords: ['colon cancer', 'cancer prevention', 'cancer screening', 'bowel cancer'],
+    keywords: [
+      "colon cancer",
+      "cancer prevention",
+      "cancer screening",
+      "bowel cancer",
+    ],
     featured: true,
-    image: '/CRC.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/CRC.jpg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Colorectal cancer is largely preventable with proper screening and lifestyle measures.
 
 Risk Factors
@@ -1665,21 +2080,29 @@ Early Detection
 
 Current Research
 
-Dr. Poudel stays updated on latest screening technologies and techniques.`
+Dr. Poudel stays updated on latest screening technologies and techniques.`,
   },
   {
-    id: '23',
-    slug: 'esophageal-cancer-awareness',
-    title: 'Esophageal Cancer: Risk Factors, Symptoms, and Survival',
-    description: 'Comprehensive guide to esophageal cancer including risk factors, diagnosis, and prognosis.',
-    category: 'Cancer',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-05-05',
+    id: "23",
+    slug: "esophageal-cancer-awareness",
+    title: "Esophageal Cancer: Risk Factors, Symptoms, and Survival",
+    description:
+      "Comprehensive guide to esophageal cancer including risk factors, diagnosis, and prognosis.",
+    category: "Cancer",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-05-05",
     readTime: 9,
-    keywords: ['esophageal cancer', 'throat cancer', 'cancer awareness', 'cancer diagnosis'],
+    keywords: [
+      "esophageal cancer",
+      "throat cancer",
+      "cancer awareness",
+      "cancer diagnosis",
+    ],
     featured: false,
-    image: '/Esophageal cancer.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/Esophageal cancer.jpg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Esophageal cancer awareness and early detection are crucial for improving outcomes.
 
 Types
@@ -1751,21 +2174,29 @@ References & Sources:
 - Mayo Clinic - Esophageal Cancer: https://www.mayoclinic.org/diseases-conditions/esophageal-cancer
 - American Cancer Society - Esophageal Cancer
 - NIH - Esophageal Cancer: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7047066/
-- Gastric Cancer Journal - Cancer Prevention`
+- Gastric Cancer Journal - Cancer Prevention`,
   },
   {
-    id: '24',
-    slug: 'pancreatitis-causes-management',
-    title: 'Acute and Chronic Pancreatitis: Causes and Management',
-    description: 'Understanding acute and chronic pancreatitis, their causes, and treatment approaches.',
-    category: 'Pancreas',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-05-10',
+    id: "24",
+    slug: "pancreatitis-causes-management",
+    title: "Acute and Chronic Pancreatitis: Causes and Management",
+    description:
+      "Understanding acute and chronic pancreatitis, their causes, and treatment approaches.",
+    category: "Pancreas",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-05-10",
     readTime: 9,
-    keywords: ['pancreatitis', 'pancreas inflammation', 'acute pancreatitis', 'chronic pancreatitis'],
+    keywords: [
+      "pancreatitis",
+      "pancreas inflammation",
+      "acute pancreatitis",
+      "chronic pancreatitis",
+    ],
     featured: true,
-    image: '/Acute pancreatitis.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/Acute pancreatitis.jpg",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Pancreatitis ranges from mild to life-threatening. Understanding it is crucial.
 
 Acute Pancreatitis
@@ -1849,21 +2280,29 @@ Specialized expertise in complex pancreatic cases.
 References & Sources:
 - Mayo Clinic - Pancreatitis: https://www.mayoclinic.org/diseases-conditions/pancreatitis
 - American Pancreatic Association: https://americanpancreatic.org/
-- NIH - Pancreatitis: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8253066/`
+- NIH - Pancreatitis: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8253066/`,
   },
   {
-    id: '25',
-    slug: 'biliary-colic-gallstones',
-    title: 'Gallstones and Biliary Colic: When Surgery Is Needed',
-    description: 'Understanding gallstones, biliary colic, and the role of cholecystectomy.',
-    category: 'Gallbladder',
-    author: 'Dr. Shekhar Poudel',
-    date: '2024-05-15',
+    id: "25",
+    slug: "biliary-colic-gallstones",
+    title: "Gallstones and Biliary Colic: When Surgery Is Needed",
+    description:
+      "Understanding gallstones, biliary colic, and the role of cholecystectomy.",
+    category: "Gallbladder",
+    author: "Dr. Shekhar Poudel",
+    authorImage: "/dr-shekhar-poudel_BaxEz1X.png",
+    date: "2024-05-15",
     readTime: 8,
-    keywords: ['gallstones', 'biliary colic', 'cholecystectomy', 'gallbladder disease'],
+    keywords: [
+      "gallstones",
+      "biliary colic",
+      "cholecystectomy",
+      "gallbladder disease",
+    ],
     featured: false,
-    image: '/gallstones.webp',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    image: "/gallstones.webp",
+    fallbackImage:
+      "https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg",
     content: `Gallstones are common, but only symptomatic ones require treatment.
 
 What Are Gallstones?
@@ -1954,6 +2393,6 @@ Cholecystectomy has excellent outcomes with symptomatic relief in >90% of cases.
 
 References & Sources:
 - Mayo Clinic - Gallstones: https://www.mayoclinic.org/diseases-conditions/gallstones
-- NIH - Cholelithiasis: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8074046/`
-  }
+- NIH - Cholelithiasis: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8074046/`,
+  },
 ];
