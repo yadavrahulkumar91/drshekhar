@@ -144,7 +144,8 @@ export default function TeleconsultationBooking() {
       );
 
       const doctorEmailResult = await sendEmail({
-        to: DOCTOR_EMAIL,
+        // to: DOCTOR_EMAIL,
+        to: process.env.DOCTOR_EMAIL || DOCTOR_EMAIL,
         subject: `New Teleconsultation Appointment - ${formData.fullName}`,
         html: "Lets have a teleconsultation appointment with the patient. Please check the details below." + doctorEmailBody,
         // message: doctorEmailBody,

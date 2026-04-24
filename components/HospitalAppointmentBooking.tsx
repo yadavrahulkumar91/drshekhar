@@ -167,7 +167,7 @@ export default function HospitalAppointmentBooking() {
       );
 
       const doctorEmailResult = await sendEmail({
-        to: DOCTOR_EMAIL,
+        to: process.env.DOCTOR_EMAIL || DOCTOR_EMAIL,
         subject: `New Hospital Appointment - ${selectedHospital?.name} - ${formData.fullName}`,
         html: `Appointment booked at ${selectedHospital?.name}. Please check the details below.\n\n${doctorEmailBody}`,
       });

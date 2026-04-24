@@ -30,17 +30,40 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* Preconnect to critical third-party origins - saves ~310ms per origin */}
-        <link rel="preconnect" href="https://www.tiktok.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://p16-common-sign.tiktokcdn.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://mon.tiktokv.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://p16-sign-sg.tiktokcdn.com" crossOrigin="anonymous" />
-        
+        <link
+          rel="preconnect"
+          href="https://www.tiktok.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://p16-common-sign.tiktokcdn.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://mon.tiktokv.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://p16-sign-sg.tiktokcdn.com"
+          crossOrigin="anonymous"
+        />
+
         {/* DNS prefetch for other third-party resources */}
-        <link rel="dns-prefetch" href="https://sf16-website-login.neutral.ttwstatic.com" />
+        <link
+          rel="dns-prefetch"
+          href="https://sf16-website-login.neutral.ttwstatic.com"
+        />
         <link rel="dns-prefetch" href="https://v19.tiktokcdn.com" />
-        
-        <style dangerouslySetInnerHTML={{
-          __html: `
+        <meta
+          name="google-site-verification"
+          content="m4nExK0i3MY3tgvf53bDlJp6GzK84769yERca-AHbgg"
+        />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
             html.dark {
               color-scheme: dark;
               background-color: #111827;
@@ -54,8 +77,9 @@ export default function RootLayout({
             @font-face {
               font-display: swap;
             }
-          `
-        }} />
+          `,
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -67,8 +91,16 @@ export default function RootLayout({
             `,
           }}
         />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(doctorSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(doctorSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
       </head>
       <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
         <ThemeProvider>

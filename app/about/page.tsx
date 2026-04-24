@@ -184,7 +184,7 @@ export default function AboutPage() {
           <Achievement />
 
           {/* Certificates Section */}
-          <CertificatesSection />
+          {/* <CertificatesSection /> */}
         </div>
       </div>
     </>

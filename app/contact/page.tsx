@@ -3,6 +3,9 @@
 import { useState } from 'react';
 import { Metadata } from 'next';
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Music } from 'lucide-react';
+import { sendEmail } from '@/lib/emailService';
+
+const DOCTOR_EMAIL = 'yadavrahulkumar91@gmail.com';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -11,6 +14,7 @@ export default function ContactPage() {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
@@ -19,12 +23,112 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const createContactEmailBody = (name: string, email: string, phone: string, message: string): string => {
+    return `
+<html>
+  <body style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+      <h2 style="color: #059669; text-align: center;">New Contact Form Submission</h2>
+      
+      <div style="background-color: #f0fdf4; border: 2px solid #10b981; border-radius: 8px; padding: 20px; margin: 20px 0;">
+        <h3 style="color: #047857; margin-top: 0;">Contact Details</h3>
+        
+        <div style="margin: 15px 0;">
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+        </div>
+      </div>
+
+      <div style="background-color: #f3f4f6; border-radius: 8px; padding: 15px; margin: 20px 0;">
+        <h3 style="color: #047857; margin-top: 0;">Message:</h3>
+        <p style="white-space: pre-wrap; word-wrap: break-word;">${message}</p>
+      </div>
+      
+      <p style="text-align: center; color: #6b7280; font-size: 12px;">
+        This message was sent from the contact form on your website.
+      </p>
+    </div>
+  </body>
+</html>
+    `.trim();
+  };
+
+  const createPatientConfirmationEmail = (name: string): string => {
+    return `
+<html>
+  <body style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+      <h2 style="color: #059669; text-align: center;">We Received Your Message</h2>
+      
+      <div style="background-color: #f0fdf4; border: 2px solid #10b981; border-radius: 8px; padding: 20px; margin: 20px 0;">
+        <p>Hi ${name},</p>
+        <p>Thank you for contacting Dr. Shekhar Poudel. We have received your message and will get back to you as soon as possible.</p>
+        <p>We typically respond within 24 hours during business hours.</p>
+      </div>
+      
+      <div style="background-color: #f3f4f6; border-radius: 8px; padding: 15px; margin: 20px 0;">
+        <p><strong>Quick Contact Options:</strong></p>
+        <ul>
+          <li><strong>Phone:</strong> +977-01-5451000</li>
+          <li><strong>WhatsApp:</strong> +977-9765199777</li>
+          <li><strong>Location:</strong> National Gastro Liver Center, Lalitpur, Nepal</li>
+        </ul>
+      </div>
+      
+      <p style="text-align: center; color: #6b7280; font-size: 12px;">
+        Dr. Shekhar Poudel - Gastroenterologist & Hepatologist
+      </p>
+    </div>
+  </body>
+</html>
+    `.trim();
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, send to backend or Firebase
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message. We will contact you soon!');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    
+    if (!formData.name || !formData.email || !formData.message) {
+      alert('Please fill in all required fields');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Send email to doctor
+      const doctorEmailResult = await sendEmail({
+        to: process.env.NEXT_PUBLIC_DOCTOR_EMAIL || DOCTOR_EMAIL,
+        subject: `New Contact Form Submission from ${formData.name}`,
+        html: createContactEmailBody(formData.name, formData.email, formData.phone, formData.message),
+      });
+
+      if (!doctorEmailResult.success) {
+        console.error('Failed to send email to doctor:', doctorEmailResult.error);
+        alert('Error sending message. Please try again.');
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Send confirmation email to patient
+      const patientEmailResult = await sendEmail({
+        to: formData.email,
+        subject: 'We Received Your Message - Dr. Shekhar Poudel',
+        html: createPatientConfirmationEmail(formData.name),
+      });
+
+      if (!patientEmailResult.success) {
+        console.error('Failed to send confirmation email to patient:', patientEmailResult.error);
+      }
+
+      alert('Thank you for your message. We will contact you soon!');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Error sending message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -180,9 +284,10 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold py-3 rounded-lg transition shadow-lg"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-semibold py-3 rounded-lg transition shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>

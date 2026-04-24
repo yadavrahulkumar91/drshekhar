@@ -10,76 +10,12 @@ export default function CertificatesSection() {
 
   const certificates = [
     {
-      name: "AIIMS DM Marksheet",
-      path: "/certificates/dr_shekhar_AIIMS_DM_marksheet.png",
-    },
-    {
-      name: "DM AIIMS Certificate",
-      path: "/certificates/dr_shekhar_DM_AIIMS.png",
-    },
-    {
-      name: "BPKIHS MBBS Certificate",
-      path: "/certificates/dr_shekhar_BPKIHS_MBBS_certificate.png",
-    },
-    {
-      name: "MBBS BPKIHS Transcript",
-      path: "/certificates/dr_shekhar_MBBS_BPKIHS_transcript.png",
-    },
-    {
-      name: "MD Internal Medicine Certificate",
-      path: "/certificates/dr_shekhar_MD_Internal_medicine_PIMER_certificate.png",
-    },
-    {
-      name: "PIMER Postgraduate Certificate",
-      path: "/certificates/dr_shekhar_PIMER_postgraduate_certificate.png",
-    },
-    {
-      name: "Fellowship in Liver Transplant",
-      path: "/certificates/dr_shekhar_NMC_fellowship_in_liver_transplant.png",
-    },
-    {
-      name: "Fellowship in Transplant Hepatology",
-      path: "/certificates/dr_shekhar_fellowship_in_transplant_hepatology_max_medical.png",
-    },
-    {
-      name: "Post Doctoral Training - LTSI",
-      path: "/certificates/dr_shekhar_post_doctoral_tranining_liver_transplantation_society_of_india_certificate.png",
-    },
-    {
       name: "Associate Professor Appointment",
       path: "/certificates/dr_shekhar_associate_professor_appointment_kathmandu_medical_college.png",
     },
     {
       name: "3-Year Contract - Associate Professor",
       path: "/certificates/dr_shekhar_associate_professor_appointment_kathmandu_medical_college_3_year_contract.png",
-    },
-    {
-      name: "HSEB Certificate",
-      path: "/certificates/dr_shekhar_higher_secondary_education_board_certificate.png",
-    },
-    {
-      name: "HSEB Marksheet",
-      path: "/certificates/dr_shekhar_HSEB_marksheet.png",
-    },
-    {
-      name: "SLC Marksheet",
-      path: "/certificates/dr_shekhar_SLC_marksheet.png",
-    },
-    {
-      name: "School Leaving Certificate",
-      path: "/certificates/dr_shekhar_school_leaving_certificate.png",
-    },
-    {
-      name: "NMC Certificates",
-      path: "/certificates/DrShekarNMC_certificates.png",
-    },
-    {
-      name: "BPKIHS MBBS Internship",
-      path: "/certificates/dr_shekhar_BPKIHS_MBBS_internship_certificate.png",
-    },
-    {
-      name: "Certificate of Participation",
-      path: "/certificates/dr_shekhar_certificate_of_participation_kathmandu_medical_college.png",
     },
   ];
 
