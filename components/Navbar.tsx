@@ -7,7 +7,7 @@ import { useTheme } from "./ThemeProvider";
 import ExportedImage from "next-image-export-optimizer";
 import { navBarItems } from "@/data/navbar";
 import { getImagePath } from "@/lib/imageOptimizer";
-
+import Image from "next/image";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
  
@@ -18,18 +18,29 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <Link href="/" className="flex items-center space-x-2">
             <ExportedImage
-              src={getImagePath("/logo.svg")}
+              src={getImagePath("/logo1.png")}
               alt="Dr. Shekhar Poudel"
               width={300}
               height={40}
               className="rounded-full"
             />
+            {/* <Image
+              src="/logo1.png"
+              alt="Dr. Shekhar Poudel"
+              width={300}
+              height={40}
+              className="rounded-full"
+              priority
+            /> */}
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-4 items-center">
             {navBarItems
-              .filter((link) => !["Teleconsultation", "Appointment"].includes(link.name))
+              .filter(
+                (link) =>
+                  !["Teleconsultation", "Appointment"].includes(link.name),
+              )
               .map((link) => (
                 <Link
                   key={link.href}
@@ -63,7 +74,6 @@ export default function Navbar() {
           {/* Right Side */}
           <div className="flex items-center space-x-4">
             {/* Theme Toggle */}
-           
 
             {/* Mobile Menu Button */}
             <button
@@ -79,7 +89,10 @@ export default function Navbar() {
         {isOpen && (
           <div className="lg:hidden pb-6 space-y-3 bg-gradient-to-b from-emerald-50 to-transparent dark:from-emerald-900/20">
             {navBarItems
-              .filter((link) => !["Teleconsultation", "Appointment"].includes(link.name))
+              .filter(
+                (link) =>
+                  !["Teleconsultation", "Appointment"].includes(link.name),
+              )
               .map((link) => (
                 <Link
                   key={link.href}
