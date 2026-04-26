@@ -18,20 +18,13 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <Link href="/" className="flex items-center space-x-2">
             <ExportedImage
-              src={getImagePath("/logo1.png")}
-              alt="Dr. Shekhar Poudel"
-              width={300}
+              src={getImagePath("/logo.png")}
+              alt="U Smile Dental Clinic Logo"
+              width={150}
               height={40}
-              className="rounded-full"
+              className=""
             />
-            {/* <Image
-              src="/logo1.png"
-              alt="Dr. Shekhar Poudel"
-              width={300}
-              height={40}
-              className="rounded-full"
-              priority
-            /> */}
+
           </Link>
 
           {/* Desktop Menu */}
@@ -107,7 +100,7 @@ export default function Navbar() {
             <div className="space-y-2 pt-4 border-t border-emerald-200 dark:border-emerald-700">
               {/* Teleconsultation CTA - Live & Ready */}
               <Link
-                href="/services/teleconsultation"
+                href="/teleconsultation"
                 className="relative block w-full px-5 py-3 bg-gradient-to-r from-emerald-600 via-green-600 to-emerald-600 hover:from-emerald-700 hover:via-green-700 hover:to-emerald-700 text-white font-semibold rounded-full transition duration-300 text-center"
               >
                 <span className="absolute -top-1 -right-3 px-2 py-1 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse">

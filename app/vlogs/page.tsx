@@ -3,8 +3,8 @@ import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Vlogs & Videos | Dr. Shekhar Poudel',
-  description: 'Watch our latest TikTok and Facebook videos about gastroenterology, liver health, and digestive wellness.',
+  title: 'Vlogs & Videos | U Smile Dental Clinic',
+  description: 'Watch our latest videos about dental care, oral hygiene tips, and smile transformation stories.',
 };
 
 export default function VlogsPage() {
@@ -20,7 +20,7 @@ export default function VlogsPage() {
             Vlogs & Videos
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Follow our latest updates, health tips, and patient stories on TikTok and Facebook
+            Follow our latest updates, dental tips, and smile stories on TikTok and Facebook
           </p>
         </div>
 
@@ -143,11 +143,11 @@ export default function VlogsPage() {
           <div className="bg-gradient-to-r from-emerald-50 to-green-50 dark:from-emerald-900/20 dark:to-green-900/20 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold mb-4 dark:text-white">Follow Us For More Videos</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Subscribe to our social media channels for daily health tips, patient stories, and latest updates
+              Subscribe to our social media channels for daily dental tips, patient stories, and clinic updates
             </p>
             <div className="flex justify-center space-x-4 flex-wrap gap-4">
               <a
-                href="https://www.tiktok.com/@dr.shekharpoudel"
+                href="https://www.tiktok.com/@usmiledentalclinic"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition font-semibold inline-flex items-center space-x-2"
@@ -156,7 +156,7 @@ export default function VlogsPage() {
                 <ExternalLink size={18} />
               </a>
               <a
-                href="https://www.facebook.com/dr.shekharpoudel"
+                href="https://www.facebook.com/usmiledentalclinic"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold inline-flex items-center space-x-2"

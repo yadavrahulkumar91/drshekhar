@@ -25,7 +25,7 @@ export default function TestimonialsPage() {
               Patient Testimonials
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Discover what our patients say about their experience with Dr. Shekhar Poudel and our comprehensive gastroenterology care
+              Discover what our patients say about their experience with Dr. Rinku Sah and U Smile Dental Clinic's exceptional dental care.
             </p>
           </motion.div>
         </div>

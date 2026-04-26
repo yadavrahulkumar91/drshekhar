@@ -114,10 +114,10 @@ export function buildArticleSchema(article: {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Dr. Shekhar Poudel',
+      name: 'U Smile Dental Clinic',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://drsekharpoudel.com.np/logo.png',
+        url: 'https://usmiledentalclinic.com/logo.png',
       },
     },
     mainEntity: {

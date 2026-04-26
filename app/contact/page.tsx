@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, Music } from 'lucide-react';
 import { sendEmail } from '@/lib/emailService';
 
-const DOCTOR_EMAIL = 'yadavrahulkumar91@gmail.com';
+const DOCTOR_EMAIL = 'info@usmiledental.com.np';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -63,7 +63,7 @@ export default function ContactPage() {
       
       <div style="background-color: #f0fdf4; border: 2px solid #10b981; border-radius: 8px; padding: 20px; margin: 20px 0;">
         <p>Hi ${name},</p>
-        <p>Thank you for contacting Dr. Shekhar Poudel. We have received your message and will get back to you as soon as possible.</p>
+        <p>Thank you for contacting U Smile Dental Clinic. We have received your message and will get back to you as soon as possible.</p>
         <p>We typically respond within 24 hours during business hours.</p>
       </div>
       
@@ -72,12 +72,12 @@ export default function ContactPage() {
         <ul>
           <li><strong>Phone:</strong> +977-01-5451000</li>
           <li><strong>WhatsApp:</strong> +977-9765199777</li>
-          <li><strong>Location:</strong> National Gastro Liver Center, Lalitpur, Nepal</li>
+          <li><strong>Location:</strong> Lalbandi-6, Sarlahi, Nepal</li>
         </ul>
       </div>
       
       <p style="text-align: center; color: #6b7280; font-size: 12px;">
-        Dr. Shekhar Poudel - Gastroenterologist & Hepatologist
+        U Smile Dental Clinic | Dr. Rinku Sah, Root Canal Specialist
       </p>
     </div>
   </body>
@@ -113,7 +113,7 @@ export default function ContactPage() {
       // Send confirmation email to patient
       const patientEmailResult = await sendEmail({
         to: formData.email,
-        subject: 'We Received Your Message - Dr. Shekhar Poudel',
+        subject: 'We Received Your Message - U Smile Dental Clinic',
         html: createPatientConfirmationEmail(formData.name),
       });
 
@@ -205,9 +205,9 @@ export default function ContactPage() {
               Location
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              National Gastro Liver Center (NGLC)
+              U Smile Dental Clinic
               <br />
-              <span className="font-semibold">M89C+2JG Karmachari Sanchaykosh Bhawan, Hospital Rd, Lalitpur 44700</span>
+              <span className="font-semibold">Lalbandi-6, Sarlahi</span>
               <br />
               Nepal
             </p>
@@ -300,13 +300,13 @@ export default function ContactPage() {
               </h2>
               <div className="bg-gradient-to-br from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 h-96 rounded-xl overflow-hidden border border-emerald-200 dark:border-emerald-700/50">
                 <iframe 
-                  src="https://maps.google.com/maps?q=National+Gastro+Liver+Center,+M89C+2JG+Karmachari+Sanchaykosh+Bhawan,+Hospital+Rd,+Lalitpur+44700,+Nepal&output=embed" 
+                  src="https://maps.google.com/maps?q=U+Smile+Dental+Clinic,+Lalbandi+6,+Sarlahi,+Nepal&output=embed" 
                   width="100%" 
                   height="100%" 
                   style={{border:0}} 
                   allowFullScreen 
                   loading="lazy"
-                  title="National Gastro Liver Center Location"
+                  title="U Smile Dental Clinic Location"
                 ></iframe>
               </div>
             </div>
@@ -317,11 +317,11 @@ export default function ContactPage() {
                 Follow Us
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm text-center mb-6">
-                Stay connected and get the latest updates on health tips and medical news
+                Stay connected and get the latest updates on dental care tips and clinics news
               </p>
               <div className="flex justify-center space-x-6">
                 <a
-                  href="https://facebook.com/drshekhar"
+                  href="https://facebook.com/usmiledentalclinic"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-300 hover:scale-110"
@@ -330,7 +330,7 @@ export default function ContactPage() {
                   <Facebook size={20} />
                 </a>
                 <a
-                  href="https://instagram.com/drshekhar"
+                  href="https://instagram.com/usmiledentalclinic"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 text-white rounded-full flex items-center justify-center transition-colors duration-300 hover:scale-110 overflow-hidden"
@@ -341,7 +341,7 @@ export default function ContactPage() {
                   </svg>
                 </a>
                 <a
-                  href="https://tiktok.com/@dr.shekhar"
+                  href="https://tiktok.com/@usmiledentalclinic"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-black hover:bg-gray-800 text-white rounded-full flex items-center justify-center transition-colors duration-300 hover:scale-110 overflow-hidden"
@@ -352,7 +352,7 @@ export default function ContactPage() {
                   </svg>
                 </a>
                 <a
-                  href="https://youtube.com/@drshekhar"
+                  href="https://youtube.com/@usmiledentalclinic"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center transition-colors duration-300 hover:scale-110 overflow-hidden"

@@ -23,13 +23,11 @@ export default function HeroSection() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 dark:from-emerald-400 dark:via-green-400 dark:to-teal-400 bg-clip-text text-transparent mb-6 leading-tight">
-            Expert Gastroenterology & Hepatology Care
+            Expert Dental Care in Sarlahi
           </h1>
 
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-            Dr. Shekhar Poudel brings international expertise in digestive
-            health and liver transplantation to Kathmandu. First Nepali
-            certified by AIIMS and LTSI.
+            Dr. Rinku Sah brings advanced root canal care and cosmetic dentistry to U Smile Dental Clinic in Lalbandi-6, Sarlahi.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -62,7 +60,7 @@ export default function HeroSection() {
           <div className="grid grid-cols-3 gap-4">
             <div>
               <div className="text-2xl font-bold bg-gradient-to-r from-emerald-500 to-green-600 bg-clip-text text-transparent">
-                15+
+                8+
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Years Experience
@@ -70,7 +68,7 @@ export default function HeroSection() {
             </div>
             <div>
               <div className="text-2xl font-bold bg-gradient-to-r from-green-500 to-teal-600 bg-clip-text text-transparent">
-                5000+
+                1000+
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Patients Treated
@@ -78,10 +76,10 @@ export default function HeroSection() {
             </div>
             <div>
               <div className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-emerald-600 bg-clip-text text-transparent">
-                1st
+                NMC
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                LTSI Certified
+                Registered Dentist
               </p>
             </div>
           </div>
@@ -94,32 +92,13 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative h-96 md:h-full"
         >
-          {/* <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/30 to-teal-400/30 rounded-3xl blur-3xl"></div>
-          <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-2xl overflow-hidden">
-              <Link href="/about" >
-            <div className="w-full h-80 rounded-2xl flex items-center justify-center relative overflow-hidden">
-              <ExportedImage
-                src="/dr-shekhar-poudel_BaxEz1X.jpg"
-                alt="Dr. Shekhar Poudel - Gastroenterologist & Transplant Hepatologist"
-                width={400}
-                height={500}
-                className="w-full h-full object-cover rounded-2xl"
-                priority
-              />
-            </div>
-            <div className="mt-4 text-center">
-              <p className="text-gray-600 dark:text-gray-200 font-semibold">Dr. Shekhar Poudel</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">Gastroenterologist & Transplant Hepatologist</p>
-            </div>
-              </Link>
-          </div> */}
           <div className="bg-gradient-to-br from-emerald-200/40 to-teal-200/40 rounded-3xl p-8">
            <Link href="/about" >
             <div className="w-full bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg overflow-hidden">
               <div className="w-full aspect-square rounded-xl overflow-hidden relative">
                 <ExportedImage
-                  src={getImagePath("/dr-shekhar-poudel_BaxEz1X.png")}
-                  alt="Dr. Shekhar Poudel - Gastroenterologist & Transplant Hepatologist"
+                  src={getImagePath("/doctor-profile.png")}
+                  alt="Dr. Rinku Sah - Root Canal Specialist & Dentist"
                   width={400}
                   height={400}
                   className="w-full h-full object-cover"
@@ -146,7 +125,7 @@ export default function HeroSection() {
 
       {/* Floating CTA */}
       <a
-        href="tel:+977015451000"
+        href="tel:+9779765199777"
         className="fixed bottom-6 right-6 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white p-4 rounded-full shadow-lg flex items-center space-x-2 transition transform hover:scale-110 z-40 hover:shadow-emerald-300/50"
       >
         <Phone size={24} />

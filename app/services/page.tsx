@@ -5,15 +5,15 @@ import { ArrowRight, Check, Phone } from "lucide-react";
 import ExportedImage from "next-image-export-optimizer";
 
 export const metadata: Metadata = {
-  title: "Medical Services - Dr. Shekhar Poudel",
+  title: "Dental Services - U Smile Dental Clinic",
   description:
-    "Comprehensive gastroenterology and hepatology services including endoscopy, colonoscopy, ERCP, liver transplant care, and more.",
+    "Dental services in Sarlahi including root canal treatment, cosmetic dentistry, implants, and complete dental care.",
   keywords: [
-    "gastroenterology services",
-    "liver disease",
-    "endoscopy",
-    "ERCP",
-    "hepatology",
+    "dental services",
+    "root canal treatment",
+    "cosmetic dentistry",
+    "dental implants",
+    "family dentistry",
   ],
 };
 
@@ -23,11 +23,10 @@ export default function ServicesPage() {
       <div className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 dark:from-emerald-400 dark:via-green-400 dark:to-teal-400 bg-clip-text text-transparent mb-4">
-            Our Medical Services
+            Our Dental Services
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Comprehensive gastroenterology and hepatology services with
-            state-of-the-art facilities
+            Complete dental care in Sarlahi with modern treatment options for every smile.
           </p>
         </div>
 
@@ -90,29 +89,26 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg">
               <h3 className="text-lg font-bold bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent mb-3">
-                Endoscopic Ultrasound (EUS)
+                Root Canal Therapy
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Advanced imaging for precise diagnosis and therapeutic
-                interventions including EUS-guided coiling for varices.
+                Precise endodontic care to save infected teeth and relieve pain with comfortable treatment.
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg">
               <h3 className="text-lg font-bold bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent mb-3">
-                ERCP Procedures
+                Cosmetic Smile Makeover
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Treatment of bile and pancreatic duct disorders including stone
-                removal and stricture management.
+                Customized smile enhancements with veneers, bonding, and whitening for beautiful, natural results.
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg">
               <h3 className="text-lg font-bold bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent mb-3">
-                Liver Transplant Care
+                Dental Implant Solutions
               </h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Comprehensive pre and post-transplant management with
-                LTSI-certified expertise.
+                Durable tooth replacement with expert planning, placement, and restoration for long-lasting smiles.
               </p>
             </div>
           </div>

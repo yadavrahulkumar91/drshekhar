@@ -7,67 +7,67 @@ import ImageWithFallback from '@/components/ImageWithFallback';
 const galleryItems = [
   {
     id: 1,
-    title: 'Endoscopy Suite',
-    description: 'State-of-the-art endoscopy equipment for advanced diagnostic procedures',
-    image: '/endoscopy.webp',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
-    category: 'Equipment',
-  },
-  {
-    id: 2,
-    title: 'GERD Management',
-    description: 'Comprehensive treatment for gastroesophageal reflux disease',
-    image: '/gerd.webp',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/12/34/abdomen-1209783_640.jpg',
+    title: 'Root Canal Treatment',
+    description: 'Comfortable root canal care with modern endodontic tools and gentle techniques.',
+    image: '/root_canal.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2017/09/25/17/10/dentist-2786333_640.jpg',
     category: 'Treatment',
   },
   {
+    id: 2,
+    title: 'Cosmetic Dentistry',
+    description: 'Smile enhancement with veneers, bonding, and professional teeth whitening.',
+    image: '/cosmetic_dentistry.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2018/05/01/04/50/teeth-3361128_640.jpg',
+    category: 'Care',
+  },
+  {
     id: 3,
-    title: 'Liver Disease Care',
-    description: 'Specialized hepatology treatments and liver disease management',
-    image: '/liver_disease.webp',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2017/07/19/11/41/liver-2519045_640.jpg',
+    title: 'Dental Implants',
+    description: 'Durable tooth replacement solutions designed for natural look and function.',
+    image: '/dental_implants.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2017/08/10/03/53/dental-2619154_640.jpg',
     category: 'Specialty',
   },
   {
     id: 4,
-    title: 'Inflammatory Bowel Disease',
-    description: 'Advanced laboratory facilities for comprehensive testing',
-    image: '/ibd.webp',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/10/06/03/24/intestine-1717444_640.jpg',
-    category: 'Treatment',
+    title: 'Children Dentistry',
+    description: 'Gentle pediatric dental care for growing smiles and healthy habits.',
+    image: '/children_dentistry.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2014/11/07/00/00/child-520384_640.jpg',
+    category: 'Care',
   },
   {
     id: 5,
-    title: 'Gastritis Treatment',
-    description: 'Expert care for gastric inflammation and stomach conditions',
-    image: '/gastritis.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/12/33/stomach-1209785_640.jpg',
+    title: 'Teeth Whitening',
+    description: 'Brighten your smile with safe and effective whitening treatments.',
+    image: '/teeth_whitening.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/03/26/17/11/laughing-1284272_640.jpg',
     category: 'Treatment',
   },
   {
     id: 6,
-    title: 'Liver Transplant Care',
-    description: 'Advanced hepatology with transplant expertise and support',
-    image: '/liver_transplant.webp',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/49/surgery-1209782_640.jpg',
+    title: 'Smile Makeover',
+    description: 'Personalized aesthetic dentistry to give you a confident new smile.',
+    image: '/smile_makeover.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2017/01/06/19/15/woman-1958555_640.jpg',
     category: 'Specialty',
   },
   {
     id: 7,
-    title: 'EUS Equipment',
-    description: 'Advanced Endoscopic Ultrasound technology for precise diagnosis',
-    image: '/eus.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/11/21/14/53/ultrasound-1747156_640.jpg',
+    title: 'Dental X-Ray',
+    description: 'Modern digital imaging for accurate diagnostics and treatment planning.',
+    image: '/dental_xray.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2015/10/16/14/23/dentist-991609_640.jpg',
     category: 'Equipment',
   },
   {
     id: 8,
-    title: 'FMT Therapy',
-    description: 'Fecal Microbiota Transplantation for gut health restoration',
-    image: '/fmt.jpg',
-    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/11/42/laboratory-1209779_640.jpg',
-    category: 'Treatment',
+    title: 'Infection Control',
+    description: 'Sterile, safe dental care with strict infection prevention protocols.',
+    image: '/infection_control.webp',
+    fallbackImage: 'https://cdn.pixabay.com/photo/2016/02/19/10/50/medical-1209781_640.jpg',
+    category: 'Safety',
   },
 ];
 
@@ -86,7 +86,7 @@ export default function GalleryPage() {
             Our Gallery
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Take a virtual tour of our state-of-the-art medical facility and meet our dedicated healthcare team
+            Take a virtual tour of U Smile Dental Clinic and see our caring environment and modern dental treatments.
           </p>
         </div>
 
@@ -139,7 +139,7 @@ export default function GalleryPage() {
             Experience Our Facility
           </h2>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            Ready to see our advanced medical equipment and caring environment in person?
+            Ready to see our modern dental clinic and book a consultation for your smile?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

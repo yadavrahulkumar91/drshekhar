@@ -20,10 +20,10 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <h3 className="font-bold text-lg bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent mb-4">
-            Dr. Shekhar Poudel
+            U Smile Dental Clinic
           </h3>
           <p className="text-gray-300 text-sm">
-            Gastroenterologist & Transplant Hepatologist in Kathmandu, Nepal
+            Root canal specialist clinic in Lalbandi-6, Sarlahi, Nepal
           </p>
         </div>
 
@@ -73,16 +73,16 @@ export default function Footer() {
             <div className="flex items-center space-x-2">
               <Phone size={16} className="text-emerald-400" />
               <a
-                href="tel:+977015451000"
+                href="tel:+977-9854077977"
                 className="hover:text-emerald-400 transition"
               >
-                +977-01-5451000
+                +977-9854077977
               </a>
             </div>
             <div className="flex items-center space-x-2">
               <Send size={16} className="text-emerald-400" />
               <a
-                href="https://wa.me/9779765199777"
+                href="https://wa.me/9779854077977"
                 className="hover:text-emerald-400 transition"
               >
                 WhatsApp
@@ -91,12 +91,12 @@ export default function Footer() {
             <div className="flex items-center space-x-2">
               <MapPin size={16} className="text-emerald-400" />
               <a
-                href="https://maps.google.com/maps?q=National+Gastro+Liver+Center,+M89C+2JG+Karmachari+Sanchaykosh+Bhawan,+Hospital+Rd,+Lalitpur+44700,+Nepal"
+                href="https://maps.google.com/maps?q=U+Smile+Dental+Clinic,+Lalbandi-6,+Sarlahi,+Nepal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-emerald-400 transition"
               >
-                Kathmandu, Nepal
+                Lalbandi-6, Sarlahi
               </a>
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 mb-8 pb-8 border-t border-emerald-700/30 pt-8">
         <div className="flex justify-center space-x-6">
           <a
-            href="https://facebook.com"
+            href="https://facebook.com/usmiledentalclinic"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-emerald-400 transition"
@@ -115,7 +115,7 @@ export default function Footer() {
             <Facebook size={24} />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/usmiledentalclinic"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-emerald-400 transition"
@@ -123,7 +123,7 @@ export default function Footer() {
             <Instagram size={24} />
           </a>
           <a
-            href="https://tiktok.com/@dr.shekharpoudel"
+            href="https://tiktok.com/@usmiledentalclinic"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-emerald-400 transition"
@@ -136,8 +136,8 @@ export default function Footer() {
       {/* Copyright */}
       <div className="text-center text-gray-400 text-sm border-t border-emerald-700/30 pt-6">
         <p>
-          &copy; 2026 Dr. Shekhar Poudel. All rights reserved. | Privacy Policy
-          | Terms of Service
+          &copy; 2026 U Smile Dental Clinic. All rights reserved. | Privacy
+          Policy | Terms of Service
         </p>
       </div>
     </footer>

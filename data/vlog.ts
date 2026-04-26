@@ -9,221 +9,105 @@ export interface Vlog {
 }
 
 export const vlogs: Vlog[] = [
-  // TikTok Videos
+  // TikTok Videos - Dental Health Education
   {
-    id: 7623041183425793300,
+    id: 1,
     platform: "tiktok",
-    title: "Endoscopy Preparation Guide",
+    title: "Root Canal Treatment Explained",
     description:
-      "How to prepare oneself for Endoscopy - Complete guide for patients",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7623041183425793300",
-    embedUrl: "https://www.tiktok.com/embed/v2/7623041183425793300",
-    thumbnail: "/tiktok-1.jpg",
-  },
-  {
-    id: 7585531491220786440,
-    platform: "tiktok",
-    title: "Capsule Endoscopy",
-    description:
-      "क्याप्सुल एन्डोस्कोपी - Easy, safe and modern endoscopy procedure",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7585531491220786440",
-    embedUrl: "https://www.tiktok.com/embed/v2/7585531491220786440",
-    thumbnail: "/tiktok-2.jpg",
+      "आपके दांत को बचाने के लिए रूट कैनाल - A complete guide to root canal therapy and what to expect",
+    url: "https://www.tiktok.com/@usmiledental/video/root-canal-guide",
+    embedUrl: "https://www.tiktok.com/embed/v2/root-canal-guide",
+    thumbnail: "/vlog-root-canal.jpg",
   },
   {
     id: 2,
     platform: "tiktok",
-    title: "Patient Testimonials from Sundari Jal",
+    title: "Proper Teeth Brushing Technique",
     description:
-      "Hear from our happy and satisfied patients after successful treatment",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7623819315195759893",
-    embedUrl: "https://www.tiktok.com/embed/v2/7623819315195759893",
-    thumbnail: "/tiktok-3.jpg",
+      "दांतों को सही तरीके से कैसे ब्रश करें - Learn the correct technique to brush your teeth and prevent cavities",
+    url: "https://www.tiktok.com/@usmiledental/video/brushing-technique",
+    embedUrl: "https://www.tiktok.com/embed/v2/brushing-technique",
+    thumbnail: "/vlog-brushing.jpg",
   },
   {
     id: 3,
     platform: "tiktok",
-    title: "Fecal Microbiota Transplantation",
+    title: "Cosmetic Dentistry Transformations",
     description:
-      "दिशा प्रत्यारोपण - Restore healthy gut bacteria and improve digestion",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7621541250759396625",
-    embedUrl: "https://www.tiktok.com/embed/v2/7621541250759396625",
-    thumbnail: "/tiktok-4.jpg",
+      "स्माइल मेकओवर - Beautiful smile transformations using cosmetic dentistry at U Smile Dental Clinic",
+    url: "https://www.tiktok.com/@usmiledental/video/cosmetic-transformation",
+    embedUrl: "https://www.tiktok.com/embed/v2/cosmetic-transformation",
+    thumbnail: "/vlog-cosmetic.jpg",
   },
   {
     id: 4,
     platform: "tiktok",
-    title: "Who Should Get a Colonoscopy",
+    title: "Gum Disease Prevention Tips",
     description:
-      "Prevent colon problems before they start - Early detection saves lives",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7611152290845609236",
-    embedUrl: "https://www.tiktok.com/embed/v2/7611152290845609236",
-    thumbnail: "/tiktok-5.jpg",
+      "मसूढ़े की बीमारी से कैसे बचें - Important tips to prevent gum disease and keep your teeth healthy",
+    url: "https://www.tiktok.com/@usmiledental/video/gum-disease-prevention",
+    embedUrl: "https://www.tiktok.com/embed/v2/gum-disease-prevention",
+    thumbnail: "/vlog-gum-health.jpg",
   },
   {
     id: 5,
     platform: "tiktok",
-    title: "Gastric and Ulcer Causes",
+    title: "Dental Implants: What You Need to Know",
     description:
-      "ग्यास्ट्रिक र अल्सर किन हुन्छ - Understanding the root causes of stomach issues",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7610003945712356625",
-    embedUrl: "https://www.tiktok.com/embed/v2/7610003945712356625",
-    thumbnail: "/tiktok-6.jpg",
+      "दंत प्रत्यारोपण क्या है - Complete guide to dental implants, procedure, benefits, and aftercare",
+    url: "https://www.tiktok.com/@usmiledental/video/dental-implants-guide",
+    embedUrl: "https://www.tiktok.com/embed/v2/dental-implants-guide",
+    thumbnail: "/vlog-implants.jpg",
   },
   {
     id: 6,
     platform: "tiktok",
-    title: "Real Cause of Gastric Issues",
+    title: "Teeth Whitening at Home vs Professional",
     description:
-      "के हो ग्यास्ट्रिकको वास्तविक कारण - H. pylori infection explained",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7608379850079997202",
-    embedUrl: "https://www.tiktok.com/embed/v2/7608379850079997202",
-    thumbnail: "/tiktok-7.jpg",
+      "दांतों को सफ़ेद करने का सही तरीका - Comparison of home whitening vs professional whitening treatments",
+    url: "https://www.tiktok.com/@usmiledental/video/teeth-whitening-comparison",
+    embedUrl: "https://www.tiktok.com/embed/v2/teeth-whitening-comparison",
+    thumbnail: "/vlog-whitening.jpg",
   },
   {
     id: 7,
     platform: "tiktok",
-    title: "Weight Loss but Fatty Liver",
+    title: "Children's Dental Health Tips",
     description:
-      "Frustrated with weight loss but still having fatty liver - Learn why",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7608157036462837012",
-    embedUrl: "https://www.tiktok.com/embed/v2/7608157036462837012",
-    thumbnail: "/tiktok-8.jpg",
+      "बच्चों के दांत की देखभाल - How to maintain healthy teeth in children and build good dental habits early",
+    url: "https://www.tiktok.com/@usmiledental/video/childrens-dental-health",
+    embedUrl: "https://www.tiktok.com/embed/v2/childrens-dental-health",
+    thumbnail: "/vlog-kids-dental.jpg",
   },
   {
     id: 8,
     platform: "tiktok",
-    title: "Acidity and Stomach Pain Solutions",
+    title: "Common Dental Myths Debunked",
     description:
-      "Frequent acidity or stomach pain? Endoscopy finds the cause safely",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7607421773365169428",
-    embedUrl: "https://www.tiktok.com/embed/v2/7607421773365169428",
-    thumbnail: "/tiktok-9.jpg",
+      "दंत चिकित्सा की गलतफहमियां - Clearing up common misconceptions about dental health and treatment",
+    url: "https://www.tiktok.com/@usmiledental/video/dental-myths",
+    embedUrl: "https://www.tiktok.com/embed/v2/dental-myths",
+    thumbnail: "/vlog-myths.jpg",
   },
   {
     id: 9,
-    platform: "tiktok",
-    title: "Stomach Cancer Detection",
+    platform: "facebook",
+    title: "Patient Testimonials from U Smile Dental",
     description:
-      "पेटको क्यान्सर - Endoscopy helps in early detection of stomach cancer",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7602979158775418130",
-    embedUrl: "https://www.tiktok.com/embed/v2/7602979158775418130",
-    thumbnail: "/tiktok-10.jpg",
+      "Happy patients sharing their experience at U Smile Dental Clinic - Root canal treatment and smile makeovers",
+    url: "https://www.facebook.com/usmiledental/videos/testimonials",
+    embedUrl: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/usmiledental/videos/testimonials",
+    thumbnail: "/vlog-testimonials.jpg",
   },
   {
     id: 10,
-    platform: "tiktok",
-    title: "Liver Detox Myth or Reality",
-    description:
-      "Scam or Reality? The Liver Detox - Separating facts from fiction",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7602624665185455378",
-    embedUrl: "https://www.tiktok.com/embed/v2/7602624665185455378",
-    thumbnail: "/tiktok-11.jpg",
-  },
-  {
-    id: 11,
-    platform: "tiktok",
-    title: "World Class Digestive Care",
-    description:
-      "World Class Digestive and Liver Care with Local Expertise at NGLC",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7601140288886803730",
-    embedUrl: "https://www.tiktok.com/embed/v2/7601140288886803730",
-    thumbnail: "/tiktok-12.jpg",
-  },
-  {
-    id: 12,
-    platform: "tiktok",
-    title: "Colorectal Cancer Prevention",
-    description:
-      "ठूलो आन्द्राको क्यान्सर - Prevention is possible, early detection saves lives",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7596141451482828039",
-    embedUrl: "https://www.tiktok.com/embed/v2/7596141451482828039",
-    thumbnail: "/tiktok-13.jpg",
-  },
-  {
-    id: 13,
-    platform: "tiktok",
-    title: "Stomach and Intestinal Cancer Detection",
-    description:
-      "Can be detected early now - Stomach and intestinal cancer screening tips",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7582123327922261266",
-    embedUrl: "https://www.tiktok.com/embed/v2/7582123327922261266",
-    thumbnail: "/tiktok-14.jpg",
-  },
-  {
-    id: 14,
-    platform: "tiktok",
-    title: "Best Gastro Center in Kathmandu",
-    description:
-      "National Gastro Liver Center - Best gastro clinic with world-class facilities",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7580338265618697490",
-    embedUrl: "https://www.tiktok.com/embed/v2/7580338265618697490",
-    thumbnail: "/tiktok-15.jpg",
-  },
-  {
-    id: 15,
-    platform: "tiktok",
-    title: "Endoscopy Safety Precautions",
-    description:
-      "एन्डोस्कोपी गर्नु अघि सावधान रहनुहोस् - Important safety precautions",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7572233852635139346",
-    embedUrl: "https://www.tiktok.com/embed/v2/7572233852635139346",
-    thumbnail: "/tiktok-16.jpg",
-  },
-  {
-    id: 16,
-    platform: "tiktok",
-    title: "Health Awareness Camp Updates",
-    description:
-      "Sundari Jal Health Camp - Community health awareness and screening programs",
-    url: "https://www.tiktok.com/@gastrolivercenter/video/7570237319869959442",
-    embedUrl: "https://www.tiktok.com/embed/v2/7570237319869959442",
-    thumbnail: "/tiktok-17.jpg",
-  },
-
-  // Facebook Videos
-  {
-    id: 17,
     platform: "facebook",
-    title: "Health Check Success Story",
+    title: "Emergency Dental Care: What To Do",
     description:
-      "Success story from one of our health check programs - Patient transformation",
-    url: "https://www.facebook.com/reel/1520012986183389",
-    embedUrl:
-      "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1520012986183389&width=500&show_text=false",
-    thumbnail: "/facebook-1.jpg",
-  },
-  {
-    id: 18,
-    platform: "facebook",
-    title: "Medical Excellence Updates",
-    description:
-      "Latest medical updates and achievements at National Gastro Liver Center",
-    url: "https://www.facebook.com/reel/2129555914498344",
-    embedUrl:
-      "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2129555914498344&width=500&show_text=false",
-    thumbnail: "/facebook-2.jpg",
-  },
-  {
-    id: 19,
-    platform: "facebook",
-    title: "Patient Care Excellence",
-    description:
-      "Patient testimonials and care excellence at our center - Real stories",
-    url: "https://www.facebook.com/reel/924061957185545",
-    embedUrl:
-      "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F924061957185545&width=500&show_text=false",
-    thumbnail: "/facebook-3.jpg",
-  },
-  {
-    id: 20,
-    platform: "facebook",
-    title: "Clinic Facilities Tour",
-    description:
-      "Take a tour of our state-of-the-art clinic facilities and equipment",
-    url: "https://www.facebook.com/reel/845926658521254",
-    embedUrl:
-      "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F845926658521254&width=500&show_text=false",
-    thumbnail: "/facebook-4.jpg",
+      "दंत आपातकाल में क्या करें - Quick guide on handling dental emergencies and when to seek immediate care",
+    url: "https://www.facebook.com/usmiledental/videos/emergency-care",
+    embedUrl: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/usmiledental/videos/emergency-care",
+    thumbnail: "/vlog-emergency.jpg",
   },
 ];

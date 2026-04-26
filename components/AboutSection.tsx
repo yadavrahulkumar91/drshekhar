@@ -19,8 +19,8 @@ export default function AboutSection() {
               <div className="w-full bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg overflow-hidden">
                 <div className="w-full aspect-square rounded-xl overflow-hidden relative">
                   <ExportedImage
-                    src="/dr-shekhar-poudel_BaxEz1X.jpg"
-                    alt="Dr. Shekhar Poudel - Gastroenterologist & Transplant Hepatologist"
+                    src="/doctor-profile.png"
+                    alt="Dr. Rinku Sah - Root Canal Specialist & Dentist"
                     width={400}
                     height={400}
                     className="w-full h-full object-cover"
@@ -42,7 +42,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent mb-6">
-              Meet Dr. Shekhar Poudel
+              Meet Dr. Rinku Sah
             </h2>
 
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">

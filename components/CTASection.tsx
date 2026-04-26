@@ -21,10 +21,10 @@ export default function CTASection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Ready to Care for Your <span className="text-emerald-100">Digestive Health?</span>
+            Ready to Care for Your <span className="text-emerald-100">Smile?</span>
           </h2>
           <p className="text-xl md:text-2xl text-emerald-50/90">
-            Book your appointment today or contact us for expert guidance
+            Book your dental appointment today or contact us for expert guidance
           </p>
         </motion.div>
 
@@ -47,7 +47,7 @@ export default function CTASection() {
               </div>
               <div>
                 <p className="text-sm opacity-80">Call Directly</p>
-                <p className="text-lg font-bold">+977-01-5451000</p>
+                <p className="text-lg font-bold">+977-9854077977</p>
               </div>
             </motion.button>
           </Link>
@@ -64,7 +64,7 @@ export default function CTASection() {
               </div>
               <div>
                 <p className="text-sm opacity-80">Message on WhatsApp</p>
-                <p className="text-lg font-bold">+977-9765199777</p>
+                <p className="text-lg font-bold">+977-9854077977</p>
               </div>
             </motion.button>
           </a>
@@ -94,7 +94,7 @@ export default function CTASection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center text-emerald-50/75 text-base md:text-lg"
         >
-          Walk-ins welcome during office hours • Free initial consultation • Expert care by Dr. Shekhar Poudel
+          Walk-ins welcome during office hours • Free initial consultation • Expert care by Dr. Rinku Sah
         </motion.p>
       </div>
     </section>

@@ -7,14 +7,14 @@ import Achievement from "@/components/Achievement";
 import CertificatesSection from "@/components/CertificatesSection";
 
 export const metadata: Metadata = {
-  title: "About Dr. Shekhar Poudel - Gastroenterologist Nepal",
-  description: `Learn about Dr. Shekhar Poudel, the first Nepali DM holder in Gastroenterology from AIIMS and first LTSI-certified Transplant Hepatologist from Nepal.`,
+  title: "About Dr. Rinku Sah - Root Canal Specialist Nepal",
+  description: `Learn about Dr. Rinku Sah, a skilled root canal specialist and cosmetic dentist leading U Smile Dental Clinic in Sarlahi.`,
   keywords: [
-    "Dr. Shekhar Poudel",
-    "gastroenterologist",
-    "hepatologist",
-    "AIIMS",
-    "LTSI",
+    "Dr. Rinku Sah",
+    "root canal specialist",
+    "dentist",
+    "cosmetic dentistry",
+    "dental clinic sarlahi",
   ],
 };
 
@@ -26,10 +26,10 @@ export default function AboutPage() {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 dark:from-emerald-400 dark:via-green-400 dark:to-teal-400 bg-clip-text text-transparent mb-4">
-              About Dr. Shekhar Poudel
+              About Dr. Rinku Sah
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Pioneer in gastroenterology and liver transplantation in Nepal
+              Dedicated root canal specialist and award-winning dental care provider in Sarlahi
             </p>
           </div>
 
@@ -41,8 +41,8 @@ export default function AboutPage() {
                   <div className="text-center">
                     <div className="w-40 h-40 rounded-2xl overflow-hidden mx-auto mb-4">
                       <ExportedImage
-                        src="/dr-shekhar-poudel_BaxEz1X.png"
-                        alt="Dr. Shekhar Poudel - Gastroenterologist"
+                        src="/dr-rinku-sah.png"
+                        alt="Dr. Rinku Sah - Root Canal Specialist"
                         width={160}
                         height={160}
                         className="w-full h-full object-cover"

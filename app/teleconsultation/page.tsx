@@ -4,15 +4,15 @@ import { ArrowLeft, CheckCircle, Clock, Shield, Users } from 'lucide-react';
 import TeleconsultationBooking from '@/components/TeleconsultationBooking';
 
 export const metadata: Metadata = {
-  title: 'Teleconsultation - Dr. Shekhar Poudel',
+  title: 'Teleconsultation - U Smile Dental Clinic',
   description:
-    'Book a virtual teleconsultation with Dr. Shekhar Poudel. No login required. Get expert gastroenterology advice from home.',
+    'Book a virtual teleconsultation with Dr. Rinku Sah for dental advice from the comfort of your home.',
   keywords: [
     'teleconsultation',
-    'online consultation',
+    'online dental consultation',
     'virtual appointment',
-    'gastroenterology',
-    'doctor consultation',
+    'dental care',
+    'root canal specialist',
   ],
 };
 
@@ -34,11 +34,11 @@ export default function TeleconsultationPage() {
         {/* Header */}
         <div className="mb-16">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 dark:from-emerald-400 dark:via-green-400 dark:to-teal-400 bg-clip-text text-transparent mb-6 leading-tight">
-            Teleconsultation with Dr. Shekhar Poudel
+            Teleconsultation with Dr. Rinku Sah
           </h1>
 
           <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-            Get expert gastroenterology consultation from the comfort of your home. No need to login, just book your appointment and consult online.
+            Get expert dental advice from the comfort of your home. No need to login, just book your appointment and consult online.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export default function TeleconsultationPage() {
               Expert Consultation
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Consult with Dr. Shekhar Poudel, a specialist in gastroenterology and hepatology.
+              Consult with Dr. Rinku Sah, a skilled root canal specialist and dental care expert.
             </p>
           </div>
 
@@ -92,11 +92,11 @@ export default function TeleconsultationPage() {
 
             <div className="space-y-4">
               {[
-                'Virtual consultation from your home',
+                'Virtual dental consultation from your home',
                 'No travel time or expenses',
-                'Direct communication with Dr. Shekhar Poudel',
+                'Direct communication with Dr. Rinku Sah',
                 'Email confirmation with appointment details',
-                'Expert advice on gastroenterology concerns',
+                'Expert advice on root canal and dental health concerns',
                 'Prescription and recommendations via email',
               ].map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4">

@@ -2,23 +2,31 @@ import { link } from "fs";
 
 export const servicesList = [
   {
-    id: "Gastritis treatment",
-    link: "/services/gastritis-treatment",
+    id: "Root Canal Treatment",
+    link: "/services/root-canal-treatment",
   },
   {
-    id: "Liver care",
-    link: "/services/liver-care",
+    id: "Cosmetic Dentistry",
+    link: "/services/cosmetic-dentistry",
   },
   {
-    id: "Endoscopy",
-    link: "/services/endoscopy",
+    id: "Complete Dental Care",
+    link: "/services/complete-dental-care",
+  },
+  {
+    id: "Preventive Dentistry",
+    link: "/services/preventive-dentistry",
+  },
+  {
+    id: "Dental Implants",
+    link: "/services/dental-implants",
   },
   {
     id: "Teleconsultation",
     link: "/teleconsultation",
   },
   {
-    id: "Consultation",
+    id: "Appointment",
     link: "/appointment",
   },
 ];

@@ -1,6 +1,18 @@
 {
     "hosting": {
-        "site": "drshekhar",
-        "public": "out"
+        "site": "u-smile-dental-clinic",
+        "public": "out",
+        "cleanUrls": true,
+        "headers": [
+            {
+                "source": "**/*.xml",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/xml"
+                    }
+                ]
+            }
+        ]
     }
 }

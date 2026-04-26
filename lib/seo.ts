@@ -9,7 +9,7 @@ export interface MetaTags {
 }
 
 export const generateMetaTags = (meta: MetaTags) => {
-  const domain = process.env.NEXT_PUBLIC_DOMAIN || 'drsekharpoudel.com.np';
+  const domain = process.env.NEXT_PUBLIC_DOMAIN || 'usmiledentalclinic.com';
   const baseUrl = `https://${domain}`;
 
   return {
@@ -27,7 +27,7 @@ export const generateMetaTags = (meta: MetaTags) => {
       type: meta.ogType || 'website',
       url: meta.canonicalUrl || baseUrl,
       locale: meta.ogLocale || 'en_NP',
-      siteName: 'Dr. Shekhar Poudel - Gastroenterologist Nepal',
+      siteName: 'U Smile Dental Clinic',
       images: [
         {
           url: meta.ogImage || `${baseUrl}/og-image.jpg`,
@@ -59,75 +59,73 @@ export const generateMetaTags = (meta: MetaTags) => {
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
-  '@id': 'https://drsekharpoudel.com.np',
-  name: 'Dr. Shekhar Poudel - Gastroenterology & Hepatology Clinic',
-  alternateName: 'National Gastro Liver Center',
-  description: 'Leading gastroenterologist and transplant hepatologist in Kathmandu, Nepal. First DM holder in Gastroenterology from AIIMS and LTSI-certified Transplant Hepatologist.',
-  url: 'https://drsekharpoudel.com.np',
-  telephone: '+977-1-5451000',
-  email: 'contact@drsekharpoudel.com.np',
+  '@id': 'https://usmiledentalclinic.com',
+  name: 'U Smile Dental Clinic',
+  alternateName: 'U Smile Dental Clinic Lalbandi',
+  description: 'Professional dental care clinic in Lalbandi-6, Sarlahi offering root canal therapy, implants, cosmetic dentistry, and preventive oral health services.',
+  url: 'https://usmiledentalclinic.com',
+  telephone: '+977-9765199777',
+  email: 'info@usmiledentalclinic.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Lagankhel, Lalitpur',
-    addressLocality: 'Kathmandu',
-    addressRegion: 'Bagmati',
-    postalCode: '44600',
+    streetAddress: 'Lalbandi-6',
+    addressLocality: 'Sarlahi',
+    addressRegion: 'Province No. 2',
+    postalCode: '',
     addressCountry: 'NP',
   },
   areaServed: [
     {
       '@type': 'City',
-      name: 'Kathmandu',
+      name: 'Sarlahi',
       containedInPlace: {
         '@type': 'AdministrativeArea',
-        name: 'Bagmati',
+        name: 'Province No. 2',
         containedInPlace: {
           '@type': 'Country',
           name: 'Nepal',
           geo: {
             '@type': 'GeoShape',
-            box: '26.1646 80.6418 28.7039 88.2017',
+            box: '26.5 85.0 27.0 86.0',
           },
         },
       },
     },
     {
       '@type': 'City',
-      name: 'Lalitpur',
+      name: 'Janakpur',
     },
     {
       '@type': 'City',
-      name: 'Bhaktapur',
+      name: 'Birgunj',
     },
   ],
   medicalSpecialty: [
     {
       '@type': 'MedicalSpecialty',
-      name: 'Gastroenterology',
+      name: 'Dentistry',
     },
     {
       '@type': 'MedicalSpecialty',
-      name: 'Hepatology',
+      name: 'Endodontics',
     },
   ],
   knowsAbout: [
-    'Endoscopy',
-    'ERCP',
-    'Liver Transplant',
-    'Gastritis',
-    'GERD',
-    'IBS',
-    'Liver Disease',
-    'Hepatitis',
-    'Cirrhosis',
+    'Root Canal Treatment',
+    'Dental Implants',
+    'Teeth Whitening',
+    'Cosmetic Dentistry',
+    'Preventive Dentistry',
+    'Oral Hygiene',
+    'Dental Crowns',
+    'Tooth Pain',
   ],
-  priceRange: '$$',
-  image: 'https://drsekharpoudel.com.np/dr-shekhar-poudel_BaxEz1X.png',
+  priceRange: 'NPR',
+  image: 'https://usmiledentalclinic.com/doctor-profile.png',
   sameAs: [
-    'https://facebook.com/drshekhar',
-    'https://instagram.com/drshekhar',
-    'https://tiktok.com/@dr.shekharpoudel',
-    'https://youtube.com/channel/drshekhar',
+    'https://facebook.com/usmiledentalclinic',
+    'https://instagram.com/usmiledentalclinic',
+    'https://youtube.com/@usmiledentalclinic',
   ],
 };
 
@@ -135,24 +133,24 @@ export const localBusinessSchema = {
 export const doctorPersonSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Dr. Shekhar Poudel',
-  alternateName: 'Shekhar Poudel',
-  description: 'Gastroenterologist and Transplant Hepatologist in Nepal',
-  image: 'https://drsekharpoudel.com.np/dr-shekhar-poudel_BaxEz1X.png',
-  url: 'https://drsekharpoudel.com.np',
+  name: 'Dr. Rinku Sah',
+  alternateName: 'Dr Rinku Sah',
+  description: 'Root canal specialist and experienced dentist at U Smile Dental Clinic in Lalbandi, Sarlahi',
+  image: 'https://usmiledentalclinic.com/doctor-profile.png',
+  url: 'https://usmiledentalclinic.com',
   sameAs: [
-    'https://facebook.com/drshekhar',
-    'https://instagram.com/drshekhar',
-    'https://tiktok.com/@dr.shekharpoudel',
+    'https://facebook.com/usmiledentalclinic',
+    'https://instagram.com/usmiledentalclinic',
+    'https://youtube.com/@usmiledentalclinic',
   ],
-  jobTitle: 'Gastroenterologist, Transplant Hepatologist',
+  jobTitle: 'Dentist, Root Canal Specialist',
   worksFor: {
     '@type': 'Organization',
-    name: 'National Gastro Liver Center',
+    name: 'U Smile Dental Clinic',
   },
   award: [
-    'First DM holder in Gastroenterology from AIIMS',
-    'LTSI-certified Transplant Hepatologist',
+    'NMC Registered Dentist No: 14722',
+    'Experienced Root Canal Specialist',
   ],
 };
 
@@ -160,43 +158,42 @@ export const doctorPersonSchema = {
 export const doctorSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
-  name: 'Dr. Shekhar Poudel',
-  description: 'Gastroenterologist & Transplant Hepatologist in Kathmandu, Nepal',
-  url: 'https://drsekharpoudel.com.np',
-  telephone: '+977-01-5451000',
-  email: 'contact@drsekharpoudel.com.np',
+  name: 'U Smile Dental Clinic',
+  description: 'Dental clinic in Lalbandi-6, Sarlahi offering root canal therapy, implants, teeth whitening, and preventive dental care.',
+  url: 'https://usmiledentalclinic.com',
+  telephone: '+977-9765199777',
+  email: 'info@usmiledentalclinic.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Lagankhel, Lalitpur',
-    addressLocality: 'Kathmandu',
-    addressRegion: 'Kathmandu',
-    postalCode: '44600',
+    streetAddress: 'Lalbandi-6',
+    addressLocality: 'Sarlahi',
+    addressRegion: 'Province No. 2',
+    postalCode: '',
     addressCountry: 'NP',
   },
-  medicalSpecialty: ['Gastroenterology', 'Hepatology'],
-  priceRange: '$$',
-  areaServed: 'NP',
+  medicalSpecialty: ['Dentistry', 'Endodontics'],
+  priceRange: 'NPR',
+  areaServed: ['Sarlahi', 'Janakpur', 'Birgunj'],
   knowsAbout: [
-    'Gastritis',
-    'Acid Reflux',
-    'IBS',
-    'Liver Disease',
-    'Endoscopy',
-    'Liver Transplant',
+    'Root Canal Treatment',
+    'Dental Implants',
+    'Cosmetic Dentistry',
+    'Teeth Whitening',
+    'Preventive Dentistry',
   ],
 };
 
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Dr. Shekhar Poudel - Medical Practice',
-  url: 'https://drsekharpoudel.com.np',
-  logo: 'https://drsekharpoudel.com.np/logo.png',
-  description: 'Professional Gastroenterology and Hepatology Services in Kathmandu',
+  name: 'U Smile Dental Clinic',
+  url: 'https://usmiledentalclinic.com',
+  logo: 'https://usmiledentalclinic.com/logo.png',
+  description: 'Dental clinic specializing in root canal care, cosmetic dentistry, and patient-first services in Lalbandi, Sarlahi.',
   sameAs: [
-    'https://facebook.com/drshekhar',
-    'https://instagram.com/drshekhar',
-    'https://tiktok.com/@dr.shekharpoudel',
+    'https://facebook.com/usmiledentalclinic',
+    'https://instagram.com/usmiledentalclinic',
+    'https://youtube.com/@usmiledentalclinic',
   ],
 };
 
@@ -206,15 +203,15 @@ export const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is gastritis and how is it treated?',
+      name: 'What is a root canal treatment and when is it needed?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Gastritis is inflammation of the stomach lining. Treatment involves medication, lifestyle changes, and dietary modifications based on the underlying cause.',
+        text: 'A root canal treats infected or damaged tooth pulp. It saves the tooth, reduces pain, and prevents further infection by cleaning and sealing the nerve chamber.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How can I book an appointment with Dr. Shekhar Poudel?',
+      name: 'How can I book an appointment at U Smile Dental Clinic?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'You can book an appointment through WhatsApp, phone, or our online booking form. Contact: +977-9765199777',
@@ -241,11 +238,11 @@ export const generateBreadcrumbSchema = (items: Array<{ name: string; url: strin
 export const medicalProcedureSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalProcedure',
-  name: 'Endoscopy',
-  description: 'A minimally invasive procedure used to examine the digestive tract',
+  name: 'Root Canal Treatment',
+  description: 'A dental procedure that removes infected tooth pulp, cleans the root canal, and seals the tooth to preserve oral health.',
   performer: {
     '@type': 'Person',
-    name: 'Dr. Shekhar Poudel',
+    name: 'Dr. Rinku Sah',
   },
 };
 
@@ -258,11 +255,11 @@ export const generateServiceSchema = (service: { name: string; description: stri
     description: service.description,
     provider: {
       '@type': 'MedicalBusiness',
-      name: 'Dr. Shekhar Poudel',
+      name: 'U Smile Dental Clinic',
     },
     areaServed: {
       '@type': 'City',
-      name: 'Kathmandu',
+      name: 'Sarlahi',
     },
     ...(service.price && { priceRange: service.price }),
   };
@@ -272,13 +269,13 @@ export const generateServiceSchema = (service: { name: string; description: stri
 export const appointmentSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
-  name: 'Dr. Shekhar Poudel Appointment Booking',
-  url: 'https://drsekharpoudel.com.np/appointment',
-  telephone: '+977-01-5451000',
+  name: 'U Smile Dental Clinic Appointment Booking',
+  url: 'https://usmiledentalclinic.com/appointment',
+  telephone: '+977-9765199777',
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'Appointment Booking',
-    telephone: '+977-01-5451000',
+    telephone: '+977-9765199777',
     availableLanguage: ['en', 'ne'],
   },
 };
@@ -288,7 +285,7 @@ export const generateReviewSchema = (reviews: Array<{ author: string; rating: nu
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Dr. Shekhar Poudel',
+    name: 'U Smile Dental Clinic',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: reviews.length > 0 ? (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length).toFixed(1) : '5',

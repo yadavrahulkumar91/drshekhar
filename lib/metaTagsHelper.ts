@@ -26,10 +26,10 @@ export function getPageMetadata(props: MetaTagsHelperProps) {
       type: 'website' as const,
       url: props.canonicalUrl,
       locale: 'en_NP',
-      siteName: 'Dr. Shekhar Poudel',
+      siteName: 'U Smile Dental Clinic',
       images: [
         {
-          url: 'https://drsekharpoudel.com.np/og-image.jpg',
+          url: 'https://usmiledentalclinic.com/og-image.jpg',
           width: 1200,
           height: 630,
           alt: props.customTitle || baseMetadata.title,
@@ -40,12 +40,12 @@ export function getPageMetadata(props: MetaTagsHelperProps) {
       card: 'summary_large_image' as const,
       title: props.customTitle || baseMetadata.title,
       description: props.customDescription || baseMetadata.description,
-      images: ['https://drsekharpoudel.com.np/og-image.jpg'],
+      images: ['https://usmiledentalclinic.com/og-image.jpg'],
     },
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
     viewport: 'width=device-width, initial-scale=1.0',
     alternates: {
-      canonical: props.canonicalUrl || 'https://drsekharpoudel.com.np',
+      canonical: props.canonicalUrl || 'https://usmiledentalclinic.com',
     },
   };
 }
@@ -56,6 +56,6 @@ import { getPageMetadata } from '@/components/MetaTagsHelper';
 
 export const metadata = getPageMetadata({
   page: 'services',
-  canonicalUrl: 'https://drsekharpoudel.com.np/services',
+  canonicalUrl: 'https://usmiledentalclinic.com/services',
 });
 */

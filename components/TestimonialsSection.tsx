@@ -33,7 +33,7 @@ export default function TestimonialsSection() {
             Patient Testimonials
           </h2>
           <p className="text-gray-600 dark:text-gray-300">
-            What our patients say about their experience with Dr. Shekhar Poudel
+            What our patients say about their experience with Dr. Rinku Sah at U Smile Dental Clinic
           </p>
         </motion.div>
 

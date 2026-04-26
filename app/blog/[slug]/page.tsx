@@ -57,6 +57,14 @@ export default async function BlogPost(props: {
     .filter((p) => p.category === post.category && p.id !== post.id)
     .slice(0, 3);
 
+  const quickSummaryItems = post.quickSummary
+    ? Array.isArray(post.quickSummary)
+      ? post.quickSummary
+      : [post.quickSummary]
+    : [];
+
+  const preventionItems = post.prevention || post.preventionTips || [];
+
   return (
     <article className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-white dark:from-emerald-950/20 dark:via-green-900/20 dark:to-gray-900">
       <div className="max-w-4xl mx-auto px-4 py-20">
@@ -106,7 +114,7 @@ export default async function BlogPost(props: {
         <div className="mb-12 relative h-96 bg-gradient-to-br from-emerald-200 to-teal-200 dark:from-emerald-800 dark:to-teal-800 rounded-2xl overflow-hidden border border-emerald-200 dark:border-emerald-700/50">
           <ImageWithFallback
             src={post.image}
-            fallbackSrc={post.fallbackImage}
+            fallbackSrc={post.fallbackImage ?? post.image}
             alt={post.title}
             fill
             className="object-cover"
@@ -117,13 +125,13 @@ export default async function BlogPost(props: {
         {/* Content - Wikipedia Style */}
         <div className="max-w-none mb-12 text-gray-600 dark:text-gray-300">
           {/* Quick Summary */}
-          {post.quickSummary && post.quickSummary.length > 0 && (
+          {quickSummaryItems.length > 0 && (
             <div className="bg-emerald-50 dark:bg-emerald-900/20 border-l-4 border-emerald-600 p-6 rounded-r-lg mb-8">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                 📋 Quick Summary
               </h2>
               <ul className="space-y-3">
-                {post.quickSummary.map((point, i) => (
+                {quickSummaryItems.map((point, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="text-emerald-600 font-bold">•</span>
                     <span>{point}</span>
@@ -288,13 +296,13 @@ export default async function BlogPost(props: {
           )}
 
           {/* Prevention Section */}
-          {post.prevention && post.prevention.length > 0 && (
+          {preventionItems.length > 0 && (
             <>
               <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-emerald-600 to-green-600 dark:from-emerald-400 dark:to-green-400 bg-clip-text text-transparent mb-4 mt-8">
                 Prevention
               </h2>
               <ul className="space-y-2 ml-4 mb-6">
-                {post.prevention.map((tip, i) => (
+                {preventionItems.map((tip, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="text-emerald-600 font-bold">•</span>
                     <span>{tip}</span>

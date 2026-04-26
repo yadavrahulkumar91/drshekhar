@@ -14,13 +14,13 @@ export async function generateMetadata(props: {
   if (!service) return { title: "Service Not Found" };
 
   return {
-    title: `${service.title} - Dr. Shekhar Poudel`,
+    title: `${service.title} - Dr. Rinku Sah`,
     description: service.description,
     keywords: [
-      "gastroenterology",
-      "hepatology",
+      "dental",
       service.title.toLowerCase(),
-      "medical services",
+      "root canal",
+      "smile care",
     ],
   };
 }
@@ -66,7 +66,7 @@ export default async function ServiceDetail(props: {
 
             <ExportedImage
               src={service.image}
-              alt="Dr. Shekhar Poudel"
+              alt={service.title}
               className="rounded-2xl"
               width={600}
               height={400}
@@ -121,14 +121,14 @@ export default async function ServiceDetail(props: {
                     size={20}
                     className="text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5"
                   />
-                  <span>Experienced gastroenterology specialist</span>
+                  <span>Experienced dental specialist</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <Check
                     size={20}
                     className="text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5"
                   />
-                  <span>State-of-the-art medical facilities</span>
+                  <span>Modern dental care facilities</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <Check

@@ -25,7 +25,7 @@ export default function Author({ author, authorBio, authorImage }: AuthorProps) 
             dangerouslySetInnerHTML={{ __html: author }}
           />
           <p className="text-gray-600 dark:text-gray-300 text-sm">
-            Specialist in Gastroenterology and Hepatology
+            Root Canal Specialist and Cosmetic Dentist
           </p>
         </div>
       </div>

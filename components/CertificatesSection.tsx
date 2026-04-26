@@ -10,12 +10,12 @@ export default function CertificatesSection() {
 
   const certificates = [
     {
-      name: "Associate Professor Appointment",
-      path: "/certificates/dr_shekhar_associate_professor_appointment_kathmandu_medical_college.png",
+      name: "Root Canal Specialist Certification",
+      path: "/certificates/root-canal-specialist-certificate.png",
     },
     {
-      name: "3-Year Contract - Associate Professor",
-      path: "/certificates/dr_shekhar_associate_professor_appointment_kathmandu_medical_college_3_year_contract.png",
+      name: "Advanced Dental Care Certificate",
+      path: "/certificates/dental-care-certificate.png",
     },
   ];
 

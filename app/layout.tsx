@@ -6,18 +6,17 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 import { doctorSchema, organizationSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`https://${process.env.NEXT_PUBLIC_DOMAIN || 'drsekharpoudel.com.np'}`),
-  title: 'Dr. Shekhar Poudel - Best Gastroenterologist in Kathmandu',
-  description: 'Expert gastroenterology and hepatology services in Kathmandu. Dr. Shekhar Poudel is the first LTSI-certified transplant hepatologist from Nepal.',
+  metadataBase: new URL(`https://${process.env.NEXT_PUBLIC_DOMAIN || 'usmiledental.com.np'}`),
+  title: 'U Smile Dental Clinic | Root Canal Specialist in Sarlahi',
+  description: 'U Smile Dental Clinic provides root canal treatment, cosmetic dentistry, and complete dental care in Lalbandi-6, Sarlahi.',
   keywords: [
-    'gastroenterologist kathmandu',
-    'best gastroenterologist nepal',
-    'liver specialist nepal',
-    'gastritis doctor',
-    'hepatologist kathmandu',
-    'liver disease treatment',
-    'endoscopy kathmandu',
-    'transplant hepatologist'
+    'dental clinic sarlahi',
+    'root canal specialist',
+    'cosmetic dentistry',
+    'dental implants',
+    'teeth whitening',
+    'preventive dentistry',
+    'dental care nepal',
   ],
 };
 

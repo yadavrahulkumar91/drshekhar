@@ -4,16 +4,15 @@ import { ArrowLeft, CheckCircle, Clock, MapPin, Users } from 'lucide-react';
 import HospitalAppointmentBooking from '@/components/HospitalAppointmentBooking';
 
 export const metadata: Metadata = {
-  title: 'Book Hospital Appointment - Dr. Shekhar Poudel',
+  title: 'Book Appointment - U Smile Dental Clinic',
   description:
-    'Book an in-person consultation with Dr. Shekhar Poudel at National Gastro Liver Center or Norvic Hospital. No login required.',
+    'Book an in-person consultation with Dr. Rinku Sah at U Smile Dental Clinic. No login required.',
   keywords: [
-    'hospital appointment',
+    'dental appointment',
     'in-person consultation',
-    'gastroenterology',
-    'NGLC',
-    'Norvic Hospital',
-    'doctor appointment',
+    'dental clinic',
+    'root canal specialist',
+    'dentist appointment',
   ],
 };
 
@@ -39,7 +38,7 @@ export default function AppointmentPage() {
           </h1>
 
           <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-            Schedule an in-person consultation with Dr. Shekhar Poudel at your preferred hospital location. Choose between National Gastro Liver Center or Norvic Hospital.
+            Schedule an in-person consultation with Dr. Rinku Sah at U Smile Dental Clinic in Lalbandi-6, Sarlahi.
           </p>
         </div>
 
@@ -50,10 +49,10 @@ export default function AppointmentPage() {
               <MapPin size={24} className="text-white" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-              National Gastro Liver Center (NGLC)
+              U Smile Dental Clinic
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Specialized gastroenterology and hepatology center with advanced facilities.
+              Dedicated dental clinic offering root canal, cosmetic, and family dentistry services.
             </p>
             <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
               <p>
@@ -61,7 +60,7 @@ export default function AppointmentPage() {
                 <br />
                 Sunday-Friday: 8:00 AM - 7:00 PM
                 <br />
-                Saturday: 8:00 AM - 12:00 PM
+                Saturday: 9:00 AM - 1:00 PM
               </p>
             </div>
           </div>
@@ -72,18 +71,18 @@ export default function AppointmentPage() {
               <Users size={24} className="text-white" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-              Norvic Hospital
+              In-Clinic Dental Care
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Full-service hospital with comprehensive medical facilities and expert care.
+              Comfortable dental treatments in a patient-friendly environment with a focus on oral health.
             </p>
             <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
               <p>
                 <strong>Hours:</strong>
                 <br />
-                Sunday-Friday: 10:00 AM - 8:00 PM
+                Sunday-Friday: 9:00 AM - 6:00 PM
                 <br />
-                (Times vary by day)
+                Saturday: 9:00 AM - 1:00 PM
               </p>
             </div>
           </div>
@@ -98,12 +97,12 @@ export default function AppointmentPage() {
 
             <div className="space-y-4">
               {[
-                'Comprehensive physical examination',
-                'Direct face-to-face consultation with Dr. Shekhar Poudel',
-                'Advanced diagnostic procedures available on-site',
-                'Immediate access to medical records and test facilities',
-                'Expert gastroenterology and hepatology care',
-                'Professional medical support and guidance',
+                'Comprehensive dental examination and diagnosis',
+                'Direct face-to-face consultation with Dr. Rinku Sah',
+                'Advanced dental treatments available on-site',
+                'Immediate access to oral health records and dental imaging',
+                'Expert root canal and smile care',
+                'Professional dental support and guidance',
               ].map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
@@ -175,7 +174,7 @@ export default function AppointmentPage() {
               {
                 question: 'Which hospital should I choose?',
                 answer:
-                  'Both hospitals have excellent facilities. NGLC is a specialized gastroenterology center, while Norvic Hospital offers comprehensive medical services. Choose based on your location convenience.',
+                  'Our clinic provides personalized dental care and comfortable in-person appointments. Choose the service that best fits your needs and schedule.',
               },
               {
                 question: 'What is the consultation fee?',

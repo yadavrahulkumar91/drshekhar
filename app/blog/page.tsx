@@ -5,15 +5,15 @@ import { Search, Calendar, Clock } from "lucide-react";
 import ImageWithFallback from "@/components/ImageWithFallback";
 
 export const metadata: Metadata = {
-  title: "Medical Blog - Dr. Shekhar Poudel",
+  title: "Dental Blog - U Smile Dental Clinic",
   description:
-    "Read medical articles and health tips about gastroenterology, liver disease, and digestive health.",
+    "Read dental articles and oral health tips from U Smile Dental Clinic and Dr. Rinku Sah.",
   keywords: [
-    "medical blog",
-    "health articles",
-    "gastroenterology",
-    "hepatology",
-    "digestive health",
+    "dental blog",
+    "oral health",
+    "root canal",
+    "cosmetic dentistry",
+    "dental care",
   ],
 };
 
@@ -26,11 +26,10 @@ export default function BlogPage() {
       <div className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 dark:from-emerald-400 dark:via-green-400 dark:to-teal-400 bg-clip-text text-transparent mb-4">
-            Medical Blog & Articles
+            Dental Blog & Articles
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Expert insights on gastroenterology, hepatology, and digestive
-            health
+            Expert insights on dental health, root canal care, and smile wellness.
           </p>
         </div>
 
@@ -49,7 +48,7 @@ export default function BlogPage() {
                 <div className="relative h-48 bg-gradient-to-br from-emerald-200 to-teal-200 dark:from-emerald-800 dark:to-teal-800 overflow-hidden group hover:scale-105 transition-transform duration-300">
                   <ImageWithFallback
                     src={post.image}
-                    fallbackSrc={post.fallbackImage}
+                    fallbackSrc={post.fallbackImage ?? post.image}
                     alt={post.title}
                     fill
                     className="object-cover"

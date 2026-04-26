@@ -17,27 +17,27 @@ import { injectStructuredData, generateBreadcrumbs } from '@/lib/structuredData'
 export const blogPageExample = {
   // In your page.tsx
   metadata: generateMetaTags({
-    title: 'Understanding Gastritis: Causes, Symptoms, and Treatment',
+    title: 'How to Preserve Your Natural Tooth: Root Canal FAQs',
     description:
-      'Comprehensive guide to gastritis including causes, symptoms, diagnosis, and effective treatment strategies by Dr. Shekhar Poudel.',
+      'A practical guide to root canal treatment, benefits, and aftercare from U Smile Dental Clinic in Lalbandi-6.',
     keywords: [
-      'gastritis',
-      'stomach inflammation',
-      'gastritis treatment',
-      'causes of gastritis',
-      'gastritis symptoms',
+      'root canal FAQs',
+      'tooth preservation',
+      'dental health',
+      'oral care tips',
+      'endodontic treatment',
     ],
-    canonicalUrl: 'https://drsekharpoudel.com.np/blog/gastritis-causes-symptoms-treatment',
+    canonicalUrl: 'https://usmiledentalclinic.com/blog/root-canal-faqs',
   }),
 
   // Schema markup to include in JSX
   schema: generateArticleSchema({
-    headline: 'Understanding Gastritis: Causes, Symptoms, and Treatment',
+    headline: 'How to Preserve Your Natural Tooth: Root Canal FAQs',
     description:
-      'Comprehensive guide to gastritis including causes, symptoms, diagnosis, and effective treatment strategies.',
-    image: 'https://drsekharpoudel.com.np/blog-image.jpg',
+      'A practical guide to root canal treatment, benefits, and aftercare from U Smile Dental Clinic.',
+    image: 'https://usmiledentalclinic.com/blog-image.jpg',
     datePublished: '2024-01-15',
-    author: 'Dr. Shekhar Poudel',
+    author: 'U Smile Dental Clinic',
     content: 'Full article content here...',
   }),
 };
@@ -48,23 +48,23 @@ export const blogPageExample = {
  */
 export const servicePageExample = {
   metadata: generateMetaTags({
-    title: 'Gastritis & Ulcer Treatment in Kathmandu | Dr. Shekhar Poudel',
+    title: 'Root Canal Treatment in Sarlahi | U Smile Dental Clinic',
     description:
-      'Comprehensive gastritis and peptic ulcer treatment using latest medications and endoscopic procedures. Expert care in Kathmandu.',
+      'Advanced root canal treatment to relieve tooth pain and preserve natural teeth at U Smile Dental Clinic.',
     keywords: [
-      'gastritis treatment',
-      'ulcer treatment',
-      'stomach inflammation',
-      'gastritis diagnosis',
-      'GERD',
+      'root canal treatment',
+      'tooth pain relief',
+      'endodontic care',
+      'dental clinic sarlahi',
+      'root canal specialist',
     ],
-    canonicalUrl: 'https://drsekharpoudel.com.np/services/gastritis-treatment',
+    canonicalUrl: 'https://usmiledentalclinic.com/services/root-canal-treatment',
   }),
 
   schema: generateServiceSchema({
-    name: 'Gastritis & Ulcer Treatment',
-    description: 'Comprehensive treatment for gastritis and peptic ulcer disease',
-    price: '$$',
+    name: 'Root Canal Treatment',
+    description: 'Advanced root canal therapy to treat infected or damaged tooth pulp and preserve your natural tooth.',
+    price: 'NPR',
   }),
 };
 
@@ -74,17 +74,17 @@ export const servicePageExample = {
  */
 export const landingPageExample = {
   metadata: generateMetaTags({
-    title: 'Medical Services | Gastroenterology & Hepatology in Kathmandu',
+    title: 'Dental Services | Root Canal, Implants & Cosmetic Dentistry',
     description:
-      'Comprehensive gastroenterology and hepatology services including endoscopy, ERCP, liver disease management.',
+      'Complete dental services at U Smile Dental Clinic including root canal care, implants, crowns, and teeth whitening.',
     keywords: [
-      'medical services',
-      'gastroenterology',
-      'hepatology',
-      'endoscopy',
-      'liver care',
+      'dental services',
+      'cosmetic dentistry',
+      'dental implants',
+      'root canal',
+      'dental clinic sarlahi',
     ],
-    canonicalUrl: 'https://drsekharpoudel.com.np/services',
+    canonicalUrl: 'https://usmiledentalclinic.com/services',
   }),
 
   // Generate breadcrumbs programmatically
@@ -95,8 +95,8 @@ export const landingPageExample = {
 
   // Include breadcrumb schema
   breadcrumbSchema: generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://drsekharpoudel.com.np' },
-    { name: 'Services', url: 'https://drsekharpoudel.com.np/services' },
+    { name: 'Home', url: 'https://usmiledentalclinic.com' },
+    { name: 'Services', url: 'https://usmiledentalclinic.com/services' },
   ]),
 };
 
@@ -106,20 +106,20 @@ export const landingPageExample = {
  */
 export const testimonialPageExample = {
   metadata: generateMetaTags({
-    title: 'Patient Testimonials & Reviews | Dr. Shekhar Poudel',
+    title: 'Patient Testimonials & Reviews | U Smile Dental Clinic',
     description:
-      'Read success stories and testimonials from our satisfied patients about their experience with Dr. Shekhar Poudel.',
+      'Read patient stories and testimonials from those who trusted U Smile Dental Clinic for dental care and root canal treatment.',
     keywords: [
-      'patient reviews',
-      'testimonials',
+      'dental patient reviews',
+      'dental testimonials',
       'patient success stories',
-      'doctor reviews',
+      'dentist reviews',
     ],
-    canonicalUrl: 'https://drsekharpoudel.com.np/testimonials',
+    canonicalUrl: 'https://usmiledentalclinic.com/testimonials',
   }),
 
   // Review schema for aggregated ratings
-  reviewSchema: buildReviewSchema('Dr. Shekhar Poudel', [
+  reviewSchema: buildReviewSchema('U Smile Dental Clinic', [
     {
       author: 'Patient Name 1',
       rating: 5,
@@ -144,7 +144,7 @@ export const seoChecklist = {
   titleGuidelines: {
     length: '50-60 characters',
     format: 'Primary Keyword - Brand Name or Secondary Keyword',
-    example: 'Gastritis Treatment in Kathmandu | Dr. Shekhar Poudel',
+    example: 'Root Canal Treatment in Sarlahi | U Smile Dental Clinic',
     include: [
       'Primary keyword',
       'Location (for local SEO)',
@@ -164,7 +164,7 @@ export const seoChecklist = {
     length: '150-160 characters',
     format: 'Brief summary with CTA',
     example:
-      'Expert gastroenterology care in Kathmandu. Specialized treatment for gastritis, GERD, IBS, and liver disease. Book appointment today.',
+      'Expert dental care in Sarlahi. Specialized root canal, implant, and cosmetic dental services. Book appointment today.',
     include: ['Primary keyword', 'Unique value proposition', 'CTA', 'Local indicator'],
     avoid: ['Duplicate descriptions', 'Excessive keywords', 'Misleading content'],
   },
@@ -233,7 +233,7 @@ export const seoChecklist = {
         'Be specific, not vague',
       ],
       example: {
-        good: 'Dr. Shekhar Poudel performing endoscopy procedure',
+      good: 'Dr. Rinku Sah performing root canal treatment',
         bad: ['image', 'picture'],
       },
     },

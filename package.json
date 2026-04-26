@@ -1,7 +1,7 @@
 {
-  "name": "drshekhar-medical",
+  "name": "u-smile-dental-clinic",
   "version": "1.0.0",
-  "description": "Professional medical website for Dr. Shekhar Poudel, Gastroenterologist in Kathmandu",
+  "description": "Professional dental website for U Smile Dental Clinic in Lalbandi, Sarlahi",
   "private": true,
   "scripts": {
     "dev": "next dev",

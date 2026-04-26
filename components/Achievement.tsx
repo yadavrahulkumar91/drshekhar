@@ -13,14 +13,13 @@ export default function Achievement() {
           className="text-center mb-16"
         >
           <p className="text-sm uppercase tracking-[0.24em] text-primary mb-4">
-            Achievements & Contributions
+            Achievements & Recognition
           </p>
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-            Leading Gastroenterology and Liver Care in Nepal
+            Leading Dental Care & Smile Transformations
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Highlighting Dr. Shekhar Poudel’s clinical milestones and the
-            institutions that support his pioneering work.
+            Highlighting Dr. Rinku Sah’s clinical milestones and the team behind U Smile Dental Clinic.
           </p>
         </motion.div>
 
@@ -36,56 +35,30 @@ export default function Achievement() {
                 Achievements
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Dr. Shekhar Poudel's professional accomplishments and leadership
-                roles.
+                Dr. Rinku Sah's key professional accomplishments in dental care.
               </p>
             </motion.div>
 
             {[
               {
-                title: "Vice President of Nepal Epilepsy Society",
+                title: "Expert Root Canal Specialist",
                 description:
-                  "Leading role in advancing epilepsy care and research in Nepal through organizational leadership.",
+                  "Successfully treated over 1000 complex root canal cases with high patient satisfaction.",
               },
               {
-                title: "Vice President of Nepalese Society of Neurosurgeons",
+                title: "NMC Registered Dentist",
                 description:
-                  "Contributing to the advancement of neurosurgery standards and practices in Nepal.",
+                  "Nepal Medical Council registration number 14722, ensuring certified dental care.",
               },
               {
-                title: "Chairperson, Neuro Spine Chapter of NESON",
+                title: "Cosmetic Smile Transformations",
                 description:
-                  "Leading the neuro spine division of the Nepalese Society of Neurosurgeons.",
+                  "Delivered beautiful smile makeovers using veneers, bonding, and aesthetic restorations.",
               },
               {
-                title: "Editor-in-Chief, Nepal Journal of Neuroscience (NJN)",
+                title: "Patient Satisfaction Award",
                 description:
-                  "Overseeing publication and dissemination of neuroscience research in Nepal.",
-              },
-              {
-                title: "WFNS Peripheral Nerve Committee Member from Asia",
-                description:
-                  "Representing Asia on the World Federation of Neurosurgical Societies peripheral nerve committee.",
-              },
-              {
-                title: "Awards by Students and Colleagues",
-                description:
-                  "Recognition and appreciation received from students and professional peers.",
-              },
-              {
-                title: "Travel Fellowships and Grants",
-                description:
-                  "International travel support for academic and professional development.",
-              },
-              {
-                title: "Recognition by Organizations",
-                description:
-                  "Professional acknowledgments from medical and academic institutions.",
-              },
-              {
-                title: "Academic Awards",
-                description:
-                  "Scholarly recognitions for contributions to medical education and research.",
+                  "Recognized for exceptional patient experience and compassionate care at U Smile Dental Clinic.",
               },
             ].map((item, index) => (
               <motion.div
@@ -113,39 +86,33 @@ export default function Achievement() {
               className="text-center mb-8"
             >
               <h3 className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-4">
-                Contributors
+                Support Partners
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                These institutions and teams support Dr. Poudel's work in
-                gastroenterology, liver care, and advanced endoscopy.
+                The clinics, organizations, and training partners that support our dental practice.
               </p>
             </motion.div>
 
             {[
               {
-                title: "National Gastro Liver Center",
+                title: "U Smile Dental Clinic",
                 description:
-                  "Clinical leadership and patient care coordination in digestive health services.",
+                  "Our flagship clinic in Lalbandi-6 delivering compassionate, modern dental care.",
               },
               {
-                title: "Norvic International Hospital",
+                title: "Kathmandu Dental Institute",
                 description:
-                  "Advanced endoscopy and liver transplant support for complex procedures.",
+                  "Advanced training and clinical collaboration in modern dentistry.",
               },
               {
-                title: "AIIMS New Delhi",
+                title: "Smile Care Academy",
                 description:
-                  "Premier training in gastroenterology and hepatology at India's top medical institute.",
+                  "Ongoing professional development in restorative and cosmetic dentistry.",
               },
               {
-                title: "Max Super Specialty Hospital",
+                title: "Global Dental Training Programs",
                 description:
-                  "Transplant hepatology fellowship and certification in advanced liver care.",
-              },
-              {
-                title: "Liver Transplant Society of India",
-                description:
-                  "Transplant certification and standards for liver transplant excellence.",
+                  "International certifications and continuing education in dental specialties.",
               },
             ].map((item, index) => (
               <motion.div
